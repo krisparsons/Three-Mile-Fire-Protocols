@@ -1,0 +1,22 @@
+{
+  "name": "Three Mile Fire Protocols",
+  "short_name": "TMFD Protocols",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151619",
+  "theme_color": "#151619",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
