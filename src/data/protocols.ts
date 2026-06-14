@@ -2136,15 +2136,6 @@ export const CONTACTS: Contact[] = [
     specialty: 'Level IV Trauma (Stabilization/Transfer)',
     category: 'Hospital & Trauma Centers' 
   },
-  { 
-    id: 'hosp-4', 
-    name: 'Bitterroot Health (Hamilton)', 
-    role: 'Urgent Care', 
-    phone: '(406) 777-6002', 
-    address: '1200 Westwood Drive, Hamilton, MT 59840', 
-    specialty: 'Urgent Care / Clinical',
-    category: 'Hospital & Trauma Centers' 
-  },
 
   // Dispatch & Emergency Services
   { id: 'disp-1', name: 'Missoula Dispatch (911)', role: 'Secondary/Non-Emergency', phone: '(406) 258-3452', category: 'Dispatch & Emergency Services' },

@@ -65,46 +65,46 @@ export default function EmailRouter({ onBack }: EmailRouterProps) {
     <div className="space-y-6">
       <div className="flex items-center gap-4 mb-6">
         {onBack && (
-          <button onClick={onBack} className="p-2 hover:bg-white/5 rounded-full transition-colors">
-            <ArrowLeft className="w-6 h-6 text-emerald-500" />
+          <button onClick={onBack} className="p-2 hover:bg-zinc-100 dark:hover:bg-white/5 rounded-full transition-colors">
+            <ArrowLeft className="w-6 h-6 text-emerald-600 dark:text-emerald-500" />
           </button>
         )}
-        <h2 className="text-xl font-bold">Report Router</h2>
+        <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Report Router</h2>
       </div>
 
       {!recipient ? (
         <div className="space-y-4">
-          <p className="text-sm text-white/60 mb-4">Select the primary recipient for the report:</p>
+          <p className="text-sm text-zinc-500 dark:text-white/60 mb-4">Select the primary recipient for the report:</p>
           <button 
-            onClick={() => setRecipient('ems')}
-            className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center justify-between group hover:bg-white/10 transition-all"
+            onClick={() => setRecipient('chief')}
+            className="w-full bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-2xl p-6 flex items-center justify-between group hover:bg-zinc-50 dark:hover:bg-white/10 transition-all shadow-sm dark:shadow-none"
           >
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+              <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center text-orange-600 dark:text-orange-500">
                 <User className="w-6 h-6" />
               </div>
               <div className="text-left">
-                <h3 className="font-bold">EMS Officer</h3>
-                <p className="text-xs text-white/40">Direct report to EMS Command</p>
+                <h3 className="font-bold text-zinc-900 dark:text-white">Fire Chief</h3>
+                <p className="text-xs text-zinc-400 dark:text-white/40">Departmental notification</p>
               </div>
             </div>
-            <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-emerald-500" />
+            <ChevronRight className="w-5 h-5 text-zinc-300 dark:text-white/20 group-hover:text-emerald-600 dark:group-hover:text-emerald-500" />
           </button>
 
           <button 
-            onClick={() => setRecipient('chief')}
-            className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center justify-between group hover:bg-white/10 transition-all"
+            onClick={() => setRecipient('ems')}
+            className="w-full bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-2xl p-6 flex items-center justify-between group hover:bg-zinc-50 dark:hover:bg-white/10 transition-all shadow-sm dark:shadow-none"
           >
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500">
+              <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-500">
                 <User className="w-6 h-6" />
               </div>
               <div className="text-left">
-                <h3 className="font-bold">Fire Chief</h3>
-                <p className="text-xs text-white/40">Departmental notification</p>
+                <h3 className="font-bold text-zinc-900 dark:text-white">EMS Officer</h3>
+                <p className="text-xs text-zinc-400 dark:text-white/40">Direct report to EMS Command</p>
               </div>
             </div>
-            <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-emerald-500" />
+            <ChevronRight className="w-5 h-5 text-zinc-300 dark:text-white/20 group-hover:text-emerald-600 dark:group-hover:text-emerald-500" />
           </button>
         </div>
       ) : (
@@ -113,20 +113,20 @@ export default function EmailRouter({ onBack }: EmailRouterProps) {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-4"
         >
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <div className="bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-2xl p-6 shadow-sm dark:shadow-none">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-500">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-white/40">Sending to</p>
-                  <p className="font-bold">{recipients[recipient].name}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-zinc-400 dark:text-white/40">Sending to</p>
+                  <p className="font-bold text-zinc-900 dark:text-white">{recipients[recipient].name}</p>
                 </div>
               </div>
               <button 
                 onClick={() => setRecipient(null)}
-                className="text-xs text-emerald-500 hover:underline"
+                className="text-xs text-emerald-600 dark:text-emerald-500 hover:underline"
               >
                 Change
               </button>
@@ -134,22 +134,22 @@ export default function EmailRouter({ onBack }: EmailRouterProps) {
 
             <div className="space-y-4">
               <div>
-                <label className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-2 block">Subject</label>
+                <label className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 dark:text-white/30 mb-2 block">Subject</label>
                 <input 
                   type="text" 
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                  className="w-full bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                 />
               </div>
               <div>
-                <label className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-2 block">Report Content</label>
+                <label className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 dark:text-white/30 mb-2 block">Report Content</label>
                 <textarea 
                   rows={8}
                   value={body}
                   onChange={(e) => setBody(e.target.value)}
                   placeholder="Enter report details, patient counts, and resource needs..."
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/50 resize-none mb-4"
+                  className="w-full bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 resize-none mb-4"
                 />
 
                 {/* Attachment Section */}
@@ -157,7 +157,7 @@ export default function EmailRouter({ onBack }: EmailRouterProps) {
                   {!attachment ? (
                     <button
                       onClick={() => fileInputRef.current?.click()}
-                      className="flex items-center gap-2 text-xs text-emerald-500 hover:text-emerald-400 transition-colors bg-emerald-500/10 px-4 py-2.5 rounded-lg font-medium"
+                      className="flex items-center gap-2 text-xs text-emerald-600 dark:text-emerald-500 hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors bg-emerald-100 dark:bg-emerald-500/10 px-4 py-2.5 rounded-lg font-medium"
                     >
                       <Paperclip className="w-4 h-4" />
                       Attach Picture
@@ -167,7 +167,7 @@ export default function EmailRouter({ onBack }: EmailRouterProps) {
                       <img 
                         src={previewUrl!} 
                         alt="Attachment preview" 
-                        className="h-24 w-24 object-cover rounded-xl border border-white/10 shadow-lg"
+                        className="h-24 w-24 object-cover rounded-xl border border-zinc-200 dark:border-white/10 shadow-lg"
                       />
                       <button
                         onClick={clearAttachment}

@@ -61,8 +61,8 @@ const ApgarCalculator: React.FC<ApgarCalculatorProps> = ({ onBack }) => {
           <Calculator className="text-white w-6 h-6" />
         </div>
         <div>
-          <h2 className="text-xl font-bold tracking-tight">APGAR Calculator</h2>
-          <p className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest mt-1">Newborn Assessment Tool</p>
+          <h2 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">APGAR Calculator</h2>
+          <p className="text-[10px] font-mono text-emerald-600 dark:text-emerald-500 uppercase tracking-widest mt-1">Newborn Assessment Tool</p>
         </div>
       </div>
 
@@ -83,7 +83,7 @@ const ApgarCalculator: React.FC<ApgarCalculatorProps> = ({ onBack }) => {
       <div className="space-y-8">
         {APGAR_DATA.map((item) => (
           <div key={item.key} className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-white/40 ml-1">
               {item.label}
             </h4>
             <div className="grid grid-cols-1 gap-2">
@@ -95,7 +95,7 @@ const ApgarCalculator: React.FC<ApgarCalculatorProps> = ({ onBack }) => {
                     "w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-center justify-between group",
                     scores[item.key] === index 
                       ? "bg-emerald-500 border-emerald-500 text-white shadow-lg shadow-emerald-500/20" 
-                      : "bg-white/5 border-white/10 text-white/60 hover:bg-white/10 hover:border-white/20"
+                      : "bg-white dark:bg-white/5 border-zinc-200 dark:border-white/10 text-zinc-600 dark:text-white/60 hover:bg-zinc-50 dark:hover:bg-white/10 hover:border-zinc-300 dark:hover:border-white/20"
                   )}
                 >
                   <span className="text-sm font-medium">{option}</span>
@@ -103,7 +103,7 @@ const ApgarCalculator: React.FC<ApgarCalculatorProps> = ({ onBack }) => {
                     "w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold",
                     scores[item.key] === index 
                       ? "bg-white text-emerald-600" 
-                      : "bg-white/10 text-white/40 group-hover:bg-white/20"
+                      : "bg-zinc-100 dark:bg-white/10 text-zinc-400 dark:text-white/40 group-hover:bg-zinc-200 dark:group-hover:bg-white/20"
                   )}>
                     {index}
                   </div>
@@ -114,9 +114,9 @@ const ApgarCalculator: React.FC<ApgarCalculatorProps> = ({ onBack }) => {
         ))}
       </div>
 
-      <div className="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl">
-        <h5 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-3">Clinical Note</h5>
-        <p className="text-xs text-white/60 leading-relaxed">
+      <div className="mt-12 p-6 bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-2xl shadow-sm dark:shadow-none">
+        <h5 className="text-xs font-bold uppercase tracking-widest text-zinc-400 dark:text-white/40 mb-3">Clinical Note</h5>
+        <p className="text-xs text-zinc-500 dark:text-white/60 leading-relaxed">
           APGAR scores are typically recorded at 1 and 5 minutes after birth. A score of 7-10 is considered normal, 4-6 is fairly low, and 0-3 is critically low. If the 5-minute score is less than 7, additional scores should be assigned every 5 minutes for up to 20 minutes.
         </p>
       </div>

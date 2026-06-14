@@ -1,125 +1,132 @@
 import React from 'react';
 import { 
-  AlertTriangle, 
-  Flame, 
-  Droplets, 
-  RefreshCw, 
-  ShieldAlert, 
-  MapPin,
   ChevronRight,
-  Baby,
-  Brain
+  FileText,
+  BookOpen,
+  AlertTriangle,
+  Flame,
+  Brain,
+  ShieldAlert,
+  MapPin,
+  QrCode,
+  Baby
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { cn } from '../lib/utils';
 
+// Valid tab types based on App.tsx
+type AppTab = 'home' | 'protocols' | 'rx' | 'contacts' | 'tools' | 'email';
+
 interface HomeScreenProps {
-  onNavigate: (tab: 'protocols' | 'rx' | 'contacts' | 'tools' | 'email', tool?: string) => void;
+  onNavigate: (tab: AppTab, tool?: string) => void;
 }
 
 export default function HomeScreen({ onNavigate }: HomeScreenProps) {
-  const navItems = [
-    { title: "START Triage", icon: <AlertTriangle className="w-6 h-6" />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-500", tool: 'triage' },
-    { title: "Burn / TBSA", icon: <Flame className="w-6 h-6" />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-500", tool: 'burn' },
-    { title: "JumpSTART", icon: <Baby className="w-6 h-6" />, color: "border-blue-600", bg: "bg-blue-600/10", text: "text-blue-500", tool: 'jumpstart' },
-    { title: "GCS", icon: <Brain className="w-6 h-6" />, color: "border-orange-500", bg: "bg-orange-500/10", text: "text-orange-500", tool: 'gcs' },
-    { title: "MCI Officer", icon: <ShieldAlert className="w-6 h-6" />, color: "border-emerald-600", bg: "bg-emerald-600/10", text: "text-emerald-500", tool: 'mci' },
-    { title: "Hospitals", icon: <MapPin className="w-6 h-6" />, color: "border-purple-600", bg: "bg-purple-600/10", text: "text-purple-500", tab: 'contacts' as const },
+  const logoUrl = "logo.png";
+
+  const quickTools = [
+    { title: "MCI IC Tool", icon: <ShieldAlert />, color: "border-blue-600", bg: "bg-blue-600/10", text: "text-blue-600 dark:text-blue-400", tool: 'mci' },
+    { title: "START Triage", icon: <AlertTriangle />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-600 dark:text-red-400", tool: 'triage' },
+    { title: "JumpSTART", icon: <Baby />, color: "border-teal-600", bg: "bg-teal-600/10", text: "text-teal-600 dark:text-teal-400", tool: 'jumpstart' },
+    { title: "Burn / TBSA", icon: <Flame />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-600 dark:text-red-400", tool: 'burn' },
+    { title: "GCS Calc", icon: <Brain />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-600 dark:text-red-400", tool: 'gcs' },
+    { title: "Hospitals", icon: <MapPin />, color: "border-blue-700", bg: "bg-blue-700/10", text: "text-blue-700 dark:text-blue-400", tab: 'contacts' as AppTab },
   ];
 
   return (
-    <div className="flex flex-col items-center px-4 py-8">
-      {/* Logo Section */}
-      <div className="mb-8 flex flex-col items-center">
-        <div className="w-32 h-32 mb-4 flex items-center justify-center">
-          <img 
-            src="/logo.png" 
-            alt="Three Mile Fire Dept Logo" 
-            className="w-full h-full object-contain drop-shadow-2xl"
-            onError={(e) => {
-              // Fallback to the Flame icon if the image isn't uploaded yet
-              e.currentTarget.style.display = 'none';
-              e.currentTarget.parentElement?.classList.add('bg-red-600', 'rounded-2xl', 'shadow-2xl', 'shadow-red-900/40', 'transform', '-rotate-3');
-              const fallback = document.createElement('div');
-              fallback.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>';
-              e.currentTarget.parentElement?.appendChild(fallback.firstChild as Node);
-            }}
-          />
+    <div className="flex flex-col items-center gap-8 w-full max-w-md mx-auto py-8 px-4">
+      {/* Visual Identity */}
+      <div className="w-full flex flex-col items-center">
+        <div className="w-48 h-48 mb-6 relative group transform hover:scale-105 transition-all duration-500">
+          <div className="absolute inset-0 bg-red-600 rounded-full blur-3xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
+          <div className="relative w-full h-full flex items-center justify-center p-2 rounded-full transition-all duration-500">
+            <img 
+              src={logoUrl} 
+              alt="TMF Maltese Cross" 
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
-        <h2 className="text-2xl font-black tracking-tighter text-red-600 uppercase text-center">Three Mile Fire Dept</h2>
-        <p className="text-xs font-mono text-white/40 uppercase tracking-[0.2em] mt-1 text-center">Clinical & Tactical Suite</p>
-      </div>
-
-      {/* Static Disclaimer */}
-      <div className="w-full bg-red-500/5 border border-red-500/20 rounded-xl p-3 mb-8 text-center">
-        <p className="text-[10px] text-red-400 leading-relaxed">
-          ⚠️ <span className="font-bold">Note:</span> Refer to official protocols for the most up-to-date data.
-        </p>
-      </div>
-
-      {/* Navigation Grid */}
-      <div className="grid grid-cols-2 gap-4 w-full max-w-md">
-        {navItems.map((item, idx) => (
-          <motion.button
-            key={idx}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              if (item.tab) {
-                onNavigate(item.tab);
-              } else if (item.tool) {
-                onNavigate('tools', item.tool);
-              }
-            }}
-            className={cn(
-              "flex items-center gap-3 p-4 rounded-2xl border-l-4 bg-white/5 border-white/10 hover:bg-white/10 transition-all text-left group",
-              item.color
-            )}
-          >
-            <div className={cn("w-10 h-10 rounded-full flex items-center justify-center transition-transform group-hover:scale-110", item.bg, item.text)}>
-              {item.icon}
-            </div>
-            <span className="text-xs font-bold text-white/90 uppercase tracking-tight">{item.title}</span>
-          </motion.button>
-        ))}
-      </div>
-
-      {/* Protocols & RX Quick Access */}
-      <div className="w-full max-w-md mt-8 space-y-3">
-        <button 
-          onClick={() => onNavigate('protocols')}
-          className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between group hover:bg-white/10 transition-all"
-        >
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
-              <ShieldAlert className="w-5 h-5" />
-            </div>
-            <div className="text-left">
-              <h3 className="font-bold text-sm">Treatment Protocols</h3>
-              <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Full Reference</p>
-            </div>
+        
+        <div className="text-center space-y-2">
+          <h2 className="text-4xl font-black tracking-tighter text-zinc-900 dark:text-white uppercase leading-none">
+            Three Mile <br/>
+            <span className="text-red-700 dark:text-red-500">Fire Dept</span>
+          </h2>
+          <div className="flex items-center justify-center gap-3">
+            <div className="h-0.5 w-10 bg-red-700"></div>
+            <p className="text-[11px] font-black font-mono text-zinc-500 dark:text-zinc-400 uppercase tracking-[0.4em]">Unit Readiness: 1.1</p>
+            <div className="h-0.5 w-10 bg-red-700"></div>
           </div>
-          <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-emerald-500" />
+        </div>
+      </div>
+
+      {/* Quick Tools Grid - Tactical Tile Layout */}
+      <div className="w-full">
+        <h3 className="text-[10px] font-black font-mono text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-4 px-2 flex items-center gap-2">
+          Quick Deployment Tools
+          <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800"></div>
+        </h3>
+        <div className="grid grid-cols-2 gap-3">
+          {quickTools.map((item, idx) => (
+            <motion.button
+              key={idx}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                if (item.tab) {
+                  onNavigate(item.tab);
+                } else if (item.tool) {
+                  onNavigate('tools', item.tool);
+                }
+              }}
+              className={cn(
+                "flex flex-col gap-3 p-4 rounded-3xl border-2 transition-all text-left group shadow-lg active:scale-95",
+                "bg-white dark:bg-[#1C1C1E] border-zinc-100 dark:border-white/10 hover:border-red-600/30 dark:hover:border-red-500/30",
+                "hover:shadow-red-900/5 dark:shadow-none"
+              )}
+            >
+              <div className={cn(
+                "w-10 h-10 rounded-2xl flex items-center justify-center transition-transform group-hover:rotate-3 shadow-sm",
+                item.bg, item.text,
+                "dark:bg-white/10 dark:border dark:border-white/10"
+              )}>
+                {React.cloneElement(item.icon as React.ReactElement, { className: "w-5 h-5" })}
+              </div>
+              <div>
+                <span className="text-[11px] font-black text-zinc-900 dark:text-white uppercase tracking-tighter block">{item.title}</span>
+              </div>
+            </motion.button>
+          ))}
+        </div>
+      </div>
+
+      {/* Primary Action Buttons */}
+      <div className="w-full flex flex-col gap-3">
+        <button 
+          onClick={() => onNavigate('tools', 'community-connect')}
+          className="w-full bg-zinc-100 dark:bg-white/5 border-2 border-zinc-200 dark:border-white/10 rounded-3xl p-4 flex items-center justify-between group hover:bg-zinc-200 dark:hover:bg-white/10 transition-all font-black"
+        >
+          <div className="flex items-center gap-4 text-zinc-650 dark:text-zinc-400">
+            <QrCode className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <h3 className="text-xs uppercase tracking-widest text-zinc-900 dark:text-white">Community Connect</h3>
+          </div>
+          <ChevronRight className="w-4 h-4 text-zinc-300 group-hover:translate-x-1 transition-transform" />
         </button>
 
         <button 
-          onClick={() => onNavigate('rx')}
-          className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between group hover:bg-white/10 transition-all"
+          onClick={() => onNavigate('tools', 'billing')}
+          className="w-full bg-zinc-100 dark:bg-white/5 border-2 border-zinc-200 dark:border-white/10 rounded-3xl p-4 flex items-center justify-between group hover:bg-zinc-200 dark:hover:bg-white/10 transition-all font-black"
         >
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center">
-              <Droplets className="w-5 h-5" />
-            </div>
-            <div className="text-left">
-              <h3 className="font-bold text-sm">Medication Guide</h3>
-              <p className="text-[10px] text-white/40 uppercase tracking-widest font-mono">Dosing & Indications</p>
-            </div>
+          <div className="flex items-center gap-4 text-zinc-650 dark:text-zinc-400">
+            <FileText className="w-5 h-5 text-red-600 dark:text-red-400" />
+            <h3 className="text-xs uppercase tracking-widest text-zinc-900 dark:text-white">Billing & Recovery</h3>
           </div>
-          <ChevronRight className="w-5 h-5 text-white/20 group-hover:text-emerald-500" />
+          <ChevronRight className="w-4 h-4 text-zinc-300 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
 
-      <footer className="mt-12 text-center">
-        <p className="text-[10px] text-white/20 font-mono uppercase tracking-widest">Serving Ravalli County</p>
+      <footer className="mt-4 text-center">
+        <p className="text-[10px] text-zinc-400 dark:text-white/20 font-mono uppercase tracking-[0.2em] font-bold">Serving Ravalli County Emergency Services</p>
       </footer>
     </div>
   );

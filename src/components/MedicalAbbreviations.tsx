@@ -155,7 +155,7 @@ export default function MedicalAbbreviations({ onBack }: MedicalAbbreviationsPro
     >
       <button 
         onClick={onBack}
-        className="flex items-center gap-2 text-white/60 hover:text-white mb-6 transition-colors"
+        className="flex items-center gap-2 text-zinc-500 dark:text-white/60 hover:text-zinc-900 dark:hover:text-white mb-6 transition-colors"
       >
         <ArrowLeft className="w-5 h-5" />
         <span className="text-sm font-medium">Back to Tools</span>
@@ -163,22 +163,22 @@ export default function MedicalAbbreviations({ onBack }: MedicalAbbreviationsPro
 
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+          <div className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
             <BookOpen className="w-5 h-5" />
           </div>
-          <h2 className="text-xl font-bold tracking-tight">Medical Abbreviations</h2>
+          <h2 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white">Medical Abbreviations</h2>
         </div>
-        <p className="text-sm text-white/60">Search for approved medical abbreviations and their meanings.</p>
+        <p className="text-sm text-zinc-500 dark:text-white/60">Search for approved medical abbreviations and their meanings.</p>
       </div>
 
       <div className="relative mb-6">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-400 dark:text-white/40" />
         <input
           type="text"
           placeholder="Search abbreviations..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
+          className="w-full bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-2xl py-4 pl-12 pr-4 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"
         />
       </div>
 
@@ -187,14 +187,14 @@ export default function MedicalAbbreviations({ onBack }: MedicalAbbreviationsPro
           filteredAbbreviations.map((item, index) => (
             <div 
               key={index}
-              className="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col gap-1"
+              className="bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-xl p-4 flex flex-col gap-1 shadow-sm dark:shadow-none"
             >
-              <span className="font-bold text-indigo-400">{item.abbr}</span>
-              <span className="text-sm text-white/80">{item.meaning}</span>
+              <span className="font-bold text-indigo-600 dark:text-indigo-400">{item.abbr}</span>
+              <span className="text-sm text-zinc-700 dark:text-white/80">{item.meaning}</span>
             </div>
           ))
         ) : (
-          <div className="text-center py-8 text-white/40">
+          <div className="text-center py-8 text-zinc-400 dark:text-white/40">
             No abbreviations found matching "{searchQuery}"
           </div>
         )}

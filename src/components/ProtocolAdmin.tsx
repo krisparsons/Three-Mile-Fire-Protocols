@@ -26,7 +26,7 @@ export default function ProtocolAdmin({ protocols, setProtocols, onBack }: Proto
   const [tempContent, setTempContent] = useState('');
 
   const handleAdminLogin = () => {
-    if (passInput === 'officer9111') {
+    if (passInput === '1064admin') {
       setIsAdmin(true);
       setShowPassModal(false);
       setPassInput('');
