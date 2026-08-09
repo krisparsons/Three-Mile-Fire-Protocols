@@ -1,0 +1,261 @@
+================================================================================
+            FIRE DEPARTMENT FIRE OPERATIONS (FD FIRE OPS)
+                   COMPLETE REFERENCE & STUDY GUIDE
+      NFPA 1001 Standard for Fire Fighter Professional Qualifications
+================================================================================
+
+--------------------------------------------------------------------------------
+SECTION 1: FIREFIGHTER I (FF1) CORE OPERATIONS
+--------------------------------------------------------------------------------
+
+1.1 PPE & SCBA RAPID DONNING PROCEDURE (NFPA 1001 Skill Sheet 1-I)
+Target Time: Complete donning of turnout gear and SCBA within 60 seconds.
+
+Rapid Donning Checklist:
+  Step 1: Turnout boots pulled up fully, suspenders positioned securely over shoulders.
+  Step 2: Turnout coat donned, storm collar secured, zipper/clips locked completely.
+  Step 3: Flash hood put on and pulled down around neck.
+  Step 4: SCBA harness placed over shoulders (backpack style or over-the-head method).
+  Step 5: Waist belt and chest straps tightened firmly, hoses clear of twists.
+  Step 6: Main cylinder valve fully opened; Heads-Up Display (HUD) checked; low-air alarm verifies during pressurization.
+  Step 7: Facepiece donned, straps tightened evenly from bottom (neck) to top (crown).
+  Step 8: Check seal by covering intake with hand and inhaling deeply (mask should collapse slightly against face).
+  Step 9: Flash hood pulled up to cover head with NO skin exposed anywhere around facepiece or neck.
+  Step 10: Helmet donned, chin strap tightened. Turnout gloves donned and cuffs secured under sleeves.
+
+Critical Safety Checkpoints:
+  * Ensure ZERO skin is visible between the facepiece seal, flash hood, and turnout coat collar.
+  * SCBA low-air alarm (bell or whistle) must actuate briefly during initial pressurization to verify operation.
+  * Bypass valve must be fully closed and purge button verified before entering IDLH atmospheres.
+  * Never rush seal testing: mask seal failure inside a structure fire causes immediate carbon monoxide and hydrogen cyanide inhalation.
+
+Immediately Dangerous to Life or Health (IDLH) Limits:
+  * Carbon Monoxide (CO): > 1,200 ppm
+  * Oxygen Concentration: < 19.5%
+  * Presence of visible smoke, toxic combustion products, or oxygen-deficient environment requires 100% SCBA utilization.
+
+
+1.2 FIRE DYNAMICS & EXTREME PHENOMENA
+Understanding Compartment Fire Behavior & Thermal Layering:
+
+01 / Rollover (Flame Licking):
+  * Definition: Unburned pyrolysis products accumulate near the ceiling and mix with oxygen until igniting. Licks of flame roll across the smoke layer.
+  * Warning: Imminent Flashover indicator! Cool the upper thermal column immediately.
+
+02 / Flashover:
+  * Definition: Simultaneous ignition of all combustible surfaces in a compartment.
+  * Conditions: Compartment temperature reaches approximately 1,100°F (593°C). Radiant heat warms all fuels to ignition temperature simultaneously.
+  * Survival: Zero survival rate for unprotected occupants or firefighters trapped inside.
+  * Action: Stay low immediately and apply direct stream to upper smoke layer.
+
+03 / Backdraft:
+  * Definition: Explosive ignition of superheated, oxygen-depleted flammable gases when fresh air is rapidly introduced into a confined compartment.
+  * Indicators: Puffy yellow/brown smoke, smoke pushing through small cracks under pressure, window glass stained with dark soot and hot to touch, absence of active flame.
+  * Action: Perform vertical ventilation at highest point prior to entry to release superheated gases.
+
+Thermal Layering & Nozzle Discipline:
+  * Superheated gases rise, forming hot upper layers and cooler lower air.
+  * Water droplets directed into the upper column expand to steam at a 1,700:1 ratio.
+  * Excessive water steam generation destroys thermal balance, pushing scalding steam down onto firefighters and victims.
+  * Technique: Apply short, pulsing direct bursts to cool the overhead smoke layer without generating excess steam.
+
+
+1.3 LADDERS, CARRIES, AND SEARCH PROCEDURES
+
+Ground Ladder Positioning Rules:
+  * Standard Climbing Angle: 75 degrees (distance from wall = 1/4 of ladder working length).
+  * Roof Access: Extend 3 to 5 rungs above the roofline to provide a visible, secure handhold.
+  * Window Rescue: Place ladder tip just below the window sill level.
+  * Window Ventilation: Place ladder tip even with the top of the window frame on the windward (upwind) side.
+
+Angle Formula:
+  * Divide height to be reached by 4. Place the ladder butt that exact distance away from the building wall.
+  * Fly Placement: Fly section faces OUTWARD on wooden extension ladders; fly section faces INWARD on modern metal or fiberglass ladders (per NFPA standard recommendations).
+
+Primary Search Operations:
+  * Conduct in systematic patterns (left-hand or right-hand wall search).
+  * Maintain physical/visual contact with walls, thermal imaging cameras (TIC), or tool vectors.
+  * Keep low under the smoke layer to preserve thermal insulation and visibility.
+
+VEIS Protocol (Vent, Enter, Isolate, Search):
+  * V - VENT: Break/remove window to create entry point.
+  * E - ENTER: Climb into room through window.
+  * I - ISOLATE: IMMEDIATELY close the interior door to isolate the search room from the advancing fire path and flow path.
+  * S - SEARCH: Rapidly search the room for victims, then exit back through the window.
+
+
+1.4 TACTICAL VENTILATION & HOSE STREAMS
+
+Water Streams:
+  * Solid Stream: Maximum penetration, reach, minimum steam production, maintains thermal layering.
+  * Fog Stream: Maximum surface heat absorption, shorter reach, susceptible to wind and thermal disruption.
+
+Hose Line Operations:
+  * Stand on the inside of backup line curves to absorb nozzle reaction forces.
+  * Maintain backup firefighter position 3 to 4 feet behind the nozzle operator.
+
+Hydraulic Ventilation:
+  * Technique: Position nozzle 2 feet back from window/door opening. Set nozzle to a wide fog pattern covering 85% of the opening area. Direct spray outward to create a low-pressure draft pulling smoke/gases out of the structure.
+
+
+--------------------------------------------------------------------------------
+SECTION 2: FIREFIGHTER II (FF2) ADVANCED OPERATIONS
+--------------------------------------------------------------------------------
+
+2.1 ADVANCED FIRE SUPPRESSION & FOAM OPERATIONS (NFPA 1001 Section 5.3)
+
+Foam Application Methods:
+  1. Roll-On Method: Direct foam stream onto ground in front of flammable liquid spill, allowing foam to roll gently across liquid surface.
+  2. Bank-Down Method: Bounce foam stream off an object (wall, tank side, vehicle) so foam runs down and blankets the fuel.
+  3. Rain-Down Method: Shoot foam stream high into air above spill, allowing foam to rain gently over the fuel surface without disrupting liquid.
+
+Class A vs Class B Foams:
+  * Class A Foam (Structural / Wildland): Reduces water surface tension for faster soaking into wood/paper. Proportioning: 0.1% to 1.0%.
+  * Class B Foam (Flammable Liquids): Creates aqueous film blanket suppressing vapors and excluding oxygen.
+    - Hydrocarbons (Gasoline, Diesel, Oil): Proportion at 3%.
+    - Polar Solvents (Ethanol, Acetone, Alcohol): Require AR-AFFF proportioned at 6%.
+
+
+2.2 INCIDENT COMMAND SYSTEM (ICS) ON SCENE
+
+Tactical On-Scene Size-Up (4-Part Radio Brief):
+  1. Unit designation & arrival status (e.g., "Engine 1 on scene").
+  2. Brief incident description (e.g., "Two-story residential structure, heavy smoke showing from floor 2").
+  3. Operational strategy declaration ("Offensive interior attack").
+  4. Command establishment & post location ("Engine 1 establishing Main Street Command").
+
+Span of Control:
+  * NIMS Standard: 3 to 7 subordinates per supervisor (Optimum ratio = 5).
+  * Transfer of Command: Must be conducted FACE-TO-FACE whenever possible, with a detailed brief on incident progress, crew positions, safety hazards, and resource allocations.
+
+
+2.3 VEHICLE RESCUE & EXTRICATION TECHNIQUES
+
+Glass Management:
+  * Laminated Glass (Windshields & modern side glass): High strength, plastic interlayer. Requires windshield saw, reciprocating saw, or ax. Does NOT shatter easily.
+  * Tempered Glass (Side & rear windows): Shatters into small harmless pebbles. Use spring-loaded center punch in bottom corner of glass.
+
+Electric Vehicle (EV) & High-Voltage Safety:
+  * High-voltage wiring is color-coded ORANGE (up to 650V DC). NEVER cut orange wiring!
+  * Shut off ignition key, remove key fob 20+ feet away, pull high-voltage manual disconnect service plug if visible.
+  * Supplemental Restraint Systems (SRS / Airbags): Capacitors retain stored power for 10-15 minutes after battery disconnect.
+  * Follow 5-10-20 Rule: Maintain 5 inches clearance from side airbags, 10 inches from steering wheel, 20 inches from passenger dashboard airbag.
+
+
+2.4 PRESERVATION OF EVIDENCE & FIRE ORIGIN
+
+Fire Scene Protection Rules:
+  * Minimize structural disruption in suspected area of fire origin.
+  * Post a sentry or place red fire line tape around the perimeter.
+  * Avoid washing away potential accelerant evidence with heavy hose streams.
+  * Do NOT overhaul, remove ashes, charcoal, or furniture from origin room until fire investigator inspects and documents scene.
+
+Indications of Intentional / Arson Fires:
+  * Multiple independent points of origin.
+  * Pour patterns ("V-patterns" or burn trails on floors showing liquid accelerants).
+  * Missing personal valuables or family heirlooms prior to fire.
+  * Incendiary devices (bottles, timers, matches, unusual wiring).
+
+
+--------------------------------------------------------------------------------
+SECTION 3: FIRE HYDRAULICS FORMULAS & PUMP OPERATIONS
+--------------------------------------------------------------------------------
+
+3.1 PUMP DISCHARGE PRESSURE (PDP) FORMULA
+  PDP = NP + FL + EL + APP
+
+Where:
+  * PDP = Pump Discharge Pressure (PSI)
+  * NP  = Nozzle Pressure (PSI)
+  * FL  = Friction Loss (PSI)
+  * EL  = Elevation Loss/Gain (PSI)
+  * APP = Appliance Loss (PSI)
+
+
+3.2 FRICTION LOSS (FL) FORMULA
+  FL = C * (Q / 100)^2 * (L / 100)
+
+Where:
+  * C = Hose Diameter Friction Loss Coefficient
+  * Q = Flow Rate in Gallons Per Minute (GPM)
+  * L = Hose Lay Length in Feet
+
+
+3.3 HOSE DIAMETER COEFFICIENTS (C):
+  * 1.0" Booster Hose:   C = 150
+  * 1.5" Attack Hose:    C = 24
+  * 1.75" Attack Hose:   C = 15.5
+  * 2.0" Attack Hose:    C = 8
+  * 2.5" Supply/Line:    C = 2
+  * 3.0" Supply Line:    C = 0.8
+  * 5.0" Large Diameter: C = 0.08
+
+
+3.4 NOZZLE PRESSURE (NP) PRESETS:
+  * Standard Fog Nozzle:     100 PSI
+  * Low-Pressure Fog Nozzle: 75 PSI
+  * Smooth Bore Handline:    50 PSI
+  * Smooth Bore Master Stream: 80 PSI
+
+
+3.5 ELEVATION FACTOR (EL):
+  * Formula: EL = Elevation in Feet * 0.434
+  * Rule of Thumb: Add 5 PSI per floor (above ground) or subtract 5 PSI per floor (below ground).
+
+
+3.6 APPLIANCE LOSS (APP) PRESETS:
+  * Wye / Siamese / Manifold (flow > 350 GPM): +5 PSI
+  * Master Stream Appliance:                   +10 PSI
+  * Aerial Waterway / Riser:                  +15 PSI
+
+
+--------------------------------------------------------------------------------
+SECTION 4: FIREFIGHTER I & II Q&A STUDY GUIDE (FLASHCARDS)
+--------------------------------------------------------------------------------
+
+Q1 [FF1 - Fire Behavior]:
+What are the four components of the Fire Tetrahedron?
+A1: Oxygen, Fuel, Heat, and a Self-Sustaining Chemical Chain Reaction.
+
+Q2 [FF1 - PPE & SCBA]:
+How often must SCBA cylinders be hydrostatically tested?
+A2: Composite cylinders must be hydrostatically tested every 5 years (15-year maximum lifespan); Steel and Aluminum cylinders every 5 years (no set expiration if they pass).
+
+Q3 [FF1 - Ladders]:
+What is the standard angle and climbing angle for a fire service ground extension ladder?
+A3: 75 degrees. The fly section should face outward on wooden extension ladders, but fly section faces INWARD on modern metal or fiberglass ladders.
+
+Q4 [FF1 - Hose & Streams]:
+What is water hammer and how do you prevent it?
+A4: Water hammer is a pressure surge caused when water in motion is forced to stop suddenly (e.g., closing a nozzle/valve too fast). It can damage hoses, pumps, and water mains. Prevent it by opening and closing all valves and nozzles SLOWLY.
+
+Q5 [FF1 - Ventilation]:
+What is the difference between horizontal and vertical ventilation?
+A5: Horizontal ventilation uses doors and windows to clear heat/smoke. Vertical ventilation creates openings in the roof or highest ceiling point to allow heat and gases to escape upward.
+
+Q6 [FF2 - ICS / NIMS]:
+What are the five major functional areas of the Incident Command System (ICS)?
+A6: Command, Operations, Planning, Logistics, and Finance/Administration.
+
+Q7 [FF2 - Extrication]:
+In vehicle extrication, what is the proper sequence of securing the vehicle and hazards?
+A7: 1. Establish scene safety and traffic control.
+    2. Control hazards (fire, power lines, fuel leaks).
+    3. Stabilize the vehicle (chock wheels, cribbing).
+    4. Turn off ignition, move key fob, disconnect batteries (negative terminal first).
+
+Q8 [FF2 - Foam Operations]:
+What is the expansion ratio of medium expansion foam?
+A8: 20:1 to 200:1. (Low expansion foam is up to 20:1; High expansion foam is 200:1 to 1000:1).
+
+Q9 [FF2 - Pre-Incident Planning]:
+What is the main objective of conducting a pre-incident survey/plan?
+A9: To gather critical site-specific safety information (structural type, hazardous materials, water supply, utility shutoffs) to assist incident commanders in tactical decision-making and safety.
+
+Q10 [FF2 - Evidence Preservation]:
+What is a firefighter's primary responsibility at a fire scene regarding cause determination?
+A10: Observe unusual circumstances during response/arrival, preserve physical evidence of fire origin, and protect the chain of custody by limiting access to the area.
+
+================================================================================
+                       END OF FD FIRE OPS REFERENCE DOC
+================================================================================

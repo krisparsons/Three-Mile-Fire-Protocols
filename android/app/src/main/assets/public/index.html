@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#151619" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <title>TMFD Protocols</title>
+    <script type="module" crossorigin src="/assets/index-BpdYW46I.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DWbAohkE.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Force unregister any existing service workers and clear caches to ensure the latest preview is loaded
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(registrations => {
+          for (const registration of registrations) {
+            registration.unregister().then(() => {
+              console.log('Service Worker unregistered successfully');
+            });
+          }
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then(names => {
+          for (const name of names) {
+            caches.delete(name).then(() => {
+              console.log('Cache cleared:', name);
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+
