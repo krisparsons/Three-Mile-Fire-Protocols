@@ -613,1011 +613,1420 @@ SPECIALTY | St. Patrick Hospital (Missoula) | 500 W Broadway St, Missoula, MT 59
 • High-Visibility Vests (2 vests available)`,
     lastUpdated: '2026-01-01'
   },
-  // Section 1.0 — Incident Response SOPs
+  // SECTION 100 – ORGANIZATION & GOVERNANCE
   {
-    id: 'fire-1.1',
+    id: 'fire-100.00',
     category: 'Fire',
-    subCategory: 'Incident Response',
-    title: '1.1 Structure Fire Response SOP',
-    content: `**Purpose:** Provide a standardized sequence for responding to and managing structure fires to ensure firefighter safety, property conservation, and effective command.
-**Scope:** Applies to all members responding to any structure fire within Three Mile Fire Department jurisdiction or under mutual-aid agreement.
-**Blue Card Integration: Functions 1 – 8**
+    subCategory: '100 - Organization & Governance',
+    title: '100.00 – Purpose, Scope & Mission Statement',
+    content: `**THREE MILE FIRE DEPARTMENT — Stevensville, Montana**
+**Fire Operations Policy & Procedure Manual (Combination Department Edition)**
 
-**Procedures:**
-**1. Dispatch & Response:**
-• Crews respond within 2 minutes of dispatch.
-• Full PPE and SCBA must be worn.
-• Company officer confirms response and assigns crew roles.
+**Department Mission Statement:**
+*"As Fire Chief of the Three Mile Fire Department, my mission is to protect life, property, and the well-being of our community with professionalism, integrity, and pride. We take training very seriously and are committed to continuous improvement, ensuring our firefighters are highly skilled, disciplined, and prepared for any emergency. Serving a rural environment presents unique challenges, and we are dedicated to providing fast, reliable, and effective service no matter the conditions or distance. Our goal is to be the best, setting the standard for excellence in emergency response, teamwork, and community support, while earning and upholding the trust of those we are honored to serve every day."*
+— Chad Hampshire, Fire Chief | Three Mile Fire Department
 
-**2. Assume Command (Function 1):**
-• First arriving officer announces arrival and establishes “Command.”
-• Identify command post location and initial strategy (Offensive / Defensive / Transitional).
+**Purpose & Scope:**
+This manual establishes the policies, procedures, and standard operating guidelines for fire operations conducted by the Three Mile Fire Department, Stevensville, Montana. It applies to all Paid Staff and Volunteer Members during training, response, and any activity conducted under the authority of the district.
 
-**3. Situation Evaluation (Function 2):**
-• Perform 360° size-up.
-• Identify occupancy type, construction, fire location, life hazards, and exposures.
-• Request additional resources as needed.
+**Control & Intersection:**
+This manual covers fire operations. Where fire operations and medical operations intersect on scene, this manual controls for fire operations decisions and applicable EMS protocols control for patient care decisions.
 
-**4. Strategy & Incident Action Plan (Function 5):**
-• Determine operational mode.
-• Prioritize life safety → incident stabilization → property conservation.
-• Assign companies based on tasks and objectives.
-
-**5. Deployment Management (Function 4):**
-• Manage apparatus placement for hydrant access and egress.
-• Prevent freelancing; all assignments via Command.
-• Establish RIT as soon as resources allow.
-
-**6. Tactical Benchmarks (Function 7):**
-• Primary Search Complete → All Clear
-• Fire Under Control
-• Loss Stopped
-• PAR Complete
-• Command Terminated when safe
-
-**7. Transfer / Termination (Function 8):**
-• Transfer command face-to-face when possible.
-• Conduct final PAR and declare “Command Terminated.”
-
-**References:** NFPA 1561, 1710, 1500; Blue Card Functions 1–8; MCA Title 7 Ch. 33`,
-    lastUpdated: '2024-03-18'
+**Document Control:**
+This manual shall be reviewed annually by the Fire Chief and command staff. Revisions shall be presented to the Board of Fire Commissioners for adoption. Superseded versions shall be retained on file for a minimum of seven (7) years.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-1.2',
+    id: 'fire-100.01',
     category: 'Fire',
-    subCategory: 'Incident Response',
-    title: '1.2 Wildland Fire Response SOP',
-    content: `**Purpose:** To provide safe and effective guidelines for wildland and interface firefighting operations consistent with DNRC and NWCG standards.
-**Scope:** Applies to all members engaged in grass, brush, and wildland fire operations.
-**Blue Card Integration: Functions 2 – 8**
+    subCategory: '100 - Organization & Governance',
+    title: '100.01 – Divisions & Operational Functions',
+    content: `**Operational Divisions:**
+The Three Mile Fire Department is a combination fire department serving the Stevensville, Montana area, consisting of both Paid Staff (career personnel) and Volunteer Members operating under the same chain of command and safety standards. The district is organized into the following operational divisions:
 
-**Procedures:**
-**• Size-Up (Function 2):** Identify fuel type, weather, topography, access, and threats to life or property.
-**• Strategy (Function 5):** Determine Direct / Indirect Attack; announce ICS structure.
-**• Deployment (Function 4):** Maintain LCES (Lookouts, Communication, Escape routes, Safety zones).
-**• Communications (Function 3):** Use assigned tac channel; plain language; report progress.
-**• Benchmarks (Function 7):** Fire Perimeter Contained, Hot Spots Controlled, Mop-Up Complete, Resources Accounted For.
-**• Termination (Function 8):** Ensure rehab and equipment rehydration; return resources to service.
+• **Fire Suppression:** Structural, wildland, and vehicle fire response.
+• **Technical Rescue:** Vehicle extrication, water/ice rescue, and specialized rescue as trained and equipped.
+• **Hazardous Materials:** First-responder operations level response unless higher certified personnel are authorized.
+• **Training:** All personnel training, drills, and certification maintenance.
+• **Apparatus & Equipment:** Maintenance, readiness, inspection, and inventory control.
 
-**References:** NFPA 1051; NWCG S-130/S-190/L-180; Blue Card Functions 2–8`,
-    lastUpdated: '2024-03-18'
+**Organizational Chart:**
+A current organizational chart showing all positions, reporting relationships, and station assignments shall be maintained by the Fire Chief and posted at each station as a controlled insert.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-1.3',
+    id: 'fire-100.10',
     category: 'Fire',
-    subCategory: 'Incident Response',
-    title: '1.3 Vehicle Fire Response SOP',
-    content: `**Purpose:** Provide safe, standardized procedures for extinguishing vehicle fires involving conventional, hybrid, or alternative-fuel vehicles.
-**Scope:** Applies to all Three Mile Fire Department members responding to any vehicle fire.
-**Blue Card Integration: Functions 2 – 7**
+    subCategory: '100 - Organization & Governance',
+    title: '100.10 – Position Descriptions & Authority',
+    content: `**100.10.01 — Fire Chief:**
+Chief Executive Officer of the fire district, responsible for all operations, personnel, budget, and policy administration. Reports directly to the Board of Fire Commissioners.
+• *Minimum Qualifications:* Montana State Fire Instructor certification or equivalent; Firefighter II; Hazmat Operations; ICS-400; NIMS 700/800; Valid Montana CDL Class B or higher; 5 years progressive fire service experience including 2 years supervisory.
+• *Duties:* Budget administration, hiring & supervision of Paid Staff, volunteer recruitment/retention, policy enforcement, Board liaison, mutual aid coordination, and major incident command.
 
-**Procedures:**
-**1. Size-Up (Function 2):**
-o Determine vehicle type, fuel source, and exposure hazards.
-o Assess proximity to structures or wildland fuels.
+**100.10.02 — Deputy / Assistant Fire Chief:**
+Assumes command authority in Chief's absence. Assists with administrative, operational, and training oversight.
+• *Qualifications:* Firefighter II, Fire Officer I, Hazmat Ops, ICS-300, NIMS 700/800, Valid MT Driver's License, 3 years fire experience.
 
-**2. Strategy (Function 5):**
-o Position apparatus uphill / upwind at least 50 ft away.
-o Use full PPE and SCBA; approach at a 45° angle.
+**100.10.03 — Captain:**
+Company officer supervising personnel, apparatus, and station functions.
+• *Qualifications:* Firefighter II, Fire Officer I (within 18 mos), ICS-200, Valid MT Driver's License with appropriate endorsement, 2 years experience. First line of leadership.
 
-**3. Deployment (Function 4):**
-o Establish water supply and backup line.
-o Use foam or Class B agent if fuel involvement.
+**100.10.04 — Engineer / Driver-Operator:**
+Responsible for safe apparatus operation, pump/hydraulic systems, and command support.
+• *Qualifications:* Firefighter II, Driver/Operator — Pumper (NFPA 1002), Valid MT CDL Class B with air brake endorsement.
 
-**4. Tactical Benchmarks (Function 7):**
-o Fire Knockdown
-o All Clear of Occupants
-o Hazard Mitigated (batteries, fuel, airbags)
-o PAR Complete
+**100.10.05 — Firefighter (Paid Staff):**
+Performs fire suppression, rescue, and hazmat ops.
+• *Qualifications:* Firefighter I (FF II within 12 mos), ICS-100, Valid MT Driver's License, physical agility test, SCBA qualified.
 
-**5. Termination (Function 8):**
-o Overhaul for hidden fires, especially EV battery packs.
-o Notify law enforcement or towing for investigation/disposal.
+**100.10.06 — Firefighter (Volunteer Member):**
+Responds to dispatched incidents as available, attends training nights (min attendance required).
+• *Qualifications:* Firefighter I within 24 mos (enrollment in 6 mos), ICS-100, Valid MT Driver's License, physical agility, SCBA qualified.
 
-**References:** NFPA 1500, 1620, Blue Card Functions 2–8`,
-    lastUpdated: '2024-03-18'
+**100.10.09 — Board of Fire Commissioners (Trustee):**
+Statutory governing body under Montana law (MCA 7-33-2105, 7-33-2106), consisting of 5 elected/appointed trustees serving staggered 3-year terms. Sets policy, adopts budget, hires/evaluates Fire Chief, approves contracts and volunteer acceptances.
+
+**100.10.10 — Board President:**
+Presiding officer of the Board per MCA 7-33-2106(7). Signs official resolutions and manual adoption.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-1.4',
+    id: 'fire-100.20',
     category: 'Fire',
-    subCategory: 'Incident Response',
-    title: '1.4 Hazardous Materials / Gas Leak SOP',
-    content: `**Purpose:** Provide initial-response procedures for incidents involving chemical, biological, or unknown hazardous substances.
-**Scope:** Applies to all department personnel responding to HazMat or gas leak incidents within jurisdiction or mutual-aid areas.
-**Blue Card Integration: Functions 2 – 8**
+    subCategory: '100 - Organization & Governance',
+    title: '100.20 – Oath of Office & Code of Ethics',
+    content: `**100.20 — Sworn Oath of Office:**
+*"I, [Member Name], do solemnly swear (or affirm) that I will support and defend the Constitution of the United States and the Constitution of the State of Montana; that I will faithfully and impartially discharge the duties of a member of the Three Mile Fire Department to the best of my ability and judgment; that my fundamental duty is to safeguard life, health, and property against fire, medical emergency, and other peril, without regard to whom I am called to serve; that I will obey the lawful orders of those appointed over me, and will lead and support those entrusted to my care; that I will uphold the policies, procedures, and standards of this department, and will continually strive to improve my knowledge and skill in its service; that I recognize the badge and title of this department as a symbol of public trust, to be honored both on duty and off; and that I will at all times conduct myself in a manner that reflects honor upon myself, this department, and the community of Stevensville I am sworn to protect. I take this obligation freely, without any mental reservation or purpose of evasion. So help me God (or: This I affirm)."*
 
-**Procedures:**
-**• Initial Size-Up (Function 2):** Identify product, container, and environment. Use ERG for isolation distances.
-**• Strategy (Function 5):** Establish isolation, deny entry, protect exposures.
-**• Deployment (Function 4):** Position apparatus uphill / upwind; stage personnel; avoid contamination.
-**• Communications (Function 3):** Announce “HazMat Mode” and coordinate with law enforcement and utility reps.
-**• Benchmarks (Function 7):** Evacuation Complete, Leak Controlled, PAR Complete, Command Terminated.
-**• Termination (Function 8):** Decontaminate crews and equipment; notify State HazMat Team or DNRC if required.
+**100.21 — Code of Ethics Core Tenets:**
+• **Service Before Self:** Place community safety above personal interests.
+• **Integrity:** Honest and truthful in all reports, logs, and communications.
+• **Professionalism:** Highest standards of conduct, appearance, and competence.
+• **Courage:** Perform duties within the bounds of training, safety, and sound judgment.
+• **Continuous Improvement:** Seek improvement through study, training, and constructive feedback.
+• **Accountability:** Take responsibility for actions and consequences.
+• **Respect for Persons:** No discrimination on any protected characteristic.
+• **Stewardship:** Treat district property, apparatus, and equipment with care.`,
+    lastUpdated: '2026-08-08'
+  },
 
-**References:** NFPA 472, 1561; OSHA 1910.120; Blue Card Functions 2–8`,
-    lastUpdated: '2024-03-18'
+  // SECTION 200 – HR & PERSONNEL POLICIES
+  {
+    id: 'fire-200.01',
+    category: 'Fire',
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.01 – Career Selection, Hiring & 100-Point Scoring',
+    content: `**200.01 — Career Firefighter Selection & Hiring:**
+Objective, points-based ranking system for all full-time career firefighter hiring.
+
+**Minimum Pass/Fail Requirements:**
+• At least 18 years of age with High School Diploma or GED.
+• Valid Montana Driver's License with clean driving record.
+• State EMR or EMT-B certification baseline.
+• Ability to pass NFPA 1582 medical exam and CPAT physical test.
+• Practical Medical Call Assessment (Pass/Fail).
+
+**Points-Based Scoring System (100 Total Points):**
+1. **Experience (30 Max Pts):** 5 pts per year of active fire/EMS experience.
+2. **Certifications (30 Max Pts):** IFSAC/Pro-Board FF I (10 pts) + FF II (10 pts) + Wildland S-130/S-190 (10 pts).
+3. **Interview / Board (20 Max Pts):** Scored across Fire Skills, EMS Knowledge, Cultural Fit, and Communication on 1–5 scale.
+4. **Medical Level (10 Max Pts):** EMT-Advanced or Paramedic bonus (10 pts).
+5. **Preference Points (10 Max Pts):** Veteran Status or 12+ month District Volunteer (10 pts).
+
+**Rule of Three Advancement:**
+Number of candidates advanced to interview is the greater of: (a) 3 times open positions, or (b) 5 candidates.
+
+**Interview Panel:** Minimum 3 voting members (Fire Chief, Command Officers, Board Trustees). Background check and fingerprinting (DOJ) mandatory prior to appointment.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-1.5',
+    id: 'fire-200.02',
     category: 'Fire',
-    subCategory: 'Incident Response',
-    title: '1.5 Medical & Rescue Response SOP',
-    content: `**Purpose:** Outline basic procedures for emergency medical and rescue responses coordinated with EMS agencies.
-**Scope:** Applies to all personnel responding to medical, rescue, or extrication calls.
-**Blue Card Integration: Functions 1 – 8**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.02 – Veteran Recruitment & Preference Points',
+    content: `**Veteran-Preferred Employer Policy:**
+Three Mile Fire Department actively recruits veterans and provides structured hiring preference for honorably discharged U.S. Armed Forces members.
 
-**Procedures:**
-**1. Assume Command (Function 1):** First arriving unit establishes Command and scene control.
-**2. Situation Evaluation (Function 2):** Assess hazards, number of patients, and resource needs.
-**3. Communications (Function 3):** Use plain language; request EMS, law enforcement, or air medical.
-**4. Deployment (Function 4):** Assign triage, treatment, and transport sectors as needed.
-**5. Strategy (Function 5):** Apply ICS for MCI incidents (IS-100/200 compliant).
-**6. Benchmarks (Function 7):** All Patients Accessed, All Patients Transported, PAR Complete.
-**7. Termination (Function 8):** Debrief; complete patient care and NFIRS documentation.
+**Preference Points Breakdown:**
+• **Standard Veteran Preference (5 pts):** Requires DD-214 showing "Honorable" or "Under Honorable Conditions" discharge.
+• **Disabled Veteran Preference (10 pts):** Requires DD-214 + VA Disability Rating Letter.
+• **Current 3MF Volunteer (5 pts):** 12+ months in good standing verified by Fire Chief.
 
-**References:** NFPA 1561, 1584, OSHA 1910.1030, Blue Card Functions 1–8`,
-    lastUpdated: '2024-03-18'
+**Military Skills Assessment:**
+Conduct MOS evaluation for veteran applicants to determine accelerated training or state certification waivers. Combat Medics and Corpsmen prioritized for immediate field placement upon state reciprocity.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-1.6',
+    id: 'fire-200.03',
     category: 'Fire',
-    subCategory: 'Incident Response',
-    title: '1.6 Water / Ice Rescue SOP',
-    content: `**Purpose:** Establish safe operational procedures for surface, swift-water, and ice-rescue incidents.
-**Scope:** Applies to all department personnel trained and authorized for water or ice rescue operations.
-**Blue Card Integration: Functions 2 – 8**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.03 – Volunteer Acceptance & Probation',
+    content: `**200.03 — Volunteer Acceptance Process:**
+1. Application & valid Montana driver's license submission.
+2. In-person interview with Fire Chief or designee.
+3. Criminal background check (fingerprinting not required for volunteers).
+4. Formal Board of Fire Commissioners approval.
+5. 4-month probationary period & signed Volunteer Member Agreement.
 
-**Procedures:**
-**• Size-Up (Function 2):** Determine victim location, water type (still, moving, frozen), access points, and hazards.
-**• Strategy (Function 5):** Decide between Reach-Throw-Row-Go methods.
-**• Deployment (Function 4):** Assign shore-based rescuer, safety officer, and downstream spotter.
-**• Communications (Function 3):** Maintain continuous radio contact; use hand signals if needed.
-**• Benchmarks (Function 7):** Victim Located, Victim Removed, PAR Complete, Command Terminated.
-**• Termination (Function 8):** Rehab rescuers for cold exposure; clean and inspect equipment.
+**200.03a — Volunteer Probation & Membership Vote:**
+• **Duration:** 4 months from conditional acceptance (extension up to 2 additional months if needed).
+• **Expectations:** Attend min 75% of scheduled training nights & meetings; respond to calls as available; complete orientation within 30 days; enroll in FF I within 6 months.
+• **Restrictions:** Probationary volunteers SHALL NOT operate apparatus, enter IDLH atmospheres, or perform tasks requiring certification.
+• **Membership Vote:** Secret ballot vote by active department membership at regular meeting (majority vote required).
 
-**References:** NFPA 1006, 1670; Blue Card Functions 2–8`,
-    lastUpdated: '2024-03-18'
-  },
-  // Section 2.0 — Command Operations SOPs
-  {
-    id: 'fire-2.1',
-    category: 'Fire',
-    subCategory: 'Command Operations',
-    title: '2.1 Incident Command System (SOP)',
-    content: `**Purpose:** Establish a standardized system for command, control, and coordination of emergency incidents.
-**Scope:** Applies to all emergency operations within the Three Mile Fire Department jurisdiction or under mutual aid.
-**Blue Card Integration: Functions 1–8**
-
-**Procedures:**
-**1. Assume Command (Function 1):** First arriving officer announces arrival and establishes Command.
-**2. Position Command (Function 1):** Locate command post for visibility and communications.
-**3. Transfer of Command:** Face-to-face whenever possible; include status and assignments.
-**4. Command Staff:** Appoint Safety, PIO, and Liaison as needed.
-**5. Span of Control:** 3–7 companies per supervisor; use divisions/groups.
-**6. Benchmarks:** All Clear • Fire Under Control • Loss Stopped • PAR Complete.
-**7. Termination:** IC declares “Command Terminated” after accountability and overhaul.
-
-**References:** NFPA 1561, 1500, 1021; Blue Card Functions 1–8; MCA Title 7 Ch. 33`,
-    lastUpdated: '2024-03-18'
+**200.03b — Paid Staff Probationary Period:**
+• 12 months from hire. Written evaluations at 90-day, 180-day, and 12-month marks. At-will separation per Montana employment law.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-2.2',
+    id: 'fire-200.04',
     category: 'Fire',
-    subCategory: 'Command Operations',
-    title: '2.2 Tactical Command Operations (SOP)',
-    content: `**Purpose:** Provide direction for incident commanders and company officers during tactical operations.
-**Blue Card Integration: Functions 2–7**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.04 – Compensation & Step Pay Scale (Paid Staff)',
+    content: `**Paid Staff Pay Scale & Advancement:**
+Starting pay is $28.00/hr. Step advancement is tied exclusively to mill levy increases and financial capacity — NOT time served or tenure.
 
-**Procedures:**
-**• Size-Up (Function 2):** Continuous situation evaluation.
-**• Strategy (Function 5):** Declare offensive, defensive, or transitional mode.
-**• Task Assignments (Function 4):** Use task-location-objective radio format (e.g., “Engine 1 – Fire Attack – Alpha side interior knockdown”).
-**• Deployment Control:** Manage staging and prevent freelancing.
-**• Accountability:** PAR every 20 minutes or after benchmarks.
-**• Progress Reports:** Conditions–Actions–Needs (CAN) updates.
-**• Benchmarks:** All Clear • Fire Under Control • Loss Stopped • PAR Complete.
+**Pay Step Matrix:**
+• **Step 1 (Entry): $28.00 / hr** — Starting rate upon hire for all new Paid Staff.
+• **Step 2: $29.50 / hr** — Firefighter II certification obtained + satisfactory evaluation + Board approval.
+• **Step 3: $31.00 / hr** — Driver/Operator certification (NFPA 1002) + satisfactory evaluation + Board approval.
+• **Step 4: $32.75 / hr** — Fire Officer I certification or equivalent leadership + satisfactory evaluation + Board approval.
+• **Step 5 (Senior): $34.50 / hr** — Sustained leadership contribution + satisfactory evaluation + Board approval.
 
-**References:** NFPA 1710/1720, 1561; Blue Card Functions 2–7`,
-    lastUpdated: '2024-03-18'
+**Key Rule:**
+Advancement is funded by mill levy revenue, not earned automatically by time in rank. The Board of Fire Commissioners must approve every step increase.
+
+**Cost-Of-Living Adjustments (COLA):**
+Reviewed annually by November 1 and set by Board resolution based on mill levy capacity.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-2.3',
+    id: 'fire-200.05',
     category: 'Fire',
-    subCategory: 'Command Operations',
-    title: '2.3 Radio Communications (SOP)',
-    content: `**Purpose:** Provide consistent and effective radio procedures for all incident operations.
-**Blue Card Integration: Function 3 (Communications)**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.05 – Volunteer Member Quarterly Stipends',
+    content: `**Quarterly Stipend Amount:**
+Active Volunteer Members in good standing receive a flat quarterly stipend of **$120.00 per quarter** ($480/year) paid by check at the end of each calendar quarter (March 31, June 30, September 30, December 31).
 
-**Procedures:**
-**1. Channel Assignments:** Dispatch announces Command and Tactical channels.
-**2. Plain Language:** No 10-codes; use unit identifiers and plain speech.
-**3. Message Format:** Unit → Command → Message (e.g., “Engine 2 to Command, fire knocked down, checking extension”).
-**4. Emergency Traffic:** Declared for immediate hazard.
-**5. Mayday:** “Mayday, Mayday, Mayday” followed by unit, location, situation, needs.
-**6. CAN Reports:** Conditions, Actions, Needs for status updates.
-**7. Termination:** IC announces Command terminated when incident complete.
+**Eligibility & Good Standing:**
+• Must be in active status (not on inactive, hold, or suspension).
+• Must meet minimum quarterly training and call participation requirements defined in Volunteer Agreement.
+• No outstanding equipment or documentation obligations.
+• Probationary volunteers become eligible after formal membership vote acceptance.
 
-**References:** NFPA 1561 §7; Blue Card Function 3; MCA Title 7 Ch. 33`,
-    lastUpdated: '2024-03-18'
+**Tax Treatment:**
+Subject to federal/state reporting; district issues 1099 form annually.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-2.4',
+    id: 'fire-200.06',
     category: 'Fire',
-    subCategory: 'Command Operations',
-    title: '2.4 Mutual Aid & Interagency Coordination (SOP)',
-    content: `**Purpose:** Ensure safe and efficient integration of mutual-aid and outside agency resources into incident operations.
-**Blue Card Integration: Functions 5–8**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.06 – Platoon Shift Schedule, Attendance & Swaps',
+    content: `**Rotation Model (24/7/365 Staffing):**
+Three platoons (A, B, C) working 24-hour rotating shifts (24 hours on / 48 hours off).
+• **Shift Change:** Official shift change occurs at **08:00 hours**. Personnel must be in uniform and ready for duty.
+• **Face-to-Face Relief:** No member shall leave station until physically relieved by oncoming shift.
+• **Tardiness:** Arriving after 08:00 without prior authorization is a conduct violation.
+• **Sick Call:** Must notify on-duty Shift Officer no later than **06:30 hours**.
 
-**Procedures:**
-**• Requesting Aid:** IC requests via Dispatch per mutual-aid agreements.
-**• Integration:** Responding units report to Staging for assignment by Command.
-**• Unified Command:** Establish with other jurisdictions when shared responsibility.
-**• Briefings:** Provide incident status, strategy, and safety information.
-**• Communications:** Assign interoperable channels and plain-language protocols.
-**• Demobilization:** Release resources through Command.
-**• Documentation:** Record mutual-aid use for reimbursement and training review.
+**Shift Swaps (Mutual Trades):**
+• Must be financially neutral (FLSA convenience).
+• Written request submitted via Shift Swap Form at least 48 hours in advance.
+• Requires equal certification level (e.g., EMT for EMT).
+• Failure to report by agreed trade partner treated as No-Call/No-Show.
 
-**References:** NFPA 1561, 1021, 1710; Blue Card Functions 5–8; MCA Title 7 Ch. 33`,
-    lastUpdated: '2024-03-18'
-  },
-  // Section 3.0 — Safety & Personnel SOPs
-  {
-    id: 'fire-3.1',
-    category: 'Fire',
-    subCategory: 'Safety & Personnel',
-    title: '3.1 Firefighter Safety & Accountability SOP',
-    content: `**Purpose:** To maintain firefighter safety and ensure complete personnel accountability throughout all incident operations.
-**Scope:** Applies to all personnel engaged in emergency response or training activities under Command authority.
-**Blue Card Integration: Functions 1 – 8**
-
-**Procedures:**
-**1. Assume Command (Function 1)**
-**• The first arriving officer establishes Command and announces incident strategy.**
-**• The IC appoints a Safety Officer for working fires or complex incidents.**
-
-**2. Situation Evaluation (Function 2)**
-**• Identify immediate life hazards and risk versus benefit for entry.**
-**• Apply “Go/No-Go” decision model prior to offensive interior operations.**
-
-**3. Communications (Function 3)**
-**• Use plain language for safety orders and emergency traffic.**
-**• Declare “Emergency Traffic” for any unsafe condition or structural collapse.**
-
-**4. Deployment Management (Function 4)**
-**• Use crew-integrity principle: members enter, operate, and exit together.**
-**• Maintain company location status on the accountability board or tag system.**
-
-**5. Strategy & Incident Action Plan (Function 5)**
-**• Prioritize life safety; assign RIT as soon as resources allow.**
-**• Implement Two-In/Two-Out for interior attack (OSHA 1910.134).**
-
-**6. Organization / Sector Management (Function 6)**
-**• Safety Officer monitors operations and has authority to halt unsafe acts.**
-**• Division/Group Supervisors track assigned personnel and report to Command.**
-
-**7. Review / Evaluate / Revise (Function 7)**
-**• PAR shall be conducted every 20 minutes or upon strategic change.**
-**• Benchmarks: All Clear • Fire Under Control • PAR Complete • Evacuation Complete.**
-
-**8. Continue / Transfer / Terminate Command (Function 8)**
-**• Before termination, Command confirms accountability and rehab completion.**
-
-**References:** NFPA 1500, 1561, 1710/1720; OSHA 1910.134; Blue Card Functions 1–8; MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Mandatory Coverage ("MANDO"):**
+If a shift remains unfilled, district mandates the least-senior qualified off-going member to remain on duty.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-3.2',
+    id: 'fire-200.07',
     category: 'Fire',
-    subCategory: 'Safety & Personnel',
-    title: '3.2 PPE & SCBA Use and Maintenance SOP',
-    content: `**Purpose:** To ensure all firefighters operate with properly maintained, fully functional personal protective equipment (PPE) and self-contained breathing apparatus (SCBA) that meet NFPA and OSHA standards.
-**Scope:** Applies to every member of Three Mile Fire Department engaged in emergency, training, or standby operations.
-**Blue Card Integration: Functions 3 – 4 (Communications & Deployment Management)**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.07 – Leave Policies & USERRA Protections',
+    content: `**Vacation Leave (Paid Staff):**
+• 0–2 years: 80 hrs/yr
+• 3–5 years: 120 hrs/yr
+• 6+ years: 160 hrs/yr
+• Maximum accrual: 240 hours. Requires 14 days advance notice and Fire Chief approval. Must not drop staffing below minimums.
 
-**Procedures:**
-**1. PPE Compliance**
-**• All PPE must comply with NFPA 1851 (current edition).**
-**• Members shall don full structural or wildland PPE appropriate to the incident before entering the hazard area.**
-**• PPE includes: turnout coat/pants, helmet with shroud, hood, gloves, boots, and eye protection.**
-**• Wildland gear shall be worn for grass, brush, and interface incidents (no structural gear in wildland environments).**
+**Sick Leave (Paid Staff):**
+• Accrual: 3.69 hours per pay period (96 hrs/yr).
+• Physician statement required for absences exceeding 3 consecutive shifts.
 
-**2. Inspection and Maintenance**
-**• Pre-Shift: Each member inspects assigned PPE and SCBA before going in service.**
-**• Post-Incident: Perform gross decon of gear and inspect for damage or contamination.**
-**• Quarterly Inspection: Company officers ensure all PPE is checked and logged.**
-**• Annual Advanced Inspection: Performed by a qualified technician per NFPA 1851.**
-**• Damaged or contaminated PPE shall be tagged OOS (out of service) and replaced before next use.**
+**Holidays:**
+Eleven (11) paid holidays per MCA 1-1-216. Working staff receive regular rate plus holiday premium or comp time.
 
-**3. SCBA Operations**
-**• All SCBAs must meet NFPA 1981 and 1982 standards.**
-**• Members shall complete department-approved SCBA training and annual fit-testing per OSHA 1910.134.**
-**• SCBA must be worn in any atmosphere that is IDLH or potentially IDLH until the IC declares “Air Clear.”**
-**• Air-management: follow the “Rule of Thirds” (1/3 for entry, 1/3 for exit, 1/3 reserve).**
-**• Report any malfunction immediately to the company officer and remove the unit from service.**
+**FMLA & USERRA Military Leave:**
+Up to 12 weeks unpaid job-protected FMLA leave. Military leave protected under USERRA and Montana state law with reemployment rights.
 
-**4. Cleaning and Decontamination**
-**• After any fire or contaminant exposure, gross decon will be performed on-scene before removing gear.**
-**• Gear will be washed per manufacturer specifications using approved detergent and extractor.**
-**• Members shall shower within one hour of returning to quarters to limit carcinogen absorption.**
-
-**5. Record Keeping**
-**• All inspections, repairs, and cleanings logged on PPE/SCBA Maintenance Form (Appendix C).**
-**• Records retained for at least 10 years or the life of the gear.**
-
-**6. Enforcement**
-**• Company officers shall ensure members comply with this policy and remove defective gear from service.**
-**• Repeated non-compliance subject to disciplinary action under the Department Code of Conduct.**
-
-**References:** NFPA 1851 (Care & Maintenance of PPE) • NFPA 1981/1982 (SCBA) • NFPA 1500 • OSHA 1910.134 • Blue Card Functions 3–4 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Bereavement:**
+Up to three (3) paid shifts upon death of immediate family member.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-3.3',
+    id: 'fire-200.09',
     category: 'Fire',
-    subCategory: 'Safety & Personnel',
-    title: '3.3 Injury, Exposure & Illness Reporting SOP',
-    content: `**Purpose:** To ensure that every injury, exposure, or illness sustained during emergency operations, training, or duty time is reported, treated, and documented in accordance with department policy, NFPA 1500, 1582, and OSHA requirements.
-**Scope:** Applies to all members of the Three Mile Fire Department at all times on duty or representing the department.
-**Blue Card Integration: Functions 7 – 8 (Review / Continue Command)**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.09 – Conduct Standards & Conduct Under Oath',
+    content: `**Professional Conduct Standards:**
+• **Truthfulness:** Truthful in all reports, statements, and logs. Falsification is grounds for immediate termination.
+• **Obedience to Orders:** Follow lawful orders promptly. Safety concerns reported immediately.
+• **Social Media:** Prohibited from posting patient/victim info, scene photos without Chief approval, or disparaging content.
+• **Substance Use:** Zero tolerance for alcohol, marijuana, or impairing drugs on duty or responding.
+• **Tobacco:** Smoking/vaping prohibited in apparatus, facilities, or in uniform during ops.
 
-**Procedures:**
-**1. Immediate Notification**
-**• Any injury, near miss, or exposure must be reported immediately to the Company Officer and the IC.**
-**• The IC shall assess scene safety, call for EMS as required, and initiate a PAR if the event occurred during active operations.**
+**Duty to Cooperate & Subpoenas:**
+Paid Staff and Volunteers MUST cooperate with legal requests, court subpoenas, and investigations arising from official duties.
 
-**2. Medical Evaluation and Treatment**
-**• Members will receive prompt medical evaluation for all reported injuries and exposures.**
-**• Transport to a medical facility if there is any doubt regarding the seriousness of the condition.**
-**• All medical evaluations and follow-ups will comply with NFPA 1582 medical requirements.**
-
-**3. Exposure Control**
-**• Follow the department’s Bloodborne Pathogen Plan per OSHA 1910.1030.**
-**• Immediately wash and disinfect affected area; replace contaminated PPE.**
-**• Complete an Exposure Report Form (Appendix E) before the end of the shift.**
-
-**4. Documentation and Reporting**
-**• The Company Officer completes the Injury / Exposure Report within 24 hours.**
-**• The Chief Officer forwards reports to Administration for OSHA and Workers’ Comp filing.**
-**• Maintain confidentiality of medical information in accordance with HIPAA guidelines.**
-
-**5. Follow-Up and Review**
-**• Safety Officer reviews each incident for root-cause analysis.**
-**• Findings presented during monthly Safety Committee meeting.**
-**• Annual summary compiled to identify trends and prevention strategies.**
-
-**6. Benchmarks / Command Integration**
-**• IC announces “Injury Controlled” once the patient is removed from hazard area.**
-**• IC ensures accountability (PAR Complete) before resuming normal operations.**
-**• Command terminated only after safety confirmation and documentation initiated.**
-
-**References:** NFPA 1500 (Safety & Health Program) • NFPA 1582 (Medical Evaluations) • NFPA 1584 (Rehabilitation) • OSHA 1904 & 1910 • Blue Card Functions 7–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Conduct Under Oath (Zero Tolerance):**
+Dishonesty under oath, lying, falsifying testimony, or forging records under oath results in **immediate administrative leave pending termination review** by Fire Chief and Board of Commissioners.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-3.4',
+    id: 'fire-200.10',
     category: 'Fire',
-    subCategory: 'Safety & Personnel',
-    title: '3.4 Critical Incident Stress Management (CISM) SOP',
-    content: `**Purpose:** To safeguard the behavioral and emotional health of Three Mile Fire Department members following exposure to traumatic or high-stress incidents.
-**Scope:** Applies to all department members who participate in emergency operations, training, or administrative support where a critical incident occurs.
-**Blue Card Integration: Function 8 (Continue / Transfer / Terminate Command)**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.10 – Harassment, Discipline & Grievance SOGs',
+    content: `**200.10 — Non-Discrimination & Anti-Harassment:**
+Zero tolerance for harassment or discrimination based on race, color, religion, sex, age, disability, or protected status. Prompt investigation & non-retaliation guarantee.
 
-**Procedures:**
-**1. Activation Criteria:**
-• Initiated after incidents involving:
-o Line-of-duty death or serious injury to personnel
-o Multiple fatalities or severe pediatric cases
-o Extended or high-stress operations
-o Any situation at the discretion of the Fire Chief, IC, or Safety Officer
+**200.11 — Progressive Discipline Steps:**
+1. **Verbal Counseling:** Documented in writing within 24 hours.
+2. **Written Reprimand:** Signed by supervisor and member.
+3. **Suspension Without Pay:** 1–14 days (Paid Staff) or suspension from duty (Volunteers).
+4. **Demotion in Rank.**
+5. **Termination / Removal from Membership.**
+*Serious Violations (falsification, theft, assault, impairment, safety insubordination) warrant immediate termination without prior steps.* Due process: 5 business days to respond; appeal to Board within 10 days.
 
-**2. Immediate Defusing:**
-• Conducted within 1–4 hours after the incident if possible.
-• Led by a trained Peer Support Team member or CISM coordinator.
-• Purpose: allow members to discuss the event, share reactions, and identify those who may need additional support.
-
-**3. Formal Debriefing:**
-• Conducted within 24–72 hours by a qualified CISM team or mental-health professional.
-• Participation is voluntary and confidential.
-• Focus: stress education, coping mechanisms, and available resources.
-
-**4. Referral and Follow-Up:**
-• Members showing signs of distress are referred to the department’s contracted behavioral-health provider.
-• Peer Support Team conducts follow-up check-ins at 7 and 30 days post-incident.
-• The Chief or designee ensures appropriate leave or duty modification as needed.
-
-**5. Integration with Command (Blue Card Function 8):**
-• IC or Safety Officer notifies Command when CISM activation is warranted.
-• IC ensures demobilization and post-incident briefing include stress-management emphasis before terminating Command.
-• “Command Terminated” is not announced until personnel accountability and wellness checks are complete.
-
-**6. Training and Prevention:**
-• Annual mental-health and resiliency training for all members.
-• Encourage early peer-to-peer engagement following stressful calls.
-• Promote a culture of support and stigma-free access to help.
-
-**7. Confidentiality:**
-• All discussions during CISM activities are confidential; no information is included in personnel files.
-• Peer Support members are bound by confidentiality agreements.
-
-**References:** NFPA 1500 (Behavioral Health) • NFPA 1582 (Medical Programs) • NFPA 1584 (Rehabilitation) • OSHA 1910 • Blue Card Function 8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
-  },
-  // Section 4.0 — Operations SOPs
-  {
-    id: 'fire-4.1',
-    category: 'Fire',
-    subCategory: 'Operations',
-    title: '4.1 Water Supply Operations SOP',
-    content: `**Purpose:** Provide consistent methods for securing and sustaining an adequate water supply for firefighting operations.
-**Scope:** Applies to all Three Mile Fire Department apparatus and personnel operating on incidents requiring water flow.
-**Blue Card Integration: Functions 4 – 5**
-
-**Procedures:**
-**1. Establishing Water Supply**
-**• First-due engine secures its own supply when possible.**
-**• If hydrants are unavailable, initiate tanker shuttle or draft operation.**
-**• Announce on radio: “Water supply established” when continuous flow achieved.**
-
-**2. Hydrant Operations**
-**• Hydrant FF ensures hydrant is flushed and fully opened.**
-**• Supply line gated or clamped before charging.**
-**• Maintain minimum 20 psi residual pressure.**
-
-**3. Tanker Shuttle / Rural Water Ops**
-**• Designate Water Supply Group Supervisor.**
-**• Establish fill-site and dump-site crews.**
-**• Maintain traffic flow; use cones and lighting for safety.**
-
-**4. Relay Pumping**
-**• Use when distance or elevation causes pressure loss.**
-**• All relay engines communicate discharge/intake pressures to Command.**
-
-**5. Benchmarks (Function 7)**
-**• Sustained Water Established**
-**• Full Flow Maintained**
-**• PAR Complete**
-
-**References:** NFPA 1901, 1962, 1561, 1710/1720; Blue Card Functions 4–5; MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**200.12 — Grievance Procedure:**
+Step 1: Discussion with immediate supervisor within 14 days.
+Step 2: Written grievance to Fire Chief within 7 days.
+Step 3: Appeal to Board of Fire Commissioners within 14 days (Board decision final).`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-4.2',
+    id: 'fire-200.13',
     category: 'Fire',
-    subCategory: 'Operations',
-    title: '4.2 Ventilation SOP',
-    content: `**Purpose:** Provide safe, coordinated procedures for removing heat, smoke, and gases during fire suppression.
-**Scope:** Applies to all interior and exterior ventilation operations.
-**Blue Card Integration: Functions 4 – 7**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.13 – Drug & Alcohol-Free Workplace',
+    content: `**Zero Tolerance Policy:**
+Being under the influence of alcohol, marijuana, or illegal drugs while on duty, responding, or operating apparatus is grounds for immediate termination. No exceptions.
 
-**Procedures:**
-**1. Coordination with Fire Attack (Function 5)**
-**• Ventilation must be timed with interior attack.**
-**• IC confirms fire location and crew positions before ordering ventilation.**
+**Prescription Medications:**
+Members taking impairing prescription medication must notify the Fire Chief or Shift Officer prior to shift for reassignment to non-operational duties.
 
-**2. Horizontal Ventilation**
-**• Preferred initial method when safe.**
-**• Open leeward windows first to draw heat toward windward openings.**
+**Mandatory Post-Incident Testing:**
+Drug and alcohol testing conducted within **two (2) hours** of:
+a. Any vehicle accident involving district apparatus.
+b. Any on-the-job injury requiring clinical medical treatment.
+c. Any near-miss incident with supervisor suspicion of impairment.
+*Refusal to submit is treated as a positive test result.*
 
-**3. Vertical Ventilation**
-**• Roof operations require roof ladder and full PPE / SCBA.**
-**• Minimum of two firefighters on roof; Safety line secured.**
-**• Cut 4×4 or triangular opening near fire room.**
-
-**4. Positive Pressure Ventilation (PPV)**
-**• Initiate only after attack crew in place and exhaust opening created.**
-**• Maintain control of entry door to prevent flashover conditions.**
-
-**5. Benchmarks (Function 7)**
-**• Ventilation Complete**
-**• All Clear**
-**• Fire Under Control**
-**• PAR Complete**
-
-**References:** NFPA 1500, 1561, 92, 1710, 220; Blue Card Functions 4–7; MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Montana Marijuana Act Note:**
+Montana law does NOT require employers to accommodate marijuana use in safety-sensitive emergency response roles.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-4.3',
+    id: 'fire-200.14',
     category: 'Fire',
-    subCategory: 'Operations',
-    title: '4.3 Salvage & Overhaul SOP',
-    content: `**Purpose:** Minimize property loss and ensure complete extinguishment after knockdown.
-**Scope:** Applies to all personnel engaged in post-fire operations.
-**Blue Card Integration: Functions 5 – 7**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.14 – Safe Driving, Vehicle Ops & EVOC',
+    content: `**General Driving Rules:**
+All traffic laws must be obeyed during non-emergency travel. Seatbelts mandatory for all occupants at all times.
 
-**Procedures:**
-**1. Salvage Operations (Function 5)**
-**• Cover furniture and equipment with salvage covers.**
-**• Divert water with spouts, chutes, and drainage tubes.**
-**• Shut off utilities as directed by IC.**
+**Emergency Response (Code 3):**
+• Lights & sirens are a request for right-of-way.
+• Max speed limit: **Do NOT exceed posted speed limit by more than 10 MPH**.
+• Never exceed speeds safe for weather/road conditions.
 
-**2. Overhaul Operations (Function 6)**
-**• Check for hidden fire with TIC and hand tools.**
-**• Remove debris carefully to preserve evidence.**
-**• Coordinate with Investigation Sector before moving items of interest.**
+**Intersection Rule:**
+Drivers MUST come to a **complete stop at all red lights and stop signs**. Proceed only when all lanes yield and path is clear.
 
-**3. Safety Considerations**
-**• Continue SCBA use until atmosphere declared safe by monitoring.**
-**• Monitor structural integrity and heat levels.**
+**Backing Policy:**
+No apparatus backed without at least **one (1) designated spotter** at rear with radio/hand contact. If no spotter, perform 360-degree walk-around first.
 
-**4. Benchmarks (Function 7)**
-**• Loss Stopped**
-**• Overhaul Complete**
-**• PAR Complete**
-
-**References:** NFPA 1500, 1561, 1710, 1031; Blue Card Functions 5–7; MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Licensing & DUI Reporting (200.18):**
+Valid Montana driver's license + EVOC course completion. Any license suspension, revocation, or DUI conviction MUST be reported to Fire Chief within **24 hours** (failure to report = immediate suspension).`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-4.4',
+    id: 'fire-200.15',
     category: 'Fire',
-    subCategory: 'Operations',
-    title: '4.4 Fire Investigation & Scene Preservation SOP',
-    content: `**Purpose:** To preserve the fire scene for cause-and-origin determination and ensure safety until the investigation is complete.
-**Scope:** Applies to all personnel operating on incidents requiring fire investigation or law-enforcement coordination.
-**Blue Card Integration: Functions 7 – 8**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.15 – Social Media, Public Image & HIPAA Privacy',
+    content: `**200.15 — Social Media & Public Image:**
+• **Scene Content:** Prohibited from taking or posting scene photos/videos of emergency scenes, patients, or victims without Fire Chief written authorization.
+• **Endorsements:** 3MF logo, apparatus, or uniform cannot be used for commercial/political endorsements.
+• **Tailboard Talk:** Specific call details must remain private inside station.
 
-**Procedures:**
-**1. Scene Security**
-**• IC establishes control of entry points and logs all personnel entering the scene.**
-**• No person re-enters structure after fire is declared out without IC authorization.**
-
-**2. Preservation of Evidence**
-**• Do not move or disturb items suspected to be part of origin or cause.**
-**• Protect possible evidence from overhaul or weather damage when possible.**
-
-**3. Coordination with Investigators (Function 6)**
-**• Upon arrival of Fire Marshal or Law Enforcement, IC transfers scene control after briefing.**
-**• Document time and personnel receiving scene custody.**
-
-**4. Termination (Function 8)**
-**• IC announces “Scene Released to Investigator” when operations complete.**
-**• Command terminates after accountability confirmed and investigator assumes control.**
-
-**References:** NFPA 921 (Guide for Fire & Explosion Investigations) • NFPA 1033 (Fire Investigator Qualifications) • Blue Card Functions 7–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
-  },
-  // Section 5.0 — Training & Administration SOPs
-  {
-    id: 'fire-5.1',
-    category: 'Fire',
-    subCategory: 'Training & Administration',
-    title: '5.1 Training & Certification SOP',
-    content: `**Purpose:** To ensure all department personnel maintain the knowledge, skills, and abilities necessary to perform their assigned duties safely and effectively.
-**Scope:** Applies to all career, volunteer, and auxiliary members of the Three Mile Fire Department.
-**Blue Card Integration: Functions 5 – 8**
-
-**Procedures:**
-**1. Training Program Development (Function 5)**
-**• The Training Officer prepares an Annual Training Plan addressing structural, wildland, rescue, EMS, and driver training.**
-**• Plan aligns with NFPA 1001, 1002, 1021, and 1403 standards.**
-**• Minimum quarterly drills shall include live-fire evolutions, hose deployment, SCBA confidence, and RIT operations.**
-
-**2. Instructor Qualifications (Function 4)**
-**• Outside agencies may be used with prior approval of the Fire Chief.**
-
-**3. Attendance & Record Keeping (Function 7)**
-**• Attendance is mandatory for required drills unless excused by an officer.**
-**• The Training Officer maintains electronic and hard-copy records for ≥ 5 years.**
-**• Records shall include lesson plans, rosters, and competency evaluations.**
-
-**4. Certification Requirements**
-**• Firefighters must obtain Firefighter I within 12 months of membership; Firefighter II encouraged within 24 months.**
-**• Wildland personnel shall complete NWCG S-130/S-190/L-180 courses.**
-**• Company Officers = NFPA 1021 Level I; Driver/Operators = NFPA 1002 certified.**
-
-**5. Live-Fire Training Safety (Function 6)**
-**• Conducted under NFPA 1403 guidelines with designated Safety Officer.**
-**• Accountability tags and PARs required at each burn.**
-**• RIT team and EMS standby mandatory.**
-
-**6. Evaluation and Benchmarking (Function 7)**
-**• After each quarter, the Training Officer reports progress to Command Staff.**
-**• Benchmarks: Training Scheduled • Training Completed • Member Certified.**
-
-**7. Program Review (Function 8)**
-**• Annual Training Program Review conducted by Fire Chief and Training Officer.**
-**• Modifications documented and included in next year’s plan.**
-
-**References:** NFPA 1001 • 1002 • 1021 • 1403 • 1500 • 1561 • Blue Card Functions 5–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**200.16 — HIPAA Compliance & Patient Privacy:**
+• Protected Health Information (PHI) includes oral, written, or electronic records.
+• **Minimum Necessary Standard:** Only share PHI required for patient hand-off or billing. Prohibited from discussing patient identity with family/friends/coworkers not on call.
+• **PCR Security:** Electronic PCRs password-protected. Paper records locked and shredded.
+• **Cell Phones:** Personal cell phone photos of patients or injuries STRICTLY PROHIBITED.
+• **Breach Reporting:** Potential breach reported to Chief within 1 hour.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-5.2',
+    id: 'fire-200.17',
     category: 'Fire',
-    subCategory: 'Training & Administration',
-    title: '5.2 Driver/Operator SOP',
-    content: `**Purpose:** To ensure that only qualified personnel operate fire department vehicles and pumping equipment safely and in accordance with law, NFPA standards, and department policy.
-**Scope:** Applies to all personnel who drive or operate any Three Mile Fire Department apparatus.
-**Blue Card Integration: Functions 4 – 5**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.17 – Tobacco & Nicotine-Free Workplace Policy',
+    content: `**Prohibition:**
+Use of all tobacco and nicotine products — cigarettes, cigars, pipes, chew/dip, and electronic nicotine delivery systems (vapes) — is strictly prohibited on all district property, inside station facilities, and inside all district vehicles.
 
-**Procedures:**
-**1. Qualifications and Training (Function 5)**
-**• Operators must complete the NFPA 1002 Driver/Operator curriculum and Montana EVIP (Emergency Vehicle Incident Prevention) course.**
-**• Probationary drivers operate only under supervision of a certified operator.**
+**Off-Duty Expectation:**
+Because the district contributes to the Firefighters' Unified Retirement System (FURS), which carries heart and lung presumptive benefits, career employees are expected to maintain nicotine-free status off-duty to protect fitness-for-duty.
 
-**2. Daily and Weekly Inspections (Function 4)**
-**• Monthly = fluids, tires, lights, warning devices, PPE, and tools.**
-**• Monthly check = pump test, generator, ladders, and inventory verification.**
-**• Document all inspections on apparatus log sheets and submit to officer. Or through app**
-
-**3. Response Operations**
-**• All personnel wear seatbelts; no riding on exterior steps.**
-**• Obey traffic laws when responding code 3; come to a complete stop at red lights and stop signs.**
-**• Use spotters when backing any apparatus.**
-
-**4. Pump Operations**
-**• Operators remain at panel until relieved; maintain communication with nozzle team.**
-**• For relay pumping, maintain 20–30 psi residual pressure to next engine.**
-**• Aerial operations: ensure outriggers fully deployed and ground stability confirmed.**
-
-**5. Annual Recertification (Function 7)**
-**• Each driver must pass an annual road evaluation and pump/aerial proficiency check.**
-**• Training Officer maintains driver training files.**
-
-**6. Benchmarks:**
-**• Apparatus Ready • Operator Qualified • Inspection Complete.**
-
-**References:** NFPA 1002 • 1500 • 1901 • 1911 • Blue Card Functions 4–5 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Cessation Support:**
+Resources provided through health insurance provider.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-5.3',
+    id: 'fire-200.19',
     category: 'Fire',
-    subCategory: 'Training & Administration',
-    title: '5.3 Equipment & Apparatus Maintenance SOP',
-    content: `**Purpose:** To maintain department apparatus, tools, and equipment in a constant state of readiness and ensure timely repair or replacement.
-**Scope:** Applies to all personnel responsible for checking, operating, or maintaining equipment.
-**Blue Card Integration: Functions 7 – 8**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.19 – Resignation, Exit Process & Asset Return',
+    content: `**Resignation Notice:**
+• **Paid Staff:** Minimum 30 days written notice to Fire Chief (email/letter). Final pay per MCA 39-3-205; accrued vacation paid out, sick leave forfeited.
+• **Volunteer Members:** Minimum 2 weeks written notice requested.
 
-**Procedures:**
-**1. Preventive Maintenance Schedule (Function 7)**
-**• Apparatus inspected monthly; small tools inspected monthly; PPE and SCBA inspected per NFPA 1851/1981.**
-**• Maintenance logs kept on all equipment.**
-**• Officers ensure compliance and report deficiencies.**
+**Equipment & Asset Return ("No Departure Without Return"):**
+All district assets must be inventoried and returned before final departure and final pay processing:
+• Structural & wildland turnouts, boots, helmet, hood, gloves.
+• SCBA facepiece & components.
+• Uniforms & station wear.
+• Keys (station, apparatus, gates, master/duplicate).
+• Radios, pagers, chargers.
+• Badges, credentials, ID cards, manuals.
 
-**2. Inspection Checklists**
-**• Engines, tenders, use standardized department forms.**
-**• Include fuel, fluids, lights, tires, sirens, radios, tools, and hose inventory.**
-
-**3. Out-of-Service Procedures (Function 8)**
-**• Tag defective equipment “OOS,” record defect, and notify maintenance officer immediately.**
-**• Only the Fire Chief or Maintenance Officer may return equipment to service after repair verification.**
-
-**4. Coordination with Fleet Services**
-**• Major repairs performed by qualified technicians.**
-**• Maintenance Officer tracks all vendor work orders and invoices.**
-
-**5. Documentation and Review (Function 7)**
-**• Monthly maintenance summary submitted to Command Staff.**
-**• Annual review of equipment performance for replacement planning.**
-
-**6. Benchmarks:**
-**• Inspection Complete • Defect Reported • Apparatus Returned to Service.**
-
-**References:** NFPA 1901 • 1911 • 1500 • 1561 • Blue Card Functions 7–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Exit Process (200.19/Exit):**
+Exit interview conducted. System access, First Due access, radio IDs, and dispatch alert lists deactivated immediately.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-5.4',
+    id: 'fire-200.20',
     category: 'Fire',
-    subCategory: 'Training & Administration',
-    title: '5.4 Recruitment & Probationary Firefighter SOP',
-    content: `**Purpose:** To ensure a fair, consistent recruitment process and a structured probationary program that develops competent firefighters who meet department and NFPA standards.
-**Scope:** Applies to all new applicants and probationary members of the Three Mile Fire Department.
-**Blue Card Integration: Functions 1 – 5**
+    subCategory: '200 - HR & Personnel Policies',
+    title: '200.20 – Peer Support & Mental Health Resources',
+    content: `**Support Framework:**
+Recognizes the cumulative stress of fire and EMS operations on career and volunteer personnel.
 
-**Procedures:**
-**1. Recruitment (Function 1)**
-**• The Fire Chief and Training Officer oversee all recruitment activities.**
-**• The department maintains an equal-opportunity policy consistent with state and federal law.**
+**Peer Contact:**
+Fire Chief designates at least one member as a trained Peer Contact for informal, confidential first conversations following hard calls or tough stretches.
 
-**2. Application and Screening (Function 2)**
-**• Applicants submit completed department application, background check authorization, and medical questionnaire.**
-**• Screening includes background check, driver’s license review, and medical examination per NFPA 1582.**
+**After Critical Incidents:**
+Following line-of-duty injury/death, pediatric fatality, mass casualty, or significant incident: Company Officer or Chief conducts check-in within **24–48 hours**.
 
-**3. Probationary Period (Function 4)**
-**• Standard probation = 12 months from date of appointment.**
-**• Each probationary member is assigned a mentor for guidance and evaluation.**
-**• Monthly evaluations completed by Company Officer and Training Officer.**
+**Confidential Resources:**
+• District Employee Assistance Program (EAP).
+• **988 Suicide & Crisis Lifeline:** Call or text 988 (24/7).
+• **Crisis Text Line:** Text HOME to 741741.
+• **NVFC Share the Load:** nvfc.org (resources for firefighters, EMS, and families).
+• *Confidentiality:* District maintains no records of personal counseling contacts. Seeking support is never penalized.`,
+    lastUpdated: '2026-08-08'
+  },
 
-**4. Training Requirements (Function 5)**
-**• Completion of Firefighter I curriculum within first year.**
-**• Attendance at all mandatory drills and meetings unless excused by officer.**
+  // SECTION 300 – COMMAND & SCENE AUTHORITY
+  {
+    id: 'fire-300.01',
+    category: 'Fire',
+    subCategory: '300 - Command & Scene Authority',
+    title: '300.01 – Chain of Command & Scene Authority',
+    content: `**300.01 — Hierarchy of Authority:**
+1. Fire Chief
+2. Deputy / Assistant Fire Chief
+3. Captain
+4. Engineer / Driver-Operator
+5. Firefighter (Paid Staff)
+6. Firefighter (Volunteer Member)
+7. Probationary Firefighter (Paid Staff)
+8. Probationary Firefighter (Volunteer Member)
 
-**5. Evaluation and Advancement (Function 7)**
-**• Final evaluation conducted by Fire Chief and Training Officer.**
-**• Successful completion = recommendation to Fire leadership for regular status.**
-**• Unsuccessful completion may result in extension or termination of probation.**
+**Core Command Policy (300.02):**
+Rank and position held determine scene authority — NOT employment status. A Volunteer Captain outranks a Paid Firefighter on scene.
 
-**References:** NFPA 1001 • 1500 • 1582 • Blue Card Functions 1–5 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Seniority Rule:**
+If two personnel hold same rank, command is held by the one with greater rank seniority. Ties resolved via officer-on-duty schedule.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-5.5',
+    id: 'fire-300.03',
     category: 'Fire',
-    subCategory: 'Training & Administration',
-    title: '5.5 Discipline & Conduct SOP',
-    content: `**Purpose:** To define professional standards of behavior and outline the disciplinary process that maintains integrity and accountability within the department.
-**Scope:** Applies to all personnel of the Three Mile Fire Department, on and off duty.
-**Blue Card Integration: Functions 1 – 8**
+    subCategory: '300 - Command & Scene Authority',
+    title: '300.03 – First-Arriving Unit & Size-Up Report',
+    content: `**On-Scene Radio Call:**
+First-arriving unit immediately radios dispatch prior to size-up or tactical action:
+*"[Unit] is on scene at [address/location]."*
 
-**Procedures:**
-**1. Code of Conduct (Function 1)**
-**• Members shall uphold department values of service, integrity, and respect.**
-**• Prohibited behaviors include insubordination, harassment, discrimination, and substance abuse.**
-**• Personnel shall comply with lawful orders of officers and Command staff.**
+**Size-Up Report Sequence:**
+1. Unit designation & arrival status ("Engine 1 on scene").
+2. Incident description (structure type, occupancy, visible smoke/fire).
+3. Mode declaration (Offensive / Defensive / Transitional).
+4. Command establishment & location (*"Engine 1 is Main Street Command"*).
 
-**2. Reporting Violations (Function 2)**
-**• Any member may report a violation to their Company Officer, Training Officer, or Fire Chief.**
-**• Reports may be oral or written and will be treated confidentially to the extent possible.**
-
-**3. Progressive Discipline (Function 4)**
-**• Verbal Warning: Documented in member’s file.**
-**• Written Reprimand: Formal notice of violation.**
-**• Suspension: Loss of duty privileges for designated period.**
-**• Termination: For serious or repeated violations.**
-**• Disciplinary actions follow due-process and Montana labor law.**
-
-**4. Appeals and Review (Function 7)**
-**• Members may submit a written appeal within 10 days of disciplinary notice.**
-**• Fire Chief and Fire Board review all appeals and issue final determination.**
-
-**5. Confidentiality (Function 8)**
-**• All personnel records are confidential and maintained by Administration.**
-**• Access granted only to authorized officials on a need-to-know basis.**
-
-**6. Benchmarks:**
-**• Issue Identified • Action Taken • Resolution Documented.**
-
-**References:** NFPA 1021 • 1500 • OSHA 1910 • Blue Card Functions 1–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
-  },
-  // Section 6.0 — Post-Incident & Administrative SOPs
-  {
-    id: 'fire-6.1',
-    category: 'Fire',
-    subCategory: 'Post-Incident & Administrative',
-    title: '6.1 Post-Incident Review & Documentation SOP',
-    content: `**Purpose:** To evaluate department operations following emergency incidents and ensure complete, accurate documentation for legal, training, and statistical purposes.
-**Scope:** Applies to all members participating in emergency responses or training exercises that generate reports or require review.
-**Blue Card Integration: Function 8**
-
-**Procedures:**
-**1. After Action Review (AAR)**
-**• Conducted within 24 hours of significant incidents (e.g., structure fires, rescues, mutual-aid operations).**
-**• Facilitated by the Incident Commander or Training Officer.**
-**• Discussion topics: what was planned, what actually occurred, what went well, what needs improvement.**
-
-**2. Documentation Requirements**
-**• IC completes NFIRS/MFIRS report within 48 hours of incident close.**
-**• Attach photos, videos, and supplemental investigation notes if available.**
-**• EMS incidents include patient-care records per HIPAA requirements.**
-
-**3. Data Retention**
-**• All incident reports stored electronically and backed up for a minimum of 10 years.**
-**• Paper copies retained per state archiving requirements.**
-
-**4. Integration with Training (Function 7)**
-**• Training Officer reviews AARs quarterly to identify recurring issues.**
-**• Lessons learned incorporated into drill plans and policy revisions.**
-
-**5. Benchmarks:**
-**• AAR Complete • Report Submitted • Command Terminated.**
-
-**References:** NFPA 1561 • 1500 • 1021 • Blue Card Function 8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**Command Transfer (300.04):**
+Higher-ranking arriving officer does NOT automatically assume command. Requires formal face-to-face briefing and explicit radio announcement:
+*"Engine 1 Captain, transferring command to [Name] — [Name] is now [Incident Name] Command."*`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-6.2',
+    id: 'fire-300.07',
     category: 'Fire',
-    subCategory: 'Post-Incident & Administrative',
-    title: '6.2 Community Risk Reduction (CRR) SOP',
-    content: `**Purpose:** To minimize fire and life-safety risks through proactive education, inspection, and prevention programs.
-**Scope:** Applies to all department personnel participating in public education and risk-reduction activities.
-**Blue Card Integration: Functions 5 – 7**
+    subCategory: '300 - Command & Scene Authority',
+    title: '300.07 – Personnel Call-In & Automatic Page Triggers',
+    content: `**300.07.01 — IC-Initiated Call-In:**
+IC requests additional off-duty Paid Staff or Volunteers via dispatch.
 
-**Procedures:**
-**1. Program Planning (Function 5)**
-**• The Fire Chief or Prevention Officer develops an annual CRR plan based on incident data and community risk profile.**
-**• Identify target hazards (e.g., schools, senior housing, industrial sites).**
-
-**2. Public Education Activities (Function 4)**
-**• Conduct school fire-safety presentations, station tours, and community events.**
-**• Implement smoke-alarm installation and battery replacement programs.**
-
-**3. Home Safety Surveys & Inspections (Function 6)**
-**• Provide residents with voluntary home-safety assessments.**
-**• Record findings and recommend corrective actions.**
-
-**References:** NFPA 1730 • 1035 • 1452 • Blue Card Functions 5–7 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**300.07.02 — Automatic Page Triggers (All-Call Page):**
+With normal on-duty staffing of two (2) Paid Staff, dispatch automatically pages all personnel without waiting for IC request for:
+a. Structure fires (working or confirmed).
+b. Wildland fires with structure threat.
+c. Multi-vehicle MVAs with confirmed entrapment.
+d. Hazardous materials incidents requiring evacuation.
+e. Mass casualty incidents (3 or more patients).
+f. Mutual aid requests requiring district response.
+g. Cardiac arrest or any CPR in progress.
+h. Lift assists & patient-handling calls requiring >2 people (bariatric, floor, bathroom, tight space).
+i. Technical rescue incidents (water, confined space, trench, high-angle).
+j. Second simultaneous call while on-duty crew is committed.
+k. Severe weather generating multiple calls.
+l. Any call exceeding 2-person crew capacity ("when in doubt, page it out").`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-6.3',
+    id: 'fire-300.08',
     category: 'Fire',
-    subCategory: 'Post-Incident & Administrative',
-    title: '6.3 Department Administration SOP',
-    content: `**Purpose:** To define administrative processes for record-keeping, policy management, and organizational oversight of the Three Mile Fire Department.
-**Scope:** Applies to all officers and administrative staff responsible for department governance and operations.
-**Blue Card Integration: Functions 1 – 8**
+    subCategory: '300 - Command & Scene Authority',
+    title: '300.08 – ICS, Span of Control & Accountability',
+    content: `**300.08 — NIMS/ICS Certification Requirement:**
+All personnel must maintain ICS-100 and ICS-200. Company officers must maintain ICS-300.
 
-**Procedures:**
-**1. Chain of Command (Function 1)**
-**• Fire Chief has overall authority for department administration.**
-**• Delegation of duties to Assistant Chiefs, Training Officer, and Administrative Staff documented in organizational chart.**
+**300.09 — Span of Control:**
+Maximum 7 personnel per supervisor during active ops; **optimal span of control is 5**. Establish divisions/groups when exceeded.
 
-**2. Policy Development & Revision (Function 5)**
-**• All SOPs reviewed annually by Command Staff and Fire Board.**
-**• Revisions approved and distributed to all members within 30 days of adoption.**
-
-**3. Records Management (Function 7)**
-**• Maintain accurate records of personnel, training, maintenance, and incident data.**
-**• Use secure cloud or server-based storage with weekly backups.**
-
-**4. Meetings and Reporting (Function 6)**
-**• Monthly Command Staff meeting and quarterly Fire Board meeting required.**
-**• Chief submits monthly report summarizing calls, training, and budget status.**
-
-**5. Financial Oversight (Function 7)**
-**• Annual budget prepared by Fire Chief and Treasurer and approved by Fire Board.**
-**• Expenditures tracked through department financial software.**
-
-**6. Records Retention & Archiving (Function 8)**
-**• Administrative records retained per state and local record laws.**
-**• Archive electronic copies for 10 years minimum.**
-
-**References:** NFPA 1021 • 1500 • 1561 • Blue Card Functions 1–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
-  },
-  // Section 7.0 — Special Operations SOPs
-  {
-    id: 'fire-7.1',
-    category: 'Fire',
-    subCategory: 'Special Operations',
-    title: '7.1 Technical Rescue SOP',
-    content: `**Purpose:** Provide guidance for rope, confined space, trench, and structural collapse incidents requiring specialized equipment and training.
-**Scope:** Applies to all members trained and certified in technical rescue disciplines and responding under the direction of Command.
-**Blue Card Integration: Functions 2 – 8**
-
-**Procedures:**
-**1. Size-Up (Function 2)**
-**• Identify rescue type, hazards, victim location, and number of victims.**
-**• Request additional resources (EMS, law enforcement).**
-
-**2. Incident Action Plan (Function 5)**
-**• Determine operational mode: Rescue, Recovery, or Support.**
-**• Establish exclusion (Hot), Warm, and Cold zones.**
-
-**3. Deployment (Function 4)**
-**• Assign Technical Rescue Group Supervisor.**
-**• Stage apparatus outside collapse or hazard zone.**
-**• Designate Safety Officer and Medic Unit.**
-
-**4. Operational Safety (Function 6)**
-**• Require helmets, harnesses, gloves, and appropriate PPE per NFPA 1951.**
-**• Continuous air monitoring for confined-space or trench operations.**
-**• Utilize lock-out/tag-out where machinery is involved.**
-
-**5. Benchmarks (Function 7)**
-**• Victim Located • Victim Removed • PAR Complete • Command Terminated.**
-
-**References:** NFPA 1006 • 1670 • 1500 • 1561 • Blue Card Functions 2–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**300.10 — Passport Accountability System:**
+• Every member (Career and Volunteer) checks in with Accountability Officer or IC upon arrival.
+• Passport tag (name/rank credential) submitted to Accountability board/vest.
+• No freelancing permitted; all tasks assigned via Command.
+• Passports transferred with crew when reassigned to new Division/Group.
+• Passports retrieved upon demobilization.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-7.2',
+    id: 'fire-300.11',
     category: 'Fire',
-    subCategory: 'Special Operations',
-    title: '7.2 Helicopter Operations SOP',
-    content: `**Purpose:** To ensure safe and efficient coordination between ground crews and helicopter resources during EMS or fire operations.
-**Scope:** Applies to all department personnel assigned to landing-zone (LZ) establishment or helicopter coordination.
-**Blue Card Integration: Functions 4 – 7**
+    subCategory: '300 - Command & Scene Authority',
+    title: '300.11 – Minimum Staffing & Two-In / Two-Out Standard',
+    content: `**IDLH Safety Requirement (OSHA 29 CFR 1910.134):**
+A minimum of **FOUR (4) qualified personnel** must be on scene before any crew enters an IDLH atmosphere:
+• **2 members inside** (maintaining visual/voice contact).
+• **2 members outside** fully equipped for immediate rescue (Rapid Intervention Team / RIT).
 
-**Procedures:**
-**1. Landing Zone Establishment (Function 4)**
-**• LZ minimum: 100 × 100 ft day / 150 × 150 ft night.**
-**• Surface free of debris, slope < 5°, no overhead obstructions.**
-**• Identify LZ via strobes or crossed headlights at corners.**
+**Confirmed Life-Threat Exception:**
+Career staff (2 members) may enter before 4 members arrive ONLY if a confirmed life threat exists and is documented.
+• Requires written justification submitted to Fire Chief by end of shift.
+• Exception to rule — NOT normal practice.
 
-**2. LZ Officer (Function 6)**
-**• Appointed by IC; wears high-visibility PPE and maintains radio contact with pilot.**
-**• Coordinates approach direction, wind, and hazards.**
-
-**3. Operations Safety (Function 5)**
-**• No personnel within 100 ft of aircraft until blades stop or pilot signals.**
-**• Secure loose equipment and PPE.**
-**• Approach/depart aircraft only from downhill side when directed by crew.**
-
-**4. Communications (Function 3)**
-**• Use designated air-to-ground frequency.**
-**• Announce “LZ Established,” “Patient Loaded,” and “Aircraft Departed” benchmarks.**
-
-**5. Benchmarks (Function 7)**
-**• LZ Established • Patient Loaded • Aircraft Departed • PAR Complete.**
-
-**References:** NFPA 1500 • 1561 • FAA AC 150/5390-2 • Blue Card Functions 4–7 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+**One Team — One Standard:**
+Whether paid or volunteer, the public receives the same standard of care and safety.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-7.3',
+    id: 'fire-300.12',
     category: 'Fire',
-    subCategory: 'Special Operations',
-    title: '7.3 Disaster Response & Continuity of Operations SOP',
-    content: `**Purpose:** Provide guidance for department response and recovery during large-scale disasters and ensure continuity of essential services.
-**Scope:** Applies to all personnel when the Emergency Operations Plan (EOP) or Continuity of Operations Plan (COOP) is activated.
-**Blue Card Integration: Functions 5 – 8**
+    subCategory: '300 - Command & Scene Authority',
+    title: '300.12 – Weather-Related Response Limitations',
+    content: `**300.12 — Weather Adjustments:**
+Establishes how a response is modified during severe weather, not whether one occurs.
 
-**Procedures:**
-**1. Activation (Function 5)**
-**• Fire Chief activates EOP/COOP upon major incident or County EOC request.**
-**• Notify all members via paging and departmental alerting system.**
-
-**2. Command & Coordination (Function 6)**
-**• Establish Unified Command with cooperating agencies.**
-**• Assign Liaison to County EOC.**
-**• Implement ICS 204 Assignment List for extended operations.**
-
-**3. Resource Management (Function 4)**
-**• Track staffing, apparatus, and equipment through Logistics Section.**
-**• Request mutual aid and state/federal resources through established channels.**
-
-**4. Continuity Operations (Function 7)**
-**• Identify alternate station or facility for displaced operations.**
-**• Protect critical records and IT systems with daily backups.**
-**• Maintain fuel, generator, and water supply for 72 hours minimum.**
-
-**5. Demobilization & Recovery (Function 8)**
-**• Conduct after-action review and documentation.**
-**• Restore staffing rotations and equipment readiness.**
-**• Benchmarks: EOC Activated • Continuity Maintained • Operations Restored.**
-
-**References:** NFPA 1600 • 1561 • FEMA NIMS • Blue Card Functions 5–8 • MCA Title 7 Ch 33`,
-    lastUpdated: '2024-03-18'
+• **Winter Driving:** Snow/ice requires reduced speeds, tire chains when equipped, increased following distance. No Code 3 speed exceeding safe road conditions.
+• **Extreme Cold:** Wind chill at or below **-20°F** requires company officers to limit exposure time, establish warm rehab early, and monitor for frostbite/hypothermia.
+• **Reduced Visibility:** In blizzard, dense fog, or heavy wildfire smoke, officer may request reduced speed response or hold non-essential apparatus.
+• **Wildfire Smoke:** Provide rest breaks in filtered/clean air during extended outdoor operations.
+• **High Wind:** Exercise caution around trees, utility lines, and high-profile apparatus stability.`,
+    lastUpdated: '2026-08-08'
   },
-  // Appendices
+
+  // SECTION 400 – EQUIPMENT, PPE & UNIFORMS
   {
-    id: 'fire-app-a',
+    id: 'fire-400.01',
     category: 'Fire',
-    subCategory: 'Appendices',
-    title: 'Appendix A – Radio Call Procedures',
-    content: `**Purpose:** To standardize radio communications for clarity, efficiency, and safety during all department operations.
-
-**Procedures:**
-**• Radio Discipline: Use clear, concise, plain-language transmissions. No 10-codes or unnecessary chatter.**
-**• Call Format: [Unit] to [Recipient], [Message] — e.g., “Command, Engine 1, primary search complete.”**
-**• Acknowledgement: The receiving party must confirm all messages (“Command copies”).**
-**• Priority Traffic: Use “Emergency Traffic” for urgent safety announcements.**
-**• Mayday Procedure:**
-**o Transmit “Mayday, Mayday, Mayday” three times.**
-**o State: unit ID, location, situation, needs (LUNAR).**
-**o Command immediately announces emergency traffic, initiates RIT deployment, and requests additional alarms.**
-**• End of Incident: Command announces “All units, Command terminated, return to service.”**
-
-**References:** NFPA 1561`,
-    lastUpdated: '2024-03-18'
+    subCategory: '400 - Equipment, PPE & Uniforms',
+    title: '400.01 – Structural Firefighting PPE (NFPA 1851)',
+    content: `**PPE Standards (NFPA 1971 / 1851):**
+• **3MF Issue Only:** Only department-issued or approved gear permitted. Personally owned helmets/boots prohibited without Chief written approval.
+• **10-Year Retirement Rule:** Per NFPA 1851, all structural gear (coats, pants, hoods, gloves, boots) MUST be retired 10 years from manufacture date, regardless of appearance.
+• **Routine Inspection:** Shift-start check by career staff (08:00); pre-response check by volunteers.
+• **Advanced Inspection:** Formal annual inspection by certified PPE technician.
+• **Storage:** Never store in direct sunlight or personal vehicles (UV & heat degrade Nomex/Kevlar).
+• **Contaminated Gear:** Bagged on scene, transported in exterior compartments (Clean Cab), and laundered in district extractor.`,
+    lastUpdated: '2026-08-08'
   },
   {
-    id: 'fire-app-b',
+    id: 'fire-400.02',
     category: 'Fire',
-    subCategory: 'Appendices',
-    title: 'Appendix B – Tactical Benchmarks',
-    content: `**Benchmark | Meaning / Completion Criteria | Blue Card Function**
-**All Clear | Primary search complete; all known victims removed. | 7**
-**Fire Under Control | Fire spread stopped; main body of fire extinguished. | 7**
-**Loss Stopped | No further property loss expected; salvage complete. | 7**
-**PAR Complete | Personnel Accountability Report verified by Command. | 7**
-**Hazards Controlled | Utilities secured; hazardous conditions mitigated. | 7**
-**Command Terminated | Incident concluded; units accounted for and released. | 8**
-**Sustained Water Established | Reliable water supply secured and maintained. | 5**
-**Ventilation Complete | Smoke/heat removal complete and verified. | 7**
-**Scene Released to Investigator | Fire scene formally transferred to investigator/law enforcement. | 8**
-**EOC Activated / Continuity Maintained | Department operating under disaster plan with no interruption of critical services. | 5–8**
+    subCategory: '400 - Equipment, PPE & Uniforms',
+    title: '400.02 – SCBA — Use, Inspection & Maintenance',
+    content: `**SCBA Standards (NFPA 1852 / OSHA 1910.134):**
+• **Mandatory Use:** Interior structural firefighting, visible smoke, suspected toxic gases, overhaul until cleared by air monitoring, hazmat calls.
+• **Daily Shift Inspection:** High-pressure leak test & battery check at 08:00. Tag out failed units immediately.
+• **Cylinder Pressure:** Must be refilled if below 90% rated pressure (below **4,050 psi** for 4,500 psi cylinder).
+• **Hydrostatic Testing:** Carbon-fiber composite cylinders tested every **5 years**; retired after **15 years**.
+• **Sanitization:** Facepieces cleaned with approved disinfectant after every use.
+• **Annual Flow Test:** Computerized annual flow test. PASS device verified before every use.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-400.03',
+    category: 'Fire',
+    subCategory: '400 - Equipment, PPE & Uniforms',
+    title: '400.03 – Apparatus Inventory & Asset Accountability',
+    content: `**400.03 — Apparatus Inventory:**
+Verified at shift start (08:00) against First Due CAD profiles. Deficiencies logged and reported to Chief.
 
-**Use:** These benchmarks should be announced over the tactical channel and recorded in the incident log at completion.`,
-    lastUpdated: '2024-03-18'
-  }
-,
+**400.04 — Asset Logging on Hire / Acceptance:**
+• *"Log It Before You Claim It"* — No member takes possession of gear, keys, radio, or pager until logged in First Due asset tracking system and physical Equipment Issue Form is co-signed by member and officer.
+• Members personally responsible for issued equipment until formal return is documented. No loaning/sharing without officer authorization.
+
+**400.05 — Lost / Damaged / Stolen Equipment:**
+Reported to Fire Chief within **24 hours** using Appendix A Form.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-400.06',
+    category: 'Fire',
+    subCategory: '400 - Equipment, PPE & Uniforms',
+    title: '400.06 – Station Wear, Uniforms & Appearance',
+    content: `**400.06 — Station Wear (NFPA 1975 Mandatory):**
+Station uniforms MUST be 100% cotton, wool, or Nomex. **Synthetic fabrics (polyester, nylon, athletic moisture-wicking) are STRICTLY PROHIBITED** under turnout gear because they melt at low temperatures and bond to skin.
+• **Uniform of Day (08:00–17:00):** Class B duty uniform (collared shirt, tactical pants).
+• **After 17:00:** Approved Station T-shirt and work pants.
+• **Footwear:** Black, polishable, safety-toe boots on duty.
+
+**400.10 — Personal Vehicle Response & Priority:**
+• **Paid Staff Priority:** Paid Staff have priority over apparatus assignments. Volunteers hold at station until Paid Staff depart in assigned apparatus.
+• **Personal Vehicles on Scene:** Volunteers responding directly in personal vehicles must park at least 300 feet back on structure fires and not block apparatus or hydrants.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-400.08',
+    category: 'Fire',
+    subCategory: '400 - Equipment, PPE & Uniforms',
+    title: '400.08 – Respiratory Protection & SCBA Grooming',
+    content: `**OSHA Compliance (20 CFR 1910.134 / NFPA 1500):**
+Facial hair that crosses or lies in the sealing surface of a tight-fitting SCBA facepiece is **STRICTLY PROHIBITED BY FEDERAL LAW**.
+
+**Permitted Facial Hair:**
+• **Mustaches:** Neatly trimmed, extending no more than **½ inch** beyond mouth corners, not crossing mask seal zone ("Credit Card Test" applied by supervisors).
+• **Sideburns:** Trimmed above lowest part of earlobe.
+
+**Prohibited Facial Hair:**
+• Beards and stubble of any length (including 5 o'clock shadow) in seal area.
+• Goatees, soul patches, mutton chops.
+
+**Enforcement:** Non-compliant members barred from IDLH entry. Annual qualitative/quantitative fit testing.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-400.11',
+    category: 'Fire',
+    subCategory: '400 - Equipment, PPE & Uniforms',
+    title: '400.11 – Firearms Policy',
+    content: `**District Property & Apparatus Prohibition:**
+No personally owned firearms shall be carried or stored on district apparatus or within district facilities, except by personnel who are commissioned law enforcement officers acting in that capacity.
+
+**Personal Vehicle Storage:**
+Does not prohibit legal storage of firearms inside personal vehicles in station parking areas consistent with Montana state law.`,
+    lastUpdated: '2026-08-08'
+  },
+
+  // SECTION 500 – FIRE OPERATIONS SOPS
+  {
+    id: 'fire-500.10',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.10 – Scene Safety & Two-In / Two-Out SOP',
+    content: `**500.10 — Scene Safety Priority:**
+First priority on every incident. No entry into hazard zone without:
+a. Full PPE donned and verified.
+b. Command established & accountability active.
+c. Known egress path.
+d. Radio communication confirmed.
+
+**500.11 — Two-In / Two-Out Standard:**
+Whenever personnel enter an IDLH atmosphere, a team of at least 4 qualified personnel MUST be assembled before interior fire attack begins: 2 inside, 2 outside for rescue (RIT).
+
+**Documented Life-Threat Exception:**
+2-person entry allowed ONLY for immediate confirmed life-threatening rescue. Requires written justification to Fire Chief by end of shift.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.12',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.12 – Apparatus Placement & Scene Rules',
+    content: `**500.12 — Apparatus Placement:**
+a. Do not block hydrant access.
+b. Do not block primary egress path from structure.
+c. Position to allow second engine water supply access without blocking first.
+d. Personal vehicles shall not park forward of last apparatus on scene.
+
+**500.13 — Last Unit Leaving Scene:**
+Officer verifies no district equipment left behind. Transmit radio call to dispatch: *"Engine 1 is clear of [location], all clear, available."*
+
+**500.14 - 500.18 — Incident Discovery, Deceased & Valuables:**
+• **Discovery While Responding:** Company may stop and begin ops on new life-threat; dispatch redirects secondary unit to original call.
+• **Deceased Person (500.17):** Do not disturb body or scene except to prevent destruction. Preserve as potential crime scene; notify law enforcement.
+• **Valuables (500.18):** Turn over to IC or law enforcement. No member retains scene valuables.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.20',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.20 – Structural Fire Response & Strategy',
+    content: `**Paid Crew Initial Operations (Pre-Volunteer Arrival):**
+CRITICAL SAFETY RULE: Paid Staff arriving before 4-person Two-In/Two-Out staffing SHALL NOT initiate interior fire attack. Exterior operations and setup are priority.
+1. Command establishment & size-up.
+2. Water supply setup (hydrant or tanker).
+3. 360-degree walk-around.
+4. Exterior transitional attack through windows/doors to knock down heat.
+5. Rescue exception (if confirmed victim).
+6. Exposure protection.
+
+**Transition to Full Operations (Volunteer Arrival):**
+When volunteers arrive & 4-person staffing achieved:
+1. Rapid briefing with volunteers.
+2. Formally transition to offensive interior attack if supported.
+3. Assign roles: attack, backup line, RIT, accountability, pump operator, search.
+4. Reassess strategy; announce change on tactical radio.
+
+**Attack Line Selection:**
+• **1¾" Hose:** Standard residential attack (min 150 GPM at nozzle).
+• **2½" Hose:** Commercial structures or advanced fire (min 250 GPM).
+• **Master Stream:** Defensive operations.
+
+**Search & Overhaul:** Primary search ("All Clear"), Secondary search, overhaul under full SCBA until air monitoring clears CO.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.21',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.21 – Ventilation SOP (Horizontal, Vertical, PPV, VEIS)',
+    content: `**Coordinated Ventilation:**
+Must be coordinated with fire attack — never independent without IC approval.
+
+**Methods:**
+• **Horizontal Ventilation:** Windows/doors opposite attack entry point.
+• **Vertical Ventilation:** Cutting roof above fire (basement / attic fires). Roof crew wears full PPE with charged line.
+• **Positive Pressure Ventilation (PPV):** PPV fans used ONLY AFTER knockdown/control achieved.
+• **Vent-Enter-Isolate-Search (VEIS):** For rescue in specific room: Vent window -> Enter -> IMMEDIATELY CLOSE INTERIOR DOOR -> Search room -> Exit window. Announce VEIS on radio before entry.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.22',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.22 – Fire Attack Nozzles & Pump Pressures',
+    content: `**Standard Nozzle Pressures:**
+• Combination (fog) nozzles: **100 PSI**.
+• Low-pressure fog nozzles: **75 PSI**.
+• Smooth bore handlines (1¾" with 15/16" tip): **50 PSI**.
+• Smooth bore handlines (2½" with 1¼" tip): **50 PSI**.
+• Master stream smooth bore: **80 PSI**.
+
+**Pump Discharge Pressure (PDP) Formula:**
+PDP = Nozzle Pressure (NP) + Friction Loss (FL) + Elevation (EL) + Appliance Loss (APP).
+• *Elevation:* Add/subtract 5 PSI per floor.
+• *Friction Loss:* 1¾" hose at 150 GPM per 100' lay = ~23 PSI.
+
+**Backup Line Ops:**
+Backup firefighter stands 3–4 feet behind nozzle operator on inside of curves. Open/close valves slowly to prevent water hammer.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.23',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.23 – Mayday Procedures & RIT Activation',
+    content: `**Mayday Declaration:**
+Any member lost, trapped, injured, or in immediate danger SHALL declare a Mayday immediately.
+
+**Radio Sequence:** Transmit *"MAYDAY MAYDAY MAYDAY"* on tactical channel. IC clears channel. Report using **LUNAR format**:
+• **L** – Location (floor, room)
+• **U** – Unit / Company
+• **N** – Name
+• **A** – Assignment
+• **R** – Resources needed (air, rescue, medical)
+
+**IC Response:** Announce Mayday on all channels, activate Rapid Intervention Team (RIT) immediately, assign dedicated Mayday channel, conduct PAR roll-call for other crews.
+
+**Self-Rescue:** Activate PASS device, conserve air, move to wall, make noise. RIT stages with full PPE, charged line, irons, spare bottle, search rope.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.24',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.24 – Personnel Accountability Report (PAR)',
+    content: `**PAR Roll-Call Intervals:**
+a. Upon declaration of offensive interior operations (Initial PAR).
+b. **Every 15–20 minutes** during active interior operations.
+c. Immediately upon significant fire behavior change (flashover, backdraft, collapse).
+d. Withdrawal from offensive to defensive mode.
+e. Declaration of "Fire Under Control".
+f. Declaration of Mayday or emergency.
+
+**PAR Process:**
+IC or Accountability Officer calls each unit. Crew officer responds with: Unit, number of members, location/status. Any non-responsive crew on repeat transmission treated as potential emergency.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.25',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.25 – Fire Cause & Origin Investigation SOP',
+    content: `**Origin Preservation:**
+Crews preserve evidence during extinguishment/overhaul. Mark origin area with barrier tape and restrict access.
+
+**Mandatory Investigator Request Triggers:**
+1. Fire-related fatality.
+2. Serious injury to civilian or firefighter.
+3. Known or suspected arson.
+4. Suspicious or undetermined origin.
+5. Unusual circumstances (multiple fires, missing property).
+6. Explosion.
+7. Estimated dollar loss exceeding **$50,000**.
+8. IC discretion.
+
+Request through MT State Fire Marshal's Office or Ravalli County Sheriff's Office. Maintain minimum 2 crew members on scene for scene security until investigator arrives.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.26',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.26 – Rehabilitation (Rehab) Operations',
+    content: `**Establishment Triggers:**
+Mandatory whenever incident exceeds **1 SCBA cylinder or 45 minutes of sustained work**, extreme heat/cold stress exists, or member reports fatigue/dizziness.
+
+**Rehab Setup & Protocol:**
+• Location away from hot zone and exhaust, shaded or warm sheltered area with seating and hydration.
+• **Medical Monitoring:** Check pulse & vitals. Heart rate above **120 bpm** requires extended rest.
+• **Minimum Rest:** Ten (10) minutes rest before reassignment consideration.
+• **Accountability:** Check in and out with Rehab Group Supervisor. Members remain accounted for until released.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.30',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.30 – Wildland Fire Response & LCES Standard',
+    content: `**Training Requirement:** NWCG S-130 / S-190 required.
+
+**LCES Non-Negotiable Standard:**
+• **L — Lookouts:** Stationed with radio & clear line of sight.
+• **C — Communications:** Same radio channel, clear trigger point.
+• **E — Escape Routes:** Minimum 2 identified, clear escape routes.
+• **S — Safety Zones:** Diameter at least **4x flame length**, radiant heat protection without shelters.
+
+**Apparatus Safety:** Point vehicle toward escape route before committing. Never park in chimney, drainage, or saddle. Keys in ignition, doors unlocked.
+
+**Fire Shelters:** Last resort only. Mandatory carrying and deployment proficiency. 10 Standard Orders & 18 Watch-Outs strictly enforced.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.31',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.31 – Wildland-Urban Interface (WUI) Structure Triage',
+    content: `**WUI Priorities:** 1. Life Safety (firefighters & civilians) -> 2. Incident Stabilization -> 3. Property Conservation.
+
+**Structure Triage Categories (Go, Slow, No):**
+• **GO (Defend):** Structure defensible — clear defensible space, minimal fuel contact, access/egress secured. Commit resources.
+• **SLOW (Prep & Evaluate):** Defensible with prep. Shut propane/utilities, close windows, ladder to roof, wet down fuels, reassess.
+• **NO (Evacuate):** NOT defensible — insufficient defensible space, fire in contact, no safe egress, or fully involved. Do NOT commit personnel. Protect escape route.
+
+**Safety Distance:** Personnel shall NOT remain when fire front is within **300 feet** unless escape route integrity is confirmed.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.32',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.32 – Off-Road & 4x4 Apparatus Operations',
+    content: `**4WD Engagement:**
+Engage 4WD before conditions require it. Shift to 4WD-High on gravel/mud/snow, 4WD-Low for steep grades, deep mud, or maximum torque.
+
+**Driver Qualification & Terrain Check:**
+Only EVOC + off-road trained Engineer/Driver-Operators. Walk route on foot when practical to check drop-offs, soft ground, rocks, and water crossings.
+
+**Rollover Avoidance & Spotters:**
+Do not exceed max rated side-slope angles. Ascend/descend fall line rather than driving across slopes. Ground spotter required for backing off-road or maneuvering in tight terrain. Unsecured tools in cab stowed.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.40',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.40 – Vehicle Fire Response (Passenger, EV, Propane)',
+    content: `**Approach:** Approach at **45-degree angle** to front or rear (bumper/strut energy release risk). Stop apparatus 50 feet back.
+
+**Passenger Vehicle Fires:** Attack with 1¾" line from 45 degrees. Open hood only after initial knockdown.
+
+**Electric Vehicles (EV) & Hybrids:**
+• High-voltage wiring marked **ORANGE** — NEVER CUT!
+• Remove key fob **20+ feet away** from vehicle.
+• Locate manual high-voltage service disconnect (refer to ERG).
+• **3,000+ gallons of water** required for battery cooling thermal runaway. Monitor for re-ignition hours later.
+
+**Propane / CNG Vehicles:** Do not extinguish gas fire without shutting off fuel valve first. Evacuate 300 feet if BLEVE risk.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.41',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.41 – Vehicle Accident Response (MVAs) & Blocking',
+    content: `**Apparatus Positioning (Blocking):**
+Block upstream of crash, positioned at an angle across lane(s) to create a physical barrier and protected work zone. **Front wheels turned away from work area** so if struck, apparatus is deflected away from personnel.
+
+**Traffic Control:** Deploy cones/flares upstream. ANSI high-visibility vests worn over turnouts. Never turn back to moving traffic.
+
+**Hazard Control & Battery:**
+Shut off ignition. Disconnect battery (**negative terminal first**). SRS airbag capacitor delay: maintain clearance (**5" side, 10" steering, 20" dashboard**). Triage & patient access.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.42',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.42 – Downed Power Lines & Electrical Safety',
+    content: `**Treat Every Line as Energized:**
+Downed/sagging lines always treated as energized & deadly. Lines auto-reclose without warning.
+
+**Perimeter:** Establish perimeter at least **one full span (pole-to-pole)** in all directions. Ground around line may be energized.
+
+**Vehicle Contact:** Occupants stay inside vehicle unless fire requires evacuation. If evacuating, **jump clear without touching vehicle and ground simultaneously, then shuffle feet together**.
+
+**Utility:** Contact NorthWestern Energy. Do not touch or move lines. Do not apply water to energized electrical fires.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.50',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.50 – Hazardous Materials Response (First Responder Ops)',
+    content: `**Response Level:** First Responder Operations level.
+
+**Initial Actions (Uphill & Upwind):**
+1. Approach uphill and upwind. Do not enter vapor cloud.
+2. Identify material via ERG placards, shipping papers, SDS.
+3. Isolate perimeter using ERG isolation distances. Deny entry.
+4. Notify dispatch & request Regional HazMat Team for hot-zone entry or product control.
+5. Protect public (evacuation or shelter-in-place).
+
+*3MF does not conduct hot-zone plugging/patching without HazMat Technician certification.*`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.60',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.60 – Gas Leak Response (Natural Gas & Propane)',
+    content: `**Natural Gas Leaks:**
+1. Approach upwind. Stage apparatus minimum 150 feet back.
+2. Eliminate ignition sources (no smoking, no cell phones/radios in hazard zone, no operating light switches).
+3. Evacuate structure and 300-foot radius.
+4. Shut off hand-operated valve at gas meter (supply side).
+5. Notify NorthWestern Energy. Re-entry allowed only when air monitoring confirms atmosphere is **below 10% LEL**.
+
+**Propane (LPG) Leaks:**
+Propane is heavier than air and settles in basements/drains. Establish 300-foot perimeter. Shut off tank valve hand-tight. Cool exposed tanks with water if fire exposure exists.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.61',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.61 – Carbon Monoxide Incident Response SOP',
+    content: `**Dispatch & Approach:**
+Treat every CO alarm as genuine. Approach with air meter in hand. Don SCBA before entry if meter unavailable or occupants symptomatic (headache, nausea, dizziness).
+
+**Metering:**
+Meter floor, waist, and ceiling levels in every room. Record highest ppm reading.
+
+**Occupant Assessment:**
+If confirmed CO reading **above 9 ppm** or symptomatic, conduct medical evaluation including SpCO oximetry.
+
+**Source & Re-Entry:**
+Shut down malfunctioning appliance/generator if safe. Ventilate structure until CO levels are confirmed **at or near 0 ppm** throughout.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.70',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.70 – Vehicle Rescue & Extrication SOP',
+    content: `**Scene Stabilization First Priority:**
+No extrication tools applied until vehicle is fully stabilized:
+1. Chock wheels & place cribbing / step chocks under rocker panels.
+2. Hazard control: shut off ignition, key fob 20+ ft away, disconnect battery.
+3. Airbag clearance: 5" side, 10" steering, 20" dashboard.
+
+**Glass Management:**
+• Tempered glass (side/rear): Spring-loaded center punch at bottom corner. Cover patient first.
+• Laminated glass (windshield): Saw or glazing tool.
+
+**Disentanglement:** Hard protection (spine board, blanket) between patient and tool operations. Coordinate with medical provider.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.71',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.71 – Lift Assist Response SOP',
+    content: `**Assessment Requirement:**
+With normal on-duty staffing of 2 Paid Staff, most lift assists require additional personnel (automatic page trigger per 300.07.02).
+• **Initial Assessment:** Assess patient for injury, syncope, stroke, or cardiac cause before lifting. Falls are often symptoms of underlying medical events.
+• **Calling Additional Help:** Request additional personnel if patient size, confined space (bathroom, stairwell), or terrain increases injury risk.
+• **Lifting Technique:** Proper body mechanics (lift with legs, no twisting). Use gait belt, stair chair, or lift cushion.
+• **Repeat Lift Assists:** Document patterns for Fire Chief awareness (early warning sign for home health need). PCR required for all lift assists.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.80',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.80 – Water Supply Operations (Hydrant, Tanker, Draft)',
+    content: `**Hydrant Operations:** Connect with 5" LDH soft suction. Position apparatus to allow 2nd engine access. Flush hydrant briefly before connecting.
+
+**Tanker Shuttle Operations:**
+Established when hydrant water is unavailable/insufficient.
+• Designate FILL SITE (hydrant, pond, drafting point) and DUMP SITE (portable folding tank).
+• Dump site Engineer manages portable tank and attack engine supply.
+• **Minimum desired flow rate for working structure fire: 250 GPM sustained**.
+• Tankers strictly obey road speed limits (tanker rollovers leading LODD cause).
+
+**Drafting Operations:** Apparatus positioned within 10 feet elevation above water surface. Strainer submerged minimum **18 inches**. Prime pump before opening intake.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.90',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.90 – Mutual Aid Operations (Requesting & Responding)',
+    content: `**Requesting Mutual Aid:**
+Request early through Ravalli County Dispatch when incident exceeds on-duty capacity. Advise dispatch of incident type, resources needed, staging location. Arriving units operate under 3MF IC.
+
+**Responding to Mutual Aid Requests:**
+• **Coverage First:** On-duty officer confirms adequate in-district coverage remains before committing resources out-of-district.
+• **Command:** 3MF crew operates under requesting agency IC while adhering to 3MF safety/SCBA policies.
+• Personnel shall NOT operate outside their certification level.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.91',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.91 – Radio Protocols & Statewide SWIC Channels',
+    content: `**Plain Language Radio Policy:**
+No "10-codes" or signals used. Identify unit/station at start of transmission. "EMERGENCY TRAFFIC" clears channel.
+
+**Montana Statewide Interoperability (SWIC) Channels:**
+• **RED:** State Fire Mutual Aid (first choice for on-scene interagency comms).
+• **TAN:** Air-to-Ground coordination / Helicopter ops.
+• **GRAY / PINK:** Dispatch and paging.
+• **NEON:** General mutual aid & MCI triage group.
+• **WHITE:** Hospital-to-Ambulance communications.
+• **SCHOOL:** School emergency direct link to law enforcement.
+
+**3MF Local Tactical Channels:**
+• **3M DIRECT:** Simplex tactical channel (preferred for close-proximity fireground, interior crews, and staging).
+• **3M REPEATER:** Repeater channel extending coverage across district (used when distance/terrain blocks direct simplex).`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.92',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.92 – Air Medical Response & Helicopter Landing Zone (LZ)',
+    content: `**Air Medical Request Triggers:**
+Request helicopter via Ravalli County Dispatch for:
+1. Multi-system trauma (RTS or GCS < 13).
+2. Time-critical STEMI/Stroke where ground transport > 30–45 minutes.
+3. Prolonged extrication expected to exceed 20 minutes.
+4. Geographic barriers / road delays. Radio contact on **TAN channel**.
+
+**Helicopter Landing Zone (LZ) Protocol:**
+• **Daytime LZ:** Firm 100 ft × 100 ft area, free of wires/debris, max slope 8°. Mark 4 corners with weighted/lighted cones. **NEVER USE FLARES** (engine intake hazard). Spectators 200 ft back.
+• **Nighttime LZ:** Minimum 200 ft × 200 ft area. Lighted cones or headlights directed inward toward LZ center (never shine lights at aircraft).
+• **Approach Safety:** Approach ONLY from front in pilot's view after all-clear signal. Never approach from rear or uphill.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-500.100',
+    category: 'Fire',
+    subCategory: '500 - Fire Operations SOPs',
+    title: '500.100 – Decontamination & Cancer Prevention (Clean Cab)',
+    content: `**Mandatory Cancer Prevention Protocol:**
+Firefighter cancer rates are significantly elevated due to carcinogen exposure. These steps are mandatory on EVERY fire response:
+
+1. **Gross Decon On Scene:** Low-pressure water rinse of PPE before removal. Face & neck decon wipes before SCBA removal. Bag contaminated turnout coat/pants in exterior compartment.
+2. **Clean Cab Concept (NON-NEGOTIABLE):** Contaminated turnouts and SCBA stored strictly in exterior compartments. **PROHIBITED inside passenger cab at all times.**
+3. **Shower in an Hour:** Mandatory shower and change into clean uniform within **1 hour** of returning to station after fire involvement.
+4. **Gear Laundering:** Turnouts washed in NFPA 1851 compliant extractor. Never air-dry gear inside living quarters.`,
+    lastUpdated: '2026-08-08'
+  },
+
+  // SECTION 600 – STATION & DAILY OPERATIONS
+  {
+    id: 'fire-600.01',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.01 – Daily Station Duties & Shift Turnover',
+    content: `**600.01 — Daily Housekeeping Schedule:**
+• **Morning Duties (08:00–09:00):** Apparatus & SCBA daily inspections, common areas swept/mopped, bathrooms restocked, kitchen cleaned, bunk rooms made, bay floors swept, exterior litter checked.
+• **Ongoing Duties:** Dispatch radio monitored at all times (never unmonitored), visitors logged.
+• **End of Shift / Turnover (06:00–08:00):** Daily logs signed, apparatus fueled (top off if below ¾ tank), personal items removed from common areas.
+
+**600.02 — Shift Briefing & Turnover:**
+At 08:00 shift change, off-going officer conducts face-to-face briefing with oncoming officer covering: apparatus status, maintenance issues, prior shift calls, personnel/safety concerns, planned training. Both sign turnover log.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.03',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.03 – Apparatus Inspection & Maintenance Reporting',
+    content: `**Daily Apparatus Inspection (Every Shift 08:00–09:00):**
+• Cab: fluid levels, tire condition, lights, seatbelts, radio, equipment present.
+• Pump: fluid levels, primer, tank full, discharges/intakes capped.
+• SCBA: mounted, bottle pressure >90% (4,050+ psi), PASS operational.
+
+**Weekly Checks:**
+Run pump to pressure, test portable generators/fans/extrication tools (min 3 minutes), inspect ground ladders, test portable radios, restock EMS supplies.
+
+**Out-of-Service Protocol:**
+Any apparatus/equipment failing inspection tagged **OUT OF SERVICE** with physical tag on steering wheel; Fire Chief notified immediately.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.04',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.04 – Training Requirements & Documentation',
+    content: `**Core Principle:** *"Training is not what we do when there's nothing else going on. Training is the job."*
+
+**Minimum Annual Training Hours:**
+• **Paid Staff (Career): 240 hrs / year** (min 20 hrs/month).
+• **Volunteer Members: 72 hrs / year** (min 6 hrs/month).
+• **Company Officers: 280 hrs / year** (includes ICS, leadership, incident management).
+• **Probationary Members:** Complete Firefighter I curriculum timeline.
+
+**On-Shift Priorities:** Rotating monthly focus across Firefighting Fundamentals, SCBA Proficiency, EMS Skills, EVOC, HazMat, Wildland/WUI, ICS & Command, Tools & Equipment. Documented in training system before shift end.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.06',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.06 – Station Living Standards & Bunk Room Rules',
+    content: `**Station Living Standards:**
+• **Meals & Kitchen:** Members provide own food. Clean kitchen after meals. Refrigerator checked daily; unlabeled/expired food discarded.
+• **Nighttime Sleep Hours:** 22:00–06:00 for Paid Staff on 24-hr shift when not on calls. Must be capable of immediate response (sleep in response clothing or gear accessible).
+• **Day Sleeping:** Prohibited without express officer approval (e.g., after extended overnight call).
+• **Bunk Room Conduct:** Shared quiet space. No noise/media/phone calls after 22:00.
+• **Volunteer Access (600.10/600.11):** Volunteers welcomed in day room/kitchen during scheduled visits/drills. Check in with on-duty officer upon arrival. Bunk rooms reserved for on-duty staff.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.07',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.07 – Smoke Alarm & Prescribed Burn Programs',
+    content: `**600.07 — Smoke Alarm Program:**
+• **Community Connect Point of Entry:** All smoke alarm requests intake through Community Connect portal. On-duty member flags new requests during morning check.
+• **Installation Standard:** Scheduled within 14 days (priority to elderly/disabled/children). Install per NFPA 72 (min 1 per level, inside each bedroom, outside sleeping areas). Test and educate resident.
+
+**600.08 — Prescribed Burn Assistance:**
+• Landowners request via Community Connect.
+• **Field Assessment Required:** On-duty officer conducts site check (burn size, fuels, weather, water source, escape routes).
+• **Valid MT DNRC Burn Permit Mandatory** before any department standby.
+• Minimum 2 crew members + 1 wildland apparatus assigned. Emergency 911 coverage MUST be maintained first.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.09',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.09 – Public Outreach, Station Tours & Security',
+    content: `**600.09 — Public Outreach & Station Tours:**
+• Station tours scheduled in advance (min 2 crew members present). Children supervised by adult & crew at all times.
+• School fire safety & community events conducted in uniform with Chief approval.
+
+**600.10 — Facility Security:**
+Apparatus bay doors kept closed and locked when unattended. Sign posted when crew out on call ("On Call — Ring Bell for Non-Emergency Assistance").
+
+**600.11 — Visitor Logging:**
+All station visitors logged in Visitor Log (Name, Date, Time In/Out, Purpose).`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.12',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.12 – Records & Patient Care Report (PCR) SOG',
+    content: `**600.12 — Records Retention:**
+Incident reports completed in NFIRS within 24 hours. Records retained per Montana Secretary of State Local Government Schedule (5–7 years).
+
+**600.13 — Patient Care Report (PCR) Completion:**
+• **24-Hour Hard Deadline:** PCRs MUST be completed and submitted within **24 hours** of call completion (Paid and Volunteer).
+• **Primary Author:** Member who served as primary care provider completes narrative.
+• **All Treating Personnel Sign-Off:** EVERY member who provided patient care must review and electronically sign before PCR is marked final.
+• **Honesty & Accuracy:** Legal document. Falsification is grounds for immediate termination. Password-protected per HIPAA.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.14',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.14 – Community Connect & First Due Alerting',
+    content: `**Community Connect Intake Portal:**
+Single point of entry for community service requests (smoke alarms, burn assistance) and resident hazard/medical profile sharing.
+
+**Daily Check Requirement (08:00–09:00):**
+On-duty officer checks portal every morning for new registrations, requests, and special needs flags. Acknowledge requests within 24 hours; schedule home visits within 7 days.
+
+**First Due Community Alerting:**
+Pushes emergency notifications (evacuation, road closures, smoke/fire weather) to registered community members.
+• **Fire Chief:** Full authority to issue alerts anytime.
+• **Command Staff:** Authorized during active emergencies if Chief unreachable.
+• **Company Officer:** Requires direct verbal/written approval from Chief/Command Staff. Mandatory use of pre-built alert templates.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.15',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.15 – Mandatory On-Call for Emergency Situations',
+    content: `**Activation Triggers:**
+Mandatory on-call is a condition of employment for off-duty Paid Staff when emergency demands exceed normal staffing:
+1. Extended incidents expected to exceed 4 hours or crew fatigue.
+2. Mass Casualty Incidents (MCI - 3+ patients).
+3. Catastrophic or multi-incident events.
+4. Local/County/State Declared Emergency.
+5. Critical staffing failure (below minimums without voluntary coverage).
+
+**Response Requirement:**
+Off-duty Paid Staff report to station within **60 minutes** of phone/radio notification. Failure to respond without documented medical emergency is a serious conduct violation. Compensated at regular/FLSA overtime rate. Volunteers respond voluntarily.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.16',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.16 – Deployment Operations & Out-of-District Response',
+    content: `**600.16 — Deployment Operations:**
+Wildland or regional emergency deployments require Fire Chief authorization.
+• **Paid Staff Deployments:** Shift fill-in coverage arranged using qualified Volunteers paid at Board-approved shift rates. Deployed staff paid regular rate or deployment reimbursement rate (whichever higher). Extended deployments max 14 days without Board notice.
+• **Volunteer Deployments:** Voluntary. Must hold required certifications (NWCG red card). Deployed hours compensated from reimbursement.
+
+**600.17 — Out-of-District Response & Back-Filling:**
+*NON-NEGOTIABLE:* No unit leaves district unless in-district 911 coverage confirmed first. Back-fill with volunteer standby. Notify dispatch.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.18',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.18 – Ravalli County Emergency Management Compliance',
+    content: `**Ravalli County OEM Alignment:**
+Three Mile Fire Department is an independent special fire district under MT law (MCA §7-33) governed by its Board of Commissioners. Coordinates with Ravalli County Office of Emergency Management (OEM) under County All-Hazards EOP.
+
+**ICS/NIMS & Fire Season:**
+All ops NIMS/ICS compliant. Coordinates with County Firewarden during established fire season.
+
+**Regional HazMat Response:**
+3MF operates at First Responder Operations level. Regional HazMat Technician Team requested through **MT DES State Duty Officer at (406) 324-4777** in coordination with OEM.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.19',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.19 – Hydrant Testing, Maintenance & Color Coding',
+    content: `**Annual Flow Testing (NFPA 291):**
+All district hydrants flow-tested annually prior to **May 1**. Static pressure, residual pressure, and flow GPM recorded.
+
+**NFPA 291 Hydrant Color Coding (Bonnet & Caps):**
+• **Blue (Class AA):** 1,500 GPM or greater
+• **Green (Class A):** 1,000 – 1,499 GPM
+• **Orange (Class B):** 500 – 999 GPM
+• **Red (Class C):** Less than 500 GPM
+*Hydrant Barrels:* Painted safety yellow.
+
+**Access Path & Signage:**
+Maintain **3-foot unobstructed clearance** around hydrants. Clear vegetation and winter snow. Blue reflective pavement markers or rural marker posts installed for year-round visibility.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.20',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.20 – Draft Ponds, Cisterns & Water Source Inventory',
+    content: `**Rural Static Water Source Inspection:**
+Annual inspection of draft ponds, dry hydrants, and cisterns during spring runoff and late summer drawdown. Strainers cleared, dry hydrants painted safety yellow. Marked with standard "FIRE DEPARTMENT DRAFT SITE" reflective signs.
+
+**A. Static Fire Ponds Inventory:**
+1. **Dry Gulch Upper Pond:** GPS 46.592547, -114.000298 | 212' x 207' (1.01 ac) | Max Design: 984,825 gal | Operational Vol: ~984,825 gal.
+2. **Dry Gulch Lower Pond:** GPS 46.589964, -114.014244 | 152' x 55' (0.19 ac) | Max Design: 375,223 gal | Operational Vol: ~150,089 gal.
+3. **Wagon Trail Pond:** GPS 46.563333, -114.043011 | 355' x 94' | Max Design: 1,497,000 gal | Operational Vol: ~598,800 gal.
+4. **Lariat Ln Pond:** GPS 46.546643, -113.966092 | 617' x 162' (1.05 ac) | Max Design: 2,055,422 gal | Operational Vol: ~822,169 gal.
+5. **Duck Pond Way:** GPS 46.536340, -114.027783 | 282' x 78' (0.51 ac) | Max Design: 987,246 gal | Operational Vol: ~394,898 gal.
+
+**B. Station Cisterns & Dedicated Well Hydrants:**
+1. **Station 2 Cistern:** 10,000-Gal Gravity Cistern, continuous 10 GPM well feed.
+2. **Station 1 Deep Well Hydrant:** 1064 Three Mile Creek Rd | Tested flow: 76 GPM.
+3. **Dry Gulch & Rugged Rd Hydrant:** Developer-sourced well line | *OFFLINE*.
+
+**C. Surface Water Extraction Points:**
+1. **Lone Rock School Intercept:** Big Ditch alignment (~300 GPM seasonal).
+2. **Florence River Bridge Access:** GPS 46.633023, -114.050899 (high-volume apparatus drafting loop).
+3. **5481 Old Eastside Hwy Access:** GPS 46.595954, -114.048566 (tender access flank).
+4. **Wild Fowl Ln River Access:** GPS 46.555338, -114.097347 (low-bank deployment point).
+5. **North Burnt Fork Creek Access:** GPS 46.536699, -114.093245 (natural tributary node).
+6. **East Side Hwy (203) Access:** GPS 46.525925, -114.071847.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-600.21',
+    category: 'Fire',
+    subCategory: '600 - Station & Daily Operations',
+    title: '600.21 – On-Shift Injuries & Workers\' Compensation',
+    content: `**600.21 — On-Shift Injury Reporting:**
+Report ALL on-duty injuries immediately to Company Officer before shift end, no matter how minor. Unreported injuries cannot be treated or covered by Workers' Comp. Never "tough out" an injury.
+• Life-threatening injury: Call 911 / EMS immediately.
+• Officer arranges care, notifies Fire Chief, secures scene if investigation needed.
+
+**Workers' Compensation (MCA Title 39, Ch 71):**
+All Paid Staff and Volunteers covered for authorized duties.
+• **First Report of Injury:** Completed same day or next business day for medical treatment beyond first aid, lost time, or head/spine/joint injuries.
+• Modified duty accommodations provided when medically appropriate.
+
+**600.22 — Hazard & Danger Reporting & OSHA Protections:**
+• **No Retaliation:** Mandatory protection for good-faith hazard reports.
+• **Right to Refuse Unsafe Work (MCA Title 50, Ch 71):** Members protected when refusing work reasonably believed to pose imminent risk of death/serious harm.`,
+    lastUpdated: '2026-08-08'
+  },
+
+  // SECTION 700 – APPENDICES & FORMS
+  {
+    id: 'fire-700.app-a',
+    category: 'Fire',
+    subCategory: '700 - Appendices & Forms',
+    title: 'Appendix A – Lost / Damaged / Stolen Equipment Form',
+    content: `**THREE MILE FIRE DEPARTMENT — Appendix A Form**
+*Submit to Fire Chief within 24 hours of discovery.*
+
+**Required Form Fields:**
+• **Member Name:** [ Name ]
+• **Date of Report:** [ Date ]
+• **Item Description:** [ Detailed description of equipment ]
+• **Assigned Apparatus / Unit:** [ Unit # ]
+• **Date Item Last Confirmed Present:** [ Date / Time ]
+• **Date Loss / Damage Discovered:** [ Date / Time ]
+• **Circumstance:** [ Lost / Damaged / Stolen ]
+• **Estimated Replacement Value:** [ $ Amount ]
+• **Description of Circumstances:** [ Narrative explanation of event, location, witnesses ]
+• **Member Signature & Date**
+• **Fire Chief Review & Action Taken:** [ Approved / Replacement Ordered / Investigation ]`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-700.app-b',
+    category: 'Fire',
+    subCategory: '700 - Appendices & Forms',
+    title: 'Appendix B – Personnel Accountability System (Passport)',
+    content: `**Passport (Tag) System Protocol:**
+The Three Mile Fire Department uses a Passport Accountability System on all working incidents:
+
+1. **Passport Tags:** Every member carries a durable, name-bearing passport tag specifying certification level and unit assignment. Company Officers carry rings holding crew passports.
+2. **Check-In:** On arrival, Company Officer delivers crew passports to the Accountability Officer (or Command Post). Passports logged on accountability worksheet with Name, Assignment, and Time In.
+3. **Reassignment:** When crew transfers to another Division or Sector, passports move with the crew to the receiving supervisor's accountability point.
+4. **Check-Out:** Upon release, Accountability Officer logs Time Out and returns passports to members before departure. Members are NOT released until passport is returned.`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-700.app-c',
+    category: 'Fire',
+    subCategory: '700 - Appendices & Forms',
+    title: 'Appendix C – Mutual Aid Agreements Directory',
+    content: `**Countywide Automatic Mutual Aid:**
+Ravalli County fire agencies operate under automatic mutual aid — neighboring departments are dispatched simultaneously without a case-by-case approval delay.
+
+**Ravalli County Partner Agencies:**
+• Stevensville Rural Fire District
+• Stevensville Fire Department (Town of Stevensville)
+• Florence Rural Fire District
+• Corvallis Rural Fire District
+• Victor Rural Fire District
+• Hamilton Rural Fire District / City of Hamilton Fire Department
+• Pinesdale Volunteer Fire Department
+• Darby Rural Fire District
+• West Fork Volunteer Fire Department
+• Painted Rocks Rural Fire District
+• Sula Rural Fire District
+
+**State & Federal Wildland Partners:**
+• **Montana DNRC:** Hamilton Unit Office (Southwest Land Office).
+• **U.S. Forest Service:** Bitterroot National Forest (Stevensville, Darby/Sula, West Fork Ranger Districts).
+
+*All mutual aid dispatched via Ravalli County Sheriff's Office Dispatch. No self-dispatching permitted.*`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-700.app-d',
+    category: 'Fire',
+    subCategory: '700 - Appendices & Forms',
+    title: 'Appendix D – Board Adoption Resolution & Signatures',
+    content: `**BOARD OF FIRE COMMISSIONERS RESOLUTION**
+*A Resolution of the Board of Fire Commissioners of the Three Mile Fire District Adopting the Three Mile Fire Department Fire Operations Policy & Procedure Manual.*
+
+WHEREAS, the Board of Fire Commissioners of the Three Mile Fire District is authorized to establish policies and procedures governing fire department operations; and
+WHEREAS, the Board has reviewed and finds the attached Fire Operations Policy & Procedure Manual to be consistent with sound fire service practices and applicable law;
+NOW, THEREFORE, BE IT RESOLVED that the Board of Fire Commissioners hereby adopts the Three Mile Fire Department Fire Operations Policy & Procedure Manual, and directs the Fire Chief to implement its provisions and ensure all department members receive a copy.
+
+**Adopted Signatures:**
+• Fire Chief (Chad Hampshire)
+• Board President
+• Board Member
+• Board Member
+• Board Member
+• Secretary of the Board`,
+    lastUpdated: '2026-08-08'
+  },
+  {
+    id: 'fire-700.app-e',
+    category: 'Fire',
+    subCategory: '700 - Appendices & Forms',
+    title: 'Appendix E – Oath of Office (Member Detachable Copy)',
+    content: `**THREE MILE FIRE DEPARTMENT — Member Oath of Office Record**
+*(To be detached, signed, witnessed, and filed in member's personnel file)*
+
+"I, [Member Printed Name], do solemnly swear (or affirm) that I will support and defend the Constitution of the United States and the Constitution of the State of Montana; that I will faithfully and impartially discharge the duties of a member of the Three Mile Fire Department to the best of my ability and judgment; that my fundamental duty is to safeguard life, health, and property against fire, medical emergency, and other peril, without regard to whom I am called to serve; that I will obey the lawful orders of those appointed over me, and will lead and support those entrusted to my care; that I will uphold the policies, procedures, and standards of this department, and will continually strive to improve my knowledge and skill in its service; that I recognize the badge and title of this department as a symbol of public trust, to be honored both on duty and off; and that I will at all times conduct myself in a manner that reflects honor upon myself, this department, and the community of Stevensville I am sworn to protect. I take this obligation freely, without any mental reservation or purpose of evasion. So help me God (or: This I affirm)."
+
+• **Member Signature:** ______________________ **Date:** __________
+• **Fire Chief / Witness Signature:** ______________________
+• **Position / Rank:** ______________________`,
+    lastUpdated: '2026-08-08'
+  },
+
   {
     id: "treatment-3",
     category: "Treatment",

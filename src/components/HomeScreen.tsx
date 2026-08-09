@@ -15,7 +15,7 @@ import { motion } from 'motion/react';
 import { cn } from '../lib/utils';
 
 // Valid tab types based on App.tsx
-type AppTab = 'home' | 'protocols' | 'rx' | 'contacts' | 'tools' | 'email';
+type AppTab = 'home' | 'protocols' | 'rx' | 'dept_protocols' | 'contacts' | 'tools' | 'ems_practice' | 'email';
 
 interface HomeScreenProps {
   onNavigate: (tab: AppTab, tool?: string) => void;
@@ -27,7 +27,7 @@ export default function HomeScreen({ onNavigate }: HomeScreenProps) {
   const quickTools = [
     { title: "MCI IC Tool", icon: <ShieldAlert />, color: "border-blue-600", bg: "bg-blue-600/10", text: "text-blue-600 dark:text-blue-400", tool: 'mci' },
     { title: "START Triage", icon: <AlertTriangle />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-600 dark:text-red-400", tool: 'triage' },
-    { title: "JumpSTART", icon: <Baby />, color: "border-teal-600", bg: "bg-teal-600/10", text: "text-teal-600 dark:text-teal-400", tool: 'jumpstart' },
+    { title: "JumpSTART", icon: <Baby />, color: "border-blue-600", bg: "bg-blue-600/10", text: "text-blue-600 dark:text-blue-400", tool: 'jumpstart' },
     { title: "Burn / TBSA", icon: <Flame />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-600 dark:text-red-400", tool: 'burn' },
     { title: "GCS Calc", icon: <Brain />, color: "border-red-600", bg: "bg-red-600/10", text: "text-red-600 dark:text-red-400", tool: 'gcs' },
     { title: "Hospitals", icon: <MapPin />, color: "border-blue-700", bg: "bg-blue-700/10", text: "text-blue-700 dark:text-blue-400", tab: 'contacts' as AppTab },

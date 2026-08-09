@@ -1,5 +1,6 @@
 {
   "name": "Three Mile Fire Protocols",
   "description": "A high-utility protocol and emergency response app for Three Mile Fire Department personnel, featuring searchable medical and fire protocols, checklists, and calculators.",
-  "requestFramePermissions": []
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

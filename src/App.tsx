@@ -26,7 +26,8 @@ import {
   Activity,
   QrCode,
   User,
-  ShieldCheck
+  ShieldCheck,
+  Award
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from './lib/utils';
@@ -46,10 +47,28 @@ import BillingRecoveryTool from './components/BillingRecoveryTool';
 import NormVitals from './components/NormVitals';
 import CommunityConnect from './components/CommunityConnect';
 import Endorsements from './components/Endorsements';
+import EmsPractice from './components/EmsPractice';
+import FireMap from './components/FireMap';
+import ErgLookup from './components/ErgLookup';
+import WhatThreeWords from './components/WhatThreeWords';
+import WhatRx from './components/WhatRx';
+import FfInfo from './components/FfInfo';
+import ProtocolDetailView from './components/ProtocolDetailView';
 import { Shield } from 'lucide-react';
 
-type Tab = 'home' | 'protocols' | 'rx' | 'contacts' | 'tools' | 'email';
-type Tool = 'apgar' | 'gcs' | 'drip' | 'burn' | 'converter' | 'triage' | 'jumpstart' | 'mci' | 'admin' | 'abbreviations' | 'billing' | 'vitals' | 'community-connect' | 'endorsements' | null;
+import proximalTibiaImg from './assets/images/proximal_tibia_landmark_1783220483477.jpg';
+import proximalHumerusImg from './assets/images/proximal_humerus_landmark_1783220496403.jpg';
+import distalFemurImg from './assets/images/distal_femur_landmark_1783220515779.jpg';
+import distalTibiaImg from './assets/images/distal_tibia_landmark_1783220525787.jpg';
+import cephalicImg from './assets/images/cephalic_vein_1783821812590.jpg';
+import basilicImg from './assets/images/basilic_vein_1783821822696.jpg';
+import medianCubitalImg from './assets/images/median_cubital_vein_1783821834479.jpg';
+import handDorsumImg from './assets/images/hand_dorsum_vein_1783821843993.jpg';
+import saphenousImg from './assets/images/saphenous_vein_1783821853733.jpg';
+import scalpImg from './assets/images/scalp_veins_1783821863097.jpg';
+
+type Tab = 'home' | 'protocols' | 'rx' | 'dept_protocols' | 'contacts' | 'tools' | 'ems_practice' | 'email';
+type Tool = 'apgar' | 'gcs' | 'drip' | 'burn' | 'converter' | 'triage' | 'jumpstart' | 'mci' | 'admin' | 'abbreviations' | 'billing' | 'vitals' | 'community-connect' | 'endorsements' | 'fire-map' | 'erg-lookup' | 'what3words' | 'ff-info' | null;
 
 export default function App() {
   const [protocols, setProtocols] = useState<Protocol[]>(PROTOCOLS);
@@ -59,9 +78,8 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>('Treatment');
   const [selectedProtocol, setSelectedProtocol] = useState<Protocol | null>(null);
   const [selectedMedication, setSelectedMedication] = useState<Medication | null>(null);
-  const [selectedRxCategory, setSelectedRxCategory] = useState<'Medication Guide' | 'Endorsement Meds'>('Medication Guide');
+  const [selectedRxCategory, setSelectedRxCategory] = useState<'Medication Guide' | 'Endorsement Meds' | 'What RX?'>('Medication Guide');
   const [activeTool, setActiveTool] = useState<Tool>(null);
-  const [treatmentSubTab, setTreatmentSubTab] = useState<'protocols' | 'skills'>('protocols');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
@@ -79,6 +97,42 @@ export default function App() {
     }
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (activeTab === 'protocols') {
+      setSelectedCategory('Treatment');
+    } else if (activeTab === 'dept_protocols') {
+      setSelectedCategory('EMS');
+    }
+  }, [activeTab]);
+
+  // Automatically scroll to the top of the page on tab, tool, protocol, medication, or category change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [activeTab, activeTool, selectedProtocol, selectedMedication, selectedRxCategory, selectedCategory]);
+
+  // Preload landmark and static images for instant performance
+  useEffect(() => {
+    const imagesToPreload = [
+      'logo.png',
+      proximalTibiaImg,
+      proximalHumerusImg,
+      distalFemurImg,
+      distalTibiaImg,
+      cephalicImg,
+      basilicImg,
+      medianCubitalImg,
+      handDorsumImg,
+      saphenousImg,
+      scalpImg,
+      "/community-connect-qr.png"
+    ];
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   const filteredProtocols = useMemo(() => {
     return protocols.filter(p => {
@@ -169,166 +223,19 @@ export default function App() {
           <AnimatePresence mode="wait">
             <>
               {selectedProtocol ? (
-            <motion.div
-              key="protocol-detail"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="p-4"
-            >
-              <button 
-                onClick={() => setSelectedProtocol(null)}
-                className="flex items-center gap-2 text-emerald-500 mb-6 hover:text-emerald-400 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                <span className="text-sm font-medium">Back to Protocols</span>
-              </button>
-
-              <div className="bg-white dark:bg-[#1C1C1E] border-2 border-zinc-100 dark:border-white/5 rounded-3xl p-6 mb-6 shadow-xl shadow-zinc-100 dark:shadow-none">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={cn(
-                    "text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded",
-                    selectedProtocol.category === 'Treatment' ? "bg-blue-500/10 text-blue-500" :
-                    selectedProtocol.category === 'Fire' ? "bg-orange-500/10 text-orange-400" :
-                    "bg-emerald-500/10 text-emerald-400"
-                  )}>
-                    {selectedProtocol.category === 'Treatment' ? 'Clinical Treatment Protocol' : `Fire Department Operations Protocol > ${selectedProtocol.category === 'EMS' ? 'EMS' : 'Fire'}`}
-                    {selectedProtocol.subCategory ? ` > ${selectedProtocol.subCategory}` : ''}
-                  </span>
-                  <span className="text-[10px] font-bold text-zinc-400 dark:text-white/20 flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    Updated: {selectedProtocol.lastUpdated}
-                  </span>
-                </div>
-                <h2 className="text-2xl font-black text-zinc-900 dark:text-white uppercase tracking-tight mb-4">{selectedProtocol.title}</h2>
-                <div className="space-y-4 mb-8">
-                  {(() => {
-                    const content = selectedProtocol.content;
-                    const sectionKeys = [
-                      'Purpose:',
-                      'Scope:',
-                      'Blue Card Integration:',
-                      'Blue Card Integration',
-                      'Blue Card Information:',
-                      'Blue Card Information',
-                      'Procedures:',
-                      'Procedure:',
-                      'References:',
-                      'Reference:',
-                      'Criteria:',
-                      'Definition:',
-                      'Definitions:',
-                      'Category:',
-                      'Categories:',
-                      'Exception:',
-                      'Exceptions:',
-                      'Exception A:',
-                      'Exception B:',
-                      'Note:',
-                      'Notes:',
-                      'MANDATORY:',
-                      'WARNING:',
-                      'CAUTION:'
-                    ];
-
-                    // Sort keys by length descending to match longest patterns first
-                    const sortedKeys = [...sectionKeys].sort((a, b) => b.length - a.length);
-                    
-                    // Add a pattern for bolded headers like **Header:**
-                    const boldHeaderPattern = '\\*\\*[^\\*]+\\*\\*[:]?';
-                    const regex = new RegExp(`(${sortedKeys.join('|')}|${boldHeaderPattern})`, 'g');
-                    const parts = content.split(regex);
-
-                    const result: React.ReactNode[] = [];
-                    let currentSection: string | null = null;
-
-                    for (let i = 0; i < parts.length; i++) {
-                      const part = parts[i];
-                      if (sectionKeys.includes(part) || /^\*\*.*\*\*[:]?$/.test(part)) {
-                        currentSection = part;
-                      } else if (part.trim()) {
-                        if (currentSection) {
-                          const cleanSection = currentSection.replace(/\*\*/g, '');
-                          
-                          const colorClass = 
-                            cleanSection.startsWith('Purpose') ? 'bg-blue-50 dark:bg-blue-500/10 border-blue-100 dark:border-blue-500/20 text-blue-900 dark:text-blue-100' :
-                            cleanSection.startsWith('Scope') ? 'bg-zinc-50 dark:bg-zinc-500/10 border-zinc-100 dark:border-zinc-500/20 text-zinc-900 dark:text-zinc-100' :
-                            cleanSection.startsWith('Blue Card') ? 'bg-zinc-900 text-white border-black' :
-                            cleanSection.startsWith('Procedure') ? 'bg-emerald-50 dark:bg-emerald-500/10 border-emerald-100 dark:border-emerald-500/20 text-emerald-900 dark:text-emerald-100' :
-                            cleanSection.startsWith('Reference') ? 'bg-blue-50 dark:bg-blue-500/10 border-blue-100 dark:border-blue-500/20 text-blue-900 dark:text-blue-100' :
-                            cleanSection.startsWith('Criteria') ? 'bg-red-50 dark:bg-red-500/10 border-red-100 dark:border-red-500/20 text-red-900 dark:text-red-100' :
-                            cleanSection.startsWith('Definition') ? 'bg-zinc-50 dark:bg-zinc-500/10 border-zinc-100 dark:border-zinc-500/20 text-zinc-900 dark:text-zinc-100' :
-                            cleanSection.startsWith('Categor') ? 'bg-zinc-100 dark:bg-purple-500/10 border-zinc-200 dark:border-purple-500/20 text-zinc-900 dark:text-purple-100' :
-                            cleanSection.startsWith('Exception') ? 'bg-red-600 text-white border-red-700' :
-                            cleanSection.startsWith('MANDATORY') || cleanSection.startsWith('WARNING') || cleanSection.startsWith('CAUTION') ? 'bg-red-700 text-white border-red-800' :
-                            cleanSection.startsWith('Note') ? 'bg-blue-600 text-white border-blue-700' :
-                            cleanSection.startsWith('Adult') ? 'bg-blue-50 dark:bg-sky-500/10 border-blue-100 dark:border-sky-500/20 text-blue-900 dark:text-sky-100' :
-                            cleanSection.startsWith('Pediatric') || cleanSection.startsWith('Child') ? 'bg-red-50 dark:bg-emerald-500/10 border-red-100 dark:border-emerald-500/20 text-red-900 dark:text-emerald-100' :
-                            cleanSection.startsWith('Infant') || cleanSection.startsWith('Neonate') ? 'bg-zinc-100 dark:bg-fuchsia-500/10 border-zinc-200 dark:border-fuchsia-500/20 text-zinc-900 dark:text-fuchsia-100' :
-                            'bg-zinc-50 dark:bg-slate-500/10 border-zinc-100 dark:border-slate-500/20 text-zinc-900 dark:text-slate-100';
-
-                          const headerColor = 
-                            cleanSection.startsWith('Purpose') ? 'text-blue-600 dark:text-blue-400' :
-                            cleanSection.startsWith('Scope') ? 'text-zinc-600 dark:text-zinc-400' :
-                            cleanSection.startsWith('Blue Card') ? 'text-white/60 dark:text-indigo-400' :
-                            cleanSection.startsWith('Procedure') ? 'text-emerald-600 dark:text-emerald-400' :
-                            cleanSection.startsWith('Reference') ? 'text-blue-600 dark:text-blue-400' :
-                            cleanSection.startsWith('Criteria') ? 'text-red-600 dark:text-red-400' :
-                            cleanSection.startsWith('Definition') ? 'text-zinc-600 dark:text-zinc-400' :
-                            cleanSection.startsWith('Categor') ? 'text-zinc-500 dark:text-purple-400' :
-                            cleanSection.startsWith('Exception') ? 'text-white/80 dark:text-red-400' :
-                            cleanSection.startsWith('MANDATORY') || cleanSection.startsWith('WARNING') || cleanSection.startsWith('CAUTION') ? 'text-white font-black' :
-                            cleanSection.startsWith('Note') ? 'text-white/80 dark:text-blue-300' :
-                            cleanSection.startsWith('Adult') ? 'text-blue-600 dark:text-sky-400' :
-                            cleanSection.startsWith('Pediatric') || cleanSection.startsWith('Child') ? 'text-red-600 dark:text-emerald-400' :
-                            cleanSection.startsWith('Infant') || cleanSection.startsWith('Neonate') ? 'text-zinc-600 dark:text-fuchsia-400' :
-                            'text-zinc-500 dark:text-slate-400';
-
-                          result.push(
-                            <div key={i} className={cn("p-4 rounded-2xl border", colorClass)}>
-                              <h4 className={cn("text-[10px] font-bold uppercase tracking-widest mb-2", headerColor)}>
-                                {cleanSection.endsWith(':') ? cleanSection : `${cleanSection}:`}
-                              </h4>
-                              <div className="text-sm leading-relaxed whitespace-pre-wrap">
-                                {part.trim()}
-                              </div>
-                            </div>
-                          );
-                          currentSection = null;
-                        } else {
-                          result.push(
-                            <div key={i} className="text-zinc-700 dark:text-white/80 leading-relaxed whitespace-pre-wrap text-sm px-2">
-                              {part}
-                            </div>
-                          );
-                        }
-                      }
-                    }
-
-                    return result.length > 0 ? result : (
-                      <p className="text-white/80 leading-relaxed whitespace-pre-wrap text-sm">
-                        {content}
-                      </p>
-                    );
-                  })()}
-                </div>
-
-                {selectedProtocol.steps && (
-                  <div className="space-y-4">
-                    <h3 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-2">Action Steps</h3>
-                    {selectedProtocol.steps.map((step, idx) => (
-                      <div key={idx} className="flex gap-4 group">
-                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-[10px] font-bold text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-all">
-                          {idx + 1}
-                        </div>
-                        <p className="text-sm pt-0.5 text-zinc-800 dark:text-white/90">{step}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          ) : selectedMedication ? (
+                <motion.div
+                  key="protocol-detail"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="p-4"
+                >
+                  <ProtocolDetailView 
+                    protocol={selectedProtocol} 
+                    onBack={() => setSelectedProtocol(null)} 
+                  />
+                </motion.div>
+              ) : selectedMedication ? (
             <motion.div
               key="medication-detail"
               initial={{ opacity: 0, x: 20 }}
@@ -585,6 +492,46 @@ export default function App() {
             >
               <Endorsements onBack={() => setActiveTool(null)} />
             </motion.div>
+          ) : activeTool === 'fire-map' ? (
+            <motion.div
+              key="fire-map"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="p-4"
+            >
+              <FireMap onBack={() => setActiveTool(null)} />
+            </motion.div>
+          ) : activeTool === 'ff-info' ? (
+            <motion.div
+              key="ff-info"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="p-4"
+            >
+              <FfInfo onBack={() => setActiveTool(null)} />
+            </motion.div>
+          ) : activeTool === 'erg-lookup' ? (
+            <motion.div
+              key="erg-lookup"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="p-4"
+            >
+              <ErgLookup onBack={() => setActiveTool(null)} />
+            </motion.div>
+          ) : activeTool === 'what3words' ? (
+            <motion.div
+              key="what3words"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="p-4"
+            >
+              <WhatThreeWords onBack={() => setActiveTool(null)} />
+            </motion.div>
           ) : activeTab === 'home' ? (
             <div key="home" className="p-4">
               <HomeScreen onNavigate={(tab, tool) => {
@@ -601,15 +548,21 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               className="p-4"
-            >
-               {(activeTab === 'protocols' || activeTab === 'rx') && (
+             >
+               {(activeTab === 'protocols' || activeTab === 'dept_protocols' || activeTab === 'rx') && (
                 <>
                   {/* Search and Filters */}
                       <div className="relative mb-6">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-red-600" />
                         <input 
                           type="text"
-                          placeholder={activeTab === 'protocols' ? (selectedCategory === 'Treatment' && treatmentSubTab === 'skills' ? "SEARCH CLINICAL SKILLS..." : "SEARCH PROTOCOLS...") : "SEARCH DRUGS..."}
+                          placeholder={
+                            activeTab === 'protocols' 
+                              ? (selectedCategory === 'Clinical Skills' ? "SEARCH CLINICAL SKILLS..." : "SEARCH PROTOCOLS...") 
+                              : activeTab === 'dept_protocols'
+                              ? (selectedCategory === 'Fire' ? "SEARCH FIRE PROTOCOLS..." : "SEARCH EMS PROTOCOLS...")
+                              : "SEARCH DRUGS..."
+                          }
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
                           className="w-full bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-white/10 rounded-2xl py-4 pl-12 pr-4 focus:outline-none focus:ring-4 focus:ring-red-600/10 focus:border-red-600 transition-all shadow-xl shadow-zinc-200 dark:shadow-none placeholder:text-zinc-300 dark:placeholder:text-white/20 text-zinc-900 dark:text-white font-bold"
@@ -617,108 +570,95 @@ export default function App() {
                       </div>
 
                   {activeTab === 'protocols' && (
-                    <div className="mb-6 space-y-4">
-                      <div className="bg-zinc-200/50 dark:bg-white/5 p-1 rounded-2xl border border-zinc-200 dark:border-white/10 grid grid-cols-3 gap-1 shadow-md">
-                        <button 
-                          onClick={() => {
-                            setSelectedCategory('Treatment');
-                          }}
-                          className={cn(
-                            "py-3 px-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all flex flex-col md:flex-row items-center justify-center gap-2",
-                            selectedCategory === 'Treatment'
-                              ? "bg-red-650 text-white shadow"
-                              : "text-zinc-600 dark:text-white/60 hover:text-zinc-950 dark:hover:text-white font-bold"
-                          )}
-                        >
-                          <Stethoscope className="w-4 h-4 shrink-0" />
-                          <span className="text-[10px] md:text-xs">Tx Protocols</span>
-                        </button>
-                        <button 
-                          onClick={() => {
-                            setSelectedCategory('EMS');
-                          }}
-                          className={cn(
-                            "py-3 px-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all flex flex-col md:flex-row items-center justify-center gap-2",
-                            selectedCategory === 'EMS'
-                              ? "bg-blue-600 text-white shadow"
-                              : "text-zinc-600 dark:text-white/60 hover:text-zinc-950 dark:hover:text-white font-bold"
-                          )}
-                        >
-                          <ShieldAlert className="w-4 h-4 shrink-0" />
-                          <span className="text-[10px] md:text-xs">FD EMS Ops</span>
-                        </button>
-                        <button 
-                          onClick={() => {
-                            setSelectedCategory('Fire');
-                          }}
-                          className={cn(
-                            "py-3 px-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all flex flex-col md:flex-row items-center justify-center gap-2",
-                            selectedCategory === 'Fire'
-                              ? "bg-amber-600 text-white shadow"
-                              : "text-zinc-600 dark:text-white/60 hover:text-zinc-950 dark:hover:text-white font-bold"
-                          )}
-                        >
-                          <Flame className="w-4 h-4 shrink-0" />
-                          <span className="text-[10px] md:text-xs">FD Fire Ops</span>
-                        </button>
-                      </div>
+                    <div className="grid grid-cols-2 gap-2 w-full mb-6">
+                      <button 
+                        onClick={() => {
+                          setSelectedCategory('Treatment');
+                        }}
+                        className={cn(
+                          "py-3 px-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all border-2 flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] w-full text-center whitespace-nowrap",
+                          selectedCategory === 'Treatment'
+                            ? "bg-red-600 border-red-700 text-white shadow-lg shadow-red-200 dark:shadow-[0_0_15px_rgba(255,255,255,0.15)] dark:border-white/30"
+                            : "bg-white dark:bg-white/5 border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white/60 hover:bg-zinc-100"
+                        )}
+                      >
+                        <Stethoscope className="w-4 h-4 shrink-0" />
+                        <span>Treat</span>
+                      </button>
+                      <button 
+                        onClick={() => {
+                          setSelectedCategory('Clinical Skills');
+                        }}
+                        className={cn(
+                          "py-3 px-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all border-2 flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] w-full text-center whitespace-nowrap",
+                          selectedCategory === 'Clinical Skills'
+                            ? "bg-emerald-600 border-emerald-700 text-white shadow-lg shadow-emerald-200 dark:shadow-[0_0_15px_rgba(255,255,255,0.15)] dark:border-white/30"
+                            : "bg-white dark:bg-white/5 border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white/60 hover:bg-zinc-100"
+                        )}
+                      >
+                        <Activity className="w-4 h-4 shrink-0" />
+                        <span>Clinical Skills</span>
+                      </button>
+                    </div>
+                  )}
 
-                      {/* Inner selector for Treatment category (rearranged: Clinical Skills is first) */}
-                      {selectedCategory === 'Treatment' && (
-                        <div className="flex bg-zinc-100 dark:bg-zinc-800/40 p-1 rounded-2xl border border-zinc-200/80 dark:border-white/5 max-w-sm mx-auto shadow-inner animate-fade-in">
-                          <button
-                            onClick={() => setTreatmentSubTab('skills')}
-                            className={cn(
-                              "flex-1 py-1.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5",
-                              treatmentSubTab === 'skills'
-                                ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md font-bold"
-                                : "text-zinc-600 dark:text-white/60 hover:text-zinc-950 dark:hover:text-white font-bold"
-                            )}
-                          >
-                            <Activity className="w-3.5 h-3.5 text-emerald-500" />
-                            <span>Clinical Skills</span>
-                          </button>
-                          <button
-                            onClick={() => setTreatmentSubTab('protocols')}
-                            className={cn(
-                              "flex-1 py-1.5 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5",
-                              treatmentSubTab === 'protocols'
-                                ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-md font-bold"
-                                : "text-zinc-600 dark:text-white/60 hover:text-zinc-950 dark:hover:text-white font-bold"
-                            )}
-                          >
-                            <Stethoscope className="w-3.5 h-3.5 text-red-500" />
-                            <span>Protocols</span>
-                          </button>
-                        </div>
-                      )}
+                  {activeTab === 'dept_protocols' && (
+                    <div className="grid grid-cols-2 gap-2 w-full mb-6">
+                      <button 
+                        onClick={() => {
+                          setSelectedCategory('EMS');
+                        }}
+                        className={cn(
+                          "py-3 px-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all border-2 flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] w-full text-center whitespace-nowrap",
+                          selectedCategory === 'EMS'
+                            ? "bg-blue-600 border-blue-700 text-white shadow-lg shadow-blue-200 dark:shadow-[0_0_15px_rgba(255,255,255,0.15)] dark:border-white/30"
+                            : "bg-white dark:bg-white/5 border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white/60 hover:bg-zinc-100"
+                        )}
+                      >
+                        <ShieldAlert className="w-4 h-4 shrink-0" />
+                        <span>FD EMS Ops</span>
+                      </button>
+                      <button 
+                        onClick={() => {
+                          setSelectedCategory('Fire');
+                        }}
+                        className={cn(
+                          "py-3 px-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all border-2 flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] w-full text-center whitespace-nowrap",
+                          selectedCategory === 'Fire'
+                            ? "bg-amber-600 border-amber-700 text-white shadow-lg shadow-amber-200 dark:shadow-[0_0_15px_rgba(255,255,255,0.15)] dark:border-white/30"
+                            : "bg-white dark:bg-white/5 border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white/60 hover:bg-zinc-100"
+                        )}
+                      >
+                        <Flame className="w-4 h-4 shrink-0" />
+                        <span>FD Fire Ops</span>
+                      </button>
                     </div>
                   )}
 
                   {activeTab === 'rx' && (
-            <div className="flex gap-2 overflow-x-auto pb-4 no-scrollbar mb-6">
-              {['Medication Guide', 'Endorsement Meds'].map(cat => (
-                <button 
-                  key={cat}
-                  onClick={() => setSelectedRxCategory(cat as 'Medication Guide' | 'Endorsement Meds')}
-                  className={cn(
-                    "px-5 py-2.5 rounded-xl text-xs font-black whitespace-nowrap transition-all border-2 uppercase tracking-widest",
-                    selectedRxCategory === cat 
-                      ? "bg-red-600 border-red-700 text-white shadow-lg shadow-red-200" 
-                      : "bg-white dark:bg-white/5 border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white/60 hover:bg-zinc-100"
-                  )}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 w-full mb-6">
+                      {['Medication Guide', 'Endorsement Meds', 'What RX?'].map(cat => (
+                        <button 
+                          key={cat}
+                          onClick={() => setSelectedRxCategory(cat as 'Medication Guide' | 'Endorsement Meds' | 'What RX?')}
+                          className={cn(
+                            "py-3 px-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all border-2 flex items-center justify-center gap-2 shadow-lg active:scale-[0.98] w-full text-center whitespace-nowrap",
+                            selectedRxCategory === cat 
+                              ? "bg-red-600 border-red-700 text-white shadow-lg shadow-red-200 dark:shadow-[0_0_15px_rgba(255,255,255,0.15)] dark:border-white/30" 
+                              : "bg-white dark:bg-white/5 border-zinc-200 dark:border-white/10 text-zinc-900 dark:text-white/60 hover:bg-zinc-100"
+                          )}
+                        >
+                          {cat}
+                        </button>
+                      ))}
+                    </div>
                   )}
                 </>
               )}
 
               {activeTab === 'protocols' && (
                 <div className="space-y-3">
-                  {selectedCategory === 'Treatment' && treatmentSubTab === 'skills' ? (
+                  {selectedCategory === 'Clinical Skills' ? (
                     <Endorsements 
                       searchQuery={searchQuery}
                       hideHeader={true}
@@ -736,14 +676,13 @@ export default function App() {
                       
                       // Define order for sub-categories
                       const fireOrder = [
-                        'Incident Response',
-                        'Command Operations',
-                        'Safety & Personnel',
-                        'Operations',
-                        'Training & Administration',
-                        'Post-Incident & Administrative',
-                        'Special Operations',
-                        'Appendices'
+                        '100 - Organization & Governance',
+                        '200 - HR & Personnel Policies',
+                        '300 - Command & Scene Authority',
+                        '400 - Equipment, PPE & Uniforms',
+                        '500 - Fire Operations SOPs',
+                        '600 - Station & Daily Operations',
+                        '700 - Appendices & Forms'
                       ];
 
                       const emsOrder = [
@@ -875,6 +814,150 @@ export default function App() {
                 </div>
               )}
 
+              {activeTab === 'dept_protocols' && (
+                <div className="space-y-3">
+                  {searchQuery === '' ? (
+                    // Grouped by subCategory when not searching
+                    (() => {
+                      const grouped = filteredProtocols.reduce((acc, p) => {
+                        const sub = p.subCategory || 'General';
+                        if (!acc[sub]) acc[sub] = [];
+                        acc[sub].push(p);
+                        return acc;
+                      }, {} as Record<string, Protocol[]>);
+                      
+                      // Define order for sub-categories
+                      const fireOrder = [
+                        '100 - Organization & Governance',
+                        '200 - HR & Personnel Policies',
+                        '300 - Command & Scene Authority',
+                        '400 - Equipment, PPE & Uniforms',
+                        '500 - Fire Operations SOPs',
+                        '600 - Station & Daily Operations',
+                        '700 - Appendices & Forms'
+                      ];
+
+                      const emsOrder = [
+                        'General Operations',
+                        'Transport Policy',
+                        'Documentation',
+                        'Operational Readiness',
+                        'Medication & Safety',
+                        'Special Response',
+                        'MCI & Disaster Response',
+                        'Communications & Facilities',
+                        'Appendices'
+                      ];
+
+                      const order = selectedCategory === 'Fire' ? fireOrder : emsOrder;
+
+                      const sortedKeys = Object.keys(grouped).sort((a, b) => {
+                        const indexA = order.indexOf(a);
+                        const indexB = order.indexOf(b);
+                        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+                        if (indexA !== -1) return -1;
+                        if (indexB !== -1) return 1;
+                        return a.localeCompare(b);
+                      });
+
+                      return sortedKeys.map(subCategory => (
+                        <div key={subCategory} className="space-y-2">
+                          <div className="flex items-center gap-3 px-2 mt-8 mb-3">
+                            <div className="h-4 w-1 bg-red-600 dark:bg-emerald-600 rounded-full"></div>
+                            <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-900 dark:text-white/40">
+                              {subCategory}
+                            </h3>
+                            <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-white/5"></div>
+                          </div>
+                          {grouped[subCategory].map(protocol => (
+                            <button
+                              key={protocol.id}
+                              onClick={() => setSelectedProtocol(protocol)}
+                              className={cn(
+                                "w-full border-2 rounded-2xl p-4 flex items-center justify-between group transition-all active:scale-[0.98] shadow-sm",
+                                "dark:bg-[#1C1C1E] dark:border-white/5 dark:hover:bg-zinc-800/50 dark:shadow-none",
+                                selectedCategory === 'Fire' 
+                                  ? "bg-white border-zinc-100 text-zinc-900 hover:border-red-600/50" 
+                                  : "bg-white border-zinc-100 text-zinc-900 hover:border-blue-600/50"
+                              )}
+                            >
+                              <div className="flex items-center gap-4">
+                                <div className={cn(
+                                  "w-12 h-12 rounded-xl flex items-center justify-center transition-all group-hover:scale-105",
+                                  selectedCategory === 'Fire' 
+                                    ? "bg-red-600 text-white shadow-lg shadow-red-200 dark:shadow-none" 
+                                    : "bg-blue-600 text-white shadow-lg shadow-blue-200 dark:shadow-none"
+                                )}>
+                                  {selectedCategory === 'Fire' ? <Flame className="w-6 h-6" /> : <ShieldAlert className="w-6 h-6" />}
+                                </div>
+                                <div className="text-left">
+                                  <h3 className="font-black text-sm uppercase tracking-tight group-hover:text-red-600 dark:group-hover:text-emerald-400 dark:text-white transition-colors leading-tight">{protocol.title}</h3>
+                                  <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                                    <span className="inline-block px-1.5 py-0.5 bg-zinc-100 dark:bg-white/5 text-[8px] font-black uppercase tracking-widest text-zinc-500 dark:text-white/40 rounded animate-fade-in">
+                                      {protocol.subCategory || protocol.category}
+                                    </span>
+                                    <span className="inline-block px-1.5 py-0.5 bg-amber-500/10 dark:bg-amber-500/20 border border-amber-500/30 text-[8px] font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400 rounded animate-fade-in">
+                                      Fire Department Operations Protocol
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="w-8 h-8 rounded-lg bg-zinc-50 dark:bg-white/5 flex items-center justify-center text-zinc-300 dark:text-white/20 group-hover:text-red-500 transition-colors shrink-0">
+                                <ChevronRight className="w-5 h-5" />
+                              </div>
+                            </button>
+                          ))}
+                        </div>
+                      ));
+                    })()
+                  ) : (
+                    filteredProtocols.map(protocol => {
+                      const isFire = protocol.category === 'Fire';
+                      return (
+                        <button
+                          key={protocol.id}
+                          onClick={() => setSelectedProtocol(protocol)}
+                          className={cn(
+                            "w-full border-2 rounded-2xl p-4 flex items-center justify-between group transition-all active:scale-[0.98] shadow-sm text-left",
+                            "bg-white border-zinc-100 dark:bg-[#1C1C1E] dark:border-white/5 dark:hover:bg-zinc-800/50 dark:shadow-none text-zinc-900 dark:text-white",
+                            isFire ? "hover:border-red-600/50" : "hover:border-blue-600/50"
+                          )}
+                        >
+                          <div className="flex items-center gap-4 text-left">
+                            <div className={cn(
+                              "w-12 h-12 rounded-xl flex items-center justify-center transition-all group-hover:scale-105 shrink-0",
+                              isFire ? "bg-red-600 text-white shadow-lg shadow-red-200 dark:shadow-none" : "bg-blue-600 text-white shadow-lg shadow-blue-200 dark:shadow-none"
+                            )}>
+                              {isFire ? <Flame className="w-6 h-6" /> : <ShieldAlert className="w-6 h-6" />}
+                            </div>
+                            <div className="text-left">
+                              <h3 className="font-black text-sm uppercase tracking-tight group-hover:text-red-600 dark:group-hover:text-emerald-400 dark:text-white transition-colors leading-tight">{protocol.title}</h3>
+                              <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                                <span className="px-1.5 py-0.5 bg-zinc-100 dark:bg-white/5 text-[8px] font-black uppercase tracking-widest text-zinc-500 dark:text-white/40 rounded">
+                                  {protocol.subCategory || protocol.category}
+                                </span>
+                                <span className="px-1.5 py-0.5 bg-amber-500/10 dark:bg-amber-500/20 border border-amber-500/30 text-[8px] font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400 rounded">
+                                  Fire Department Operations Protocol
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="w-8 h-8 rounded-lg bg-zinc-50 dark:bg-white/5 flex items-center justify-center text-zinc-300 dark:text-white/20 group-hover:text-red-500 transition-colors shrink-0">
+                            <ChevronRight className="w-5 h-5" />
+                          </div>
+                        </button>
+                      );
+                    })
+                  )}
+                  {filteredProtocols.length === 0 && (
+                    <div className="text-center py-12">
+                      <Info className="w-12 h-12 text-zinc-300 dark:text-white/10 mx-auto mb-4" />
+                      <p className="text-white/40 text-sm">No protocols found matching your search.</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {activeTab === 'rx' && selectedRxCategory === 'Medication Guide' && (
                 <div className="space-y-3">
                   {filteredMedications.map(med => (
@@ -919,6 +1002,10 @@ export default function App() {
                   hideHeader={true}
                   activeSectionProp="meds"
                 />
+              )}
+
+              {activeTab === 'rx' && selectedRxCategory === 'What RX?' && (
+                <WhatRx />
               )}
 
               {activeTab === 'contacts' && (
@@ -1105,6 +1192,52 @@ export default function App() {
                       {/* Divider Line */}
                       <div className="h-px bg-zinc-200 dark:bg-white/10 w-full" />
 
+                      {/* Fire Tools Section */}
+                      <div>
+                        <h3 className="text-[10px] font-bold uppercase tracking-widest text-orange-600/80 dark:text-orange-500/80 mb-4 px-1">Fire Tools</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                          <button 
+                            onClick={() => setActiveTool('fire-map')}
+                            className="bg-orange-50/60 dark:bg-white/5 border border-orange-200/50 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 shadow-lg shadow-orange-100/20 dark:shadow-none hover:scale-105 active:scale-95 transition-all text-zinc-900 dark:text-white group"
+                          >
+                            <div className="w-12 h-12 rounded-full bg-orange-500/10 text-orange-600 flex items-center justify-center dark:bg-white/20 dark:text-white">
+                              <Flame className="w-6 h-6 animate-pulse" />
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-widest text-center">Live Fire Map</span>
+                          </button>
+                          <button 
+                            onClick={() => setActiveTool('erg-lookup')}
+                            className="bg-yellow-50/60 dark:bg-white/5 border border-yellow-200/50 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 shadow-lg shadow-yellow-100/20 dark:shadow-none hover:scale-105 active:scale-95 transition-all text-zinc-900 dark:text-white group"
+                          >
+                            <div className="w-12 h-12 rounded-full bg-yellow-500/10 text-yellow-600 flex items-center justify-center dark:bg-white/20 dark:text-white">
+                              <BookOpen className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-widest text-center">ERG Lookup</span>
+                          </button>
+                          <button 
+                            onClick={() => setActiveTool('what3words')}
+                            className="bg-zinc-50/60 dark:bg-white/5 border border-zinc-200/50 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 shadow-lg shadow-zinc-100/20 dark:shadow-none hover:scale-105 active:scale-95 transition-all text-zinc-900 dark:text-white group"
+                          >
+                            <div className="w-12 h-12 rounded-full bg-zinc-500/10 text-zinc-600 flex items-center justify-center dark:bg-white/20 dark:text-white">
+                              <MapPin className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-widest text-center">what3words</span>
+                          </button>
+                          <button 
+                            onClick={() => setActiveTool('ff-info')}
+                            className="bg-red-50/60 dark:bg-white/5 border border-red-200/50 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 shadow-lg shadow-red-100/20 dark:shadow-none hover:scale-105 active:scale-95 transition-all text-zinc-900 dark:text-white group"
+                          >
+                            <div className="w-12 h-12 rounded-full bg-red-500/10 text-red-600 flex items-center justify-center dark:bg-white/20 dark:text-white">
+                              <Award className="w-6 h-6" />
+                            </div>
+                            <span className="text-xs font-bold uppercase tracking-widest text-center">FF1 & FF2 Reference</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Divider Line */}
+                      <div className="h-px bg-zinc-200 dark:bg-white/10 w-full" />
+
                       {/* Reference Section */}
                       <div>
                         <h3 className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 dark:text-indigo-500/60 mb-4 px-1">Reference</h3>
@@ -1171,6 +1304,10 @@ export default function App() {
               {activeTab === 'email' && (
                 <EmailRouter />
               )}
+
+              {activeTab === 'ems_practice' && (
+                <EmsPractice />
+              )}
             </motion.div>
           )}
           </>
@@ -1179,7 +1316,7 @@ export default function App() {
       </main>
 
       {/* Bottom Navigation - Tactical Black in Light, Original Sleek in Dark */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-zinc-900 dark:bg-[#151619]/90 dark:backdrop-blur-xl border-t-2 border-red-600 dark:border-white/10 px-4 py-4 flex items-center justify-between z-50 shadow-[0_-8px_30px_rgba(0,0,0,0.5)] dark:shadow-none">
+      <nav className="fixed bottom-0 left-0 right-0 bg-zinc-900 dark:bg-[#151619]/90 dark:backdrop-blur-xl border-t-2 border-red-600 dark:border-white/10 px-1 py-2 sm:px-4 sm:py-3.5 grid grid-cols-8 gap-0 items-center justify-items-center z-50 shadow-[0_-8px_30px_rgba(0,0,0,0.5)] dark:shadow-none">
         <NavButton 
           active={activeTab === 'home'} 
           onClick={() => { setActiveTab('home'); setSelectedProtocol(null); setSelectedMedication(null); setActiveTool(null); }}
@@ -1190,7 +1327,7 @@ export default function App() {
           active={activeTab === 'protocols'} 
           onClick={() => { setActiveTab('protocols'); setSelectedProtocol(null); setSelectedMedication(null); setActiveTool(null); }}
           icon={<BookOpen className="w-6 h-6" />}
-          label="Tx Protocol"
+          label="Treat"
         />
         <NavButton 
           active={activeTab === 'rx'} 
@@ -1199,10 +1336,22 @@ export default function App() {
           label="Drugs"
         />
         <NavButton 
+          active={activeTab === 'dept_protocols'} 
+          onClick={() => { setActiveTab('dept_protocols'); setSelectedProtocol(null); setSelectedMedication(null); setActiveTool(null); setSelectedCategory('EMS'); }}
+          icon={<ShieldAlert className="w-6 h-6" />}
+          label="Dept"
+        />
+        <NavButton 
           active={activeTab === 'tools'} 
           onClick={() => { setActiveTab('tools'); setSelectedProtocol(null); setSelectedMedication(null); setActiveTool(null); }}
           icon={<Calculator className="w-6 h-6" />}
           label="Tools"
+        />
+        <NavButton 
+          active={activeTab === 'ems_practice'} 
+          onClick={() => { setActiveTab('ems_practice'); setSelectedProtocol(null); setSelectedMedication(null); setActiveTool(null); }}
+          icon={<Brain className="w-6 h-6" />}
+          label="Practice"
         />
         <NavButton 
           active={activeTab === 'contacts'} 
@@ -1296,17 +1445,19 @@ function NavButton({ active, onClick, icon, label }: { active: boolean, onClick:
     <button 
       onClick={onClick}
       className={cn(
-        "flex flex-col items-center gap-1 min-w-[56px] transition-all relative py-1",
-        active ? "text-red-500 scale-110" : "text-white/40 hover:text-white"
+        "flex flex-col items-center gap-0.5 sm:gap-1 w-full min-w-0 transition-all relative py-1",
+        active ? "text-red-500 scale-105 sm:scale-110 font-bold" : "text-white/40 hover:text-white"
       )}
     >
       <div className={cn(
-        "p-1.5 rounded-xl transition-all",
+        "p-1 sm:p-1.5 rounded-xl transition-all flex items-center justify-center [&_svg]:w-5 [&_svg]:h-5 sm:[&_svg]:w-6 sm:[&_svg]:h-6",
         active ? "bg-red-500/10 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : ""
       )}>
         {icon}
       </div>
-      <span className="text-[9px] font-black uppercase tracking-widest leading-none">{label}</span>
+      <span className="text-[7.5px] xs:text-[8px] sm:text-[9.5px] font-black uppercase tracking-wide xs:tracking-wider sm:tracking-widest leading-none text-center block w-full truncate px-0.5">
+        {label}
+      </span>
       {active && (
         <motion.div 
           layoutId="nav-indicator"
