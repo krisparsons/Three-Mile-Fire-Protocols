@@ -161,7 +161,7 @@ export default function WhatRx() {
     setScanResult(null);
 
     try {
-      const response = await fetch('/api/rx/lookup', {
+const response = await fetch('https://three-mile-fire-department.vercel.app/api/rx/lookup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

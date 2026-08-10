@@ -1,20 +1,48 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Navigation, MapPin, ExternalLink, Compass, ShieldAlert, Sparkles, RefreshCw, HelpCircle } from 'lucide-react';
+import { ArrowLeft, Navigation, MapPin, Compass, ShieldAlert, Sparkles, RefreshCw, HelpCircle, Copy, Check } from 'lucide-react';
 
 interface WhatThreeWordsProps {
   onBack: () => void;
 }
 
+const W3W_API_KEY = 'JLI7RDOY';
+
 export default function WhatThreeWords({ onBack }: WhatThreeWordsProps) {
   const [gpsLoading, setGpsLoading] = useState(false);
   const [coords, setCoords] = useState<{ lat: number; lng: number; accuracy: number } | null>(null);
   const [gpsError, setGpsError] = useState<string | null>(null);
-  const [manualWords, setManualWords] = useState('');
+  const [words, setWords] = useState<string | null>(null);
+  const [wordsLoading, setWordsLoading] = useState(false);
+  const [wordsError, setWordsError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const fetchWords = async (lat: number, lng: number) => {
+    setWordsLoading(true);
+    setWordsError(null);
+    setWords(null);
+    try {
+      const res = await fetch(
+        `https://api.what3words.com/v3/convert-to-3wa?coordinates=${lat},${lng}&key=${W3W_API_KEY}`
+      );
+      const data = await res.json();
+      if (data.words) {
+        setWords(data.words);
+      } else {
+        setWordsError(data.error?.message || 'Could not retrieve what3words address.');
+      }
+    } catch (err) {
+      setWordsError('Failed to reach what3words. Check your internet connection.');
+    } finally {
+      setWordsLoading(false);
+    }
+  };
 
   const fetchGpsCoordinates = () => {
     setGpsLoading(true);
     setGpsError(null);
     setCoords(null);
+    setWords(null);
+    setWordsError(null);
 
     if (!navigator.geolocation) {
       setGpsError("Geolocation is not supported by your browser.");
@@ -24,12 +52,14 @@ export default function WhatThreeWords({ onBack }: WhatThreeWordsProps) {
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setCoords({
+        const newCoords = {
           lat: position.coords.latitude,
           lng: position.coords.longitude,
           accuracy: Math.round(position.coords.accuracy),
-        });
+        };
+        setCoords(newCoords);
         setGpsLoading(false);
+        fetchWords(newCoords.lat, newCoords.lng);
       },
       (error) => {
         let msg = "Failed to retrieve GPS location.";
@@ -47,15 +77,11 @@ export default function WhatThreeWords({ onBack }: WhatThreeWordsProps) {
     );
   };
 
-  const handleManualSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!manualWords.trim()) return;
-    
-    // Clean up input - remove leading slashes or spaces, replace slashes with dots
-    let clean = manualWords.trim().toLowerCase().replace(/^\/\/\//, '').replace(/\s+/g, '.').replace(/\//g, '.');
-    
-    // Open in a new tab on what3words
-    window.open(`https://what3words.com/${clean}`, '_blank');
+  const handleCopy = () => {
+    if (!words) return;
+    navigator.clipboard.writeText(`///${words}`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -87,7 +113,7 @@ export default function WhatThreeWords({ onBack }: WhatThreeWordsProps) {
             </p>
 
             {/* GPS grabber tool */}
-            <div className="bg-zinc-50 dark:bg-black/30 border border-zinc-200 dark:border-white/10 rounded-2xl p-5 mb-6">
+            <div className="bg-zinc-50 dark:bg-black/30 border border-zinc-200 dark:border-white/10 rounded-2xl p-5">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xs font-black uppercase tracking-wider text-zinc-700 dark:text-white/60">
                   On-Scene Coordinates Grabber
@@ -100,7 +126,7 @@ export default function WhatThreeWords({ onBack }: WhatThreeWordsProps) {
               <div className="space-y-4">
                 {!coords && !gpsError && (
                   <p className="text-xs text-zinc-500 dark:text-white/40 leading-relaxed">
-                    Grab your current tactical on-scene coordinates instantly. You can then open what3words directly to broadcast your exact location to dispatch or incoming crews.
+                    Grab your current tactical on-scene coordinates instantly. Your what3words address will be shown right here — no separate app or page needed.
                   </p>
                 )}
 
@@ -135,15 +161,40 @@ export default function WhatThreeWords({ onBack }: WhatThreeWordsProps) {
                       <span className="text-red-500 animate-pulse">● Live Tracking</span>
                     </div>
 
-                    <div className="pt-2">
-                      <button
-                        onClick={() => window.open(`https://what3words.com/dir/${coords.lat},${coords.lng}`, '_blank')}
-                        className="w-full bg-red-600 hover:bg-red-500 active:scale-[0.98] text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-red-950/20 transition-all flex items-center justify-center gap-2 text-xs"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        <span>Launch what3words For This Coordinate</span>
-                      </button>
-                    </div>
+                    {/* what3words result */}
+                    {wordsLoading && (
+                      <div className="flex items-center gap-3 py-3 justify-center">
+                        <RefreshCw className="w-5 h-5 text-red-500 animate-spin shrink-0" />
+                        <span className="text-xs font-bold text-zinc-500 dark:text-white/60 animate-pulse">Converting to what3words...</span>
+                      </div>
+                    )}
+
+                    {wordsError && (
+                      <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-xl flex gap-2.5 text-xs text-red-600 dark:text-red-400">
+                        <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />
+                        <p className="font-medium">{wordsError}</p>
+                      </div>
+                    )}
+
+                    {words && (
+                      <div className="bg-red-600 rounded-2xl p-5 text-center shadow-lg shadow-red-950/20">
+                        <span className="text-[9px] font-black uppercase tracking-widest text-white/70 block mb-1">
+                          what3words Address
+                        </span>
+                        <div className="flex items-center justify-center gap-2">
+                          <span className="text-2xl font-black font-mono text-white break-all">
+                            ///{words}
+                          </span>
+                        </div>
+                        <button
+                          onClick={handleCopy}
+                          className="mt-3 inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 active:scale-95 text-white font-bold py-2 px-4 rounded-xl transition-all text-xs"
+                        >
+                          {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                          <span>{copied ? 'Copied!' : 'Copy Address'}</span>
+                        </button>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -158,35 +209,6 @@ export default function WhatThreeWords({ onBack }: WhatThreeWordsProps) {
                 )}
               </div>
             </div>
-
-            {/* Manual Lookup form */}
-            <form onSubmit={handleManualSearch} className="space-y-3">
-              <h3 className="text-xs font-black uppercase tracking-wider text-zinc-700 dark:text-white/60 px-1">
-                Verify 3-Word Address From Dispatch
-              </h3>
-              <p className="text-xs text-zinc-500 dark:text-white/40 leading-relaxed px-1">
-                Enter three words separated by dots or spaces (e.g. <code className="text-red-400 font-bold font-mono">filled.count.soap</code>) to route or locate on the map immediately.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-2">
-                <div className="relative flex-1">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-red-500 font-bold text-sm select-none font-mono">///</span>
-                  <input
-                    type="text"
-                    placeholder="word1.word2.word3"
-                    value={manualWords}
-                    onChange={(e) => setManualWords(e.target.value)}
-                    className="w-full bg-zinc-50 dark:bg-black/30 border-2 border-zinc-200 dark:border-white/10 rounded-2xl py-3.5 pl-12 pr-4 focus:outline-none focus:ring-4 focus:ring-red-600/10 focus:border-red-600 transition-all text-xs font-bold text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-white/20 font-mono"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={!manualWords.trim()}
-                  className="bg-red-600 hover:bg-red-500 disabled:bg-zinc-300 dark:disabled:bg-white/5 disabled:text-zinc-500 dark:disabled:text-white/20 text-white font-bold py-3.5 px-6 rounded-2xl transition-all shrink-0 text-xs shadow-md"
-                >
-                  Go to Map
-                </button>
-              </div>
-            </form>
           </div>
         </div>
 
