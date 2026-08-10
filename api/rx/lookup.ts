@@ -98,7 +98,7 @@ Format your response as a structured JSON object with the following fields:
       const textPart = {
         text: `You are an expert emergency medical consultant and toxicologist. 
 Analyze the medication or medications visible in this photo. They could be pill bottles, loose pills, prescription boxes, or liquid vials.
-Identify all medications and retrieve critical EMS/toxicology intelligence about them.
+Identify up to 5 of the clearest medications and retrieve critical EMS/toxicology intelligence about them. Keep every field brief (1 short sentence max) so the full response stays compact.
 Format your response as a structured JSON object with the following fields:
 - identified: (boolean) Whether you successfully identified at least one medication in the photo.
 - medications: (array of objects, each containing):
@@ -107,9 +107,9 @@ Format your response as a structured JSON object with the following fields:
   - drugClass: (string) Pharmacological class (e.g. "Anticoagulant", "Opioid Analgesic")
   - strength: (string) Strength if readable (e.g. "5mg/325mg", "5mg"), otherwise empty or "Unknown"
   - confidence: (string) "High", "Medium", or "Low"
-  - emergencyImplications: (string) Critical responder implications (e.g. "Monitor for respiratory depression", "Severe hemorrhage risk", etc.)
-  - description: (string) Quick description of what was seen in the photo (e.g., "Round yellow tablet with imprint 103", "Standard Rx bottle labeled Eliquis")
-- overallClinicalWarning: (string) A comprehensive overall safety warning/caution summary for responders encountering this patient.`
+  - emergencyImplications: (string) Critical responder implications in one short sentence (e.g. "Monitor for respiratory depression")
+  - description: (string) One short phrase describing what was seen (e.g., "Round yellow tablet, imprint 103")
+- overallClinicalWarning: (string) One short sentence overall safety warning for responders encountering this patient.`
       };
 
       contents = { parts: [imagePart, textPart] };
@@ -120,7 +120,7 @@ Format your response as a structured JSON object with the following fields:
       contents: contents,
       config: {
         responseMimeType: "application/json",
-        maxOutputTokens: 4096,
+        maxOutputTokens: 8192,
         systemInstruction: "You are a highly precise, reliable emergency clinical pharmacy database. Only provide medically accurate, on-scene actionable information for EMS personnel. If unsure, state lack of certainty but provide safety precautions. Keep every field concise so the full response stays well-formed JSON.",
       }
     });
