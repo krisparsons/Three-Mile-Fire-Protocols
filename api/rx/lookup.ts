@@ -120,16 +120,31 @@ Format your response as a structured JSON object with the following fields:
       contents: contents,
       config: {
         responseMimeType: "application/json",
-        systemInstruction: "You are a highly precise, reliable emergency clinical pharmacy database. Only provide medically accurate, on-scene actionable information for EMS personnel. If unsure, state lack of certainty but provide safety precautions.",
+        maxOutputTokens: 4096,
+        systemInstruction: "You are a highly precise, reliable emergency clinical pharmacy database. Only provide medically accurate, on-scene actionable information for EMS personnel. If unsure, state lack of certainty but provide safety precautions. Keep every field concise so the full response stays well-formed JSON.",
       }
     });
 
-    const text = response.text;
+    let text = response.text;
     if (!text) {
       throw new Error("No response from AI model");
     }
 
-    res.status(200).json(JSON.parse(text));
+    // Defensive cleanup in case the model wraps output in markdown fences
+    text = text.trim();
+    if (text.startsWith('```')) {
+      text = text.replace(/^```(?:json)?\s*/, '').replace(/```\s*$/, '');
+    }
+
+    let parsed;
+    try {
+      parsed = JSON.parse(text);
+    } catch (parseErr) {
+      console.error("JSON parse failed. Raw model output:", text);
+      throw new Error("The AI response was incomplete or malformed. Please try again.");
+    }
+
+    res.status(200).json(parsed);
   } catch (error: any) {
     console.error("Gemini API Error:", error);
     res.status(500).json({ error: error?.message || "Internal server error" });
