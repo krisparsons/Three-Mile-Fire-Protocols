@@ -120,18 +120,38 @@ export default function WhatRx() {
     setIsCameraActive(false);
   };
 
+  const MAX_DIMENSION = 1024;
+  const JPEG_QUALITY = 0.7;
+
+  const resizeImage = (source: CanvasImageSource, sourceWidth: number, sourceHeight: number): string => {
+    let width = sourceWidth;
+    let height = sourceHeight;
+
+    if (width > height && width > MAX_DIMENSION) {
+      height = Math.round((height * MAX_DIMENSION) / width);
+      width = MAX_DIMENSION;
+    } else if (height > MAX_DIMENSION) {
+      width = Math.round((width * MAX_DIMENSION) / height);
+      height = MAX_DIMENSION;
+    }
+
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.drawImage(source, 0, 0, width, height);
+    }
+    return canvas.toDataURL('image/jpeg', JPEG_QUALITY);
+  };
+
   const capturePhoto = () => {
     if (videoRef.current) {
-      const canvas = document.createElement('canvas');
-      canvas.width = videoRef.current.videoWidth || 640;
-      canvas.height = videoRef.current.videoHeight || 480;
-      const ctx = canvas.getContext('2d');
-      if (ctx) {
-        ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
-        setSelectedImage(dataUrl);
-        stopCamera();
-      }
+      const width = videoRef.current.videoWidth || 640;
+      const height = videoRef.current.videoHeight || 480;
+      const dataUrl = resizeImage(videoRef.current, width, height);
+      setSelectedImage(dataUrl);
+      stopCamera();
     }
   };
 
@@ -139,12 +159,13 @@ export default function WhatRx() {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setSelectedImage(reader.result as string);
+    const img = new Image();
+    img.onload = () => {
+      const dataUrl = resizeImage(img, img.width, img.height);
+      setSelectedImage(dataUrl);
       stopCamera();
     };
-    reader.readAsDataURL(file);
+    img.src = URL.createObjectURL(file);
   };
 
   const handleSearch = async (e?: React.FormEvent) => {
@@ -161,7 +182,7 @@ export default function WhatRx() {
     setScanResult(null);
 
     try {
-const response = await fetch('https://three-mile-fire-department.vercel.app/api/rx/lookup', {
+      const response = await fetch('https://three-mile-fire-department.vercel.app/api/rx/lookup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
